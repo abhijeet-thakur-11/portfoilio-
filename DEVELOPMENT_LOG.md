@@ -17,3 +17,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-05 11:24:46`: **perf(css): remove heavy backdrop-filter blur declarations**
 - `2026-05-05 15:38:07`: **feat(tokens): define 60/20/20 Cosmic Latte, Mocha Cream, Burgundy palette**
 - `2026-05-05 18:29:43`: **refactor(markup): clean up legacy inline styles in about section**
+- `2026-05-05 19:33:56`: **refactor(css): remove deprecated bento grid rules**
