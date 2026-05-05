@@ -15,3 +15,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-05 10:04:00`: **style(contact): adjust headline letter-spacing and typography hierarchy**
 - `2026-05-05 11:24:43`: **style(scrollbar): customize webkit scrollbar colors to match palette**
 - `2026-05-05 11:24:46`: **perf(css): remove heavy backdrop-filter blur declarations**
+- `2026-05-05 15:38:07`: **feat(tokens): define 60/20/20 Cosmic Latte, Mocha Cream, Burgundy palette**
