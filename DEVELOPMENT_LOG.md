@@ -20,3 +20,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-05 19:33:56`: **refactor(css): remove deprecated bento grid rules**
 - `2026-05-05 19:16:34`: **refactor(js): update TextScramble character accent color**
 - `2026-05-05 21:35:48`: **perf(memory): remove redundant event listeners on interactive elements**
+- `2026-05-05 22:55:17`: **refactor(css): remove custom cursor classes and restore OS cursor**
