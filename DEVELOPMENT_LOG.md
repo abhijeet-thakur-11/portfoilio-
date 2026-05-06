@@ -22,3 +22,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-05 21:35:48`: **perf(memory): remove redundant event listeners on interactive elements**
 - `2026-05-05 22:55:17`: **refactor(css): remove custom cursor classes and restore OS cursor**
 - `2026-05-06 09:46:11`: **refactor(css): standardize CSS custom properties in :root**
+- `2026-05-06 10:56:32`: **refactor(css): purge legacy sci-fi glowing box shadows**
