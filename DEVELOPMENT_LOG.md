@@ -46,3 +46,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-08 21:27:42`: **perf(render): use will-change: transform on horizontal track**
 - `2026-05-08 21:13:41`: **refactor(css): purge decorative noise grain overlay**
 - `2026-05-08 22:59:23`: **feat(skills): add interactive category blocks for tech stack**
+- `2026-05-09 10:04:14`: **style(skills): set 0px border-radius across all pill badges**
