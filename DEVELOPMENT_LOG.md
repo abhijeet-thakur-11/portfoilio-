@@ -71,3 +71,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-13 13:55:41`: **refactor(markup): update Google Fonts link to Inter only**
 - `2026-05-13 16:54:34`: **docs(tokens): document color palette and 60/20/20 distribution ratios**
 - `2026-05-13 22:35:53`: **refactor(css): remove chromatic aberration rgb-split keyframes**
+- `2026-05-14 11:25:50`: **chore(release): bump portfolio production build version**
