@@ -86,3 +86,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-15 12:20:54`: **perf(scroll): tune Lenis scroll duration and easing curve**
 - `2026-05-15 13:03:33`: **feat(projects): integrate Vision-Aid wearable AI project card**
 - `2026-05-15 18:03:10`: **feat(contact): add high contrast interactive contact buttons**
+- `2026-05-15 20:37:03`: **style(nav): set 44px minimum touch target for mobile navigation**
