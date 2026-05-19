@@ -101,3 +101,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-05-18 19:19:29`: **feat(achievements): format hackathon awards and competition badges**
 - `2026-05-18 20:29:39`: **feat(a11y): add aria-label attributes to navigation landmark**
 - `2026-05-19 10:16:56`: **style(projects): style oversized numeral background badges**
+- `2026-05-19 12:08:04`: **style(about): adjust column gaps and vertical rhythm**
