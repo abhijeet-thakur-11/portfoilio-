@@ -201,3 +201,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-04 17:39:28`: **refactor(js): update TextScramble character accent color**
 - `2026-06-04 19:52:57`: **perf(memory): remove redundant event listeners on interactive elements**
 - `2026-06-04 21:46:10`: **refactor(css): remove custom cursor classes and restore OS cursor**
+- `2026-06-04 22:57:47`: **refactor(css): standardize CSS custom properties in :root**
