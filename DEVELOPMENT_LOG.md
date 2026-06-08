@@ -217,3 +217,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-08 09:24:54`: **style(projects): set 65vw card dimensions and responsive padding**
 - `2026-06-08 18:30:57`: **chore(assets): organize portfolio imagery and transparency masks**
 - `2026-06-08 18:00:53`: **style(footer): tune footer padding and divider border line**
+- `2026-06-08 20:22:26`: **responsive(mobile): switch education cards to single column vertical stack**
