@@ -243,3 +243,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-12 12:01:08`: **feat(education): format degree and board education entries**
 - `2026-06-12 12:39:30`: **docs(readme): document Swiss Design + Brutalism principles**
 - `2026-06-12 21:09:42`: **feat(tokens): standardize brutalist border and shadow tokens**
+- `2026-06-13 12:29:16`: **responsive(mobile): collapse hero portrait and align content full-width**
