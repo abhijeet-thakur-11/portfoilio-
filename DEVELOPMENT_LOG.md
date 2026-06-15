@@ -256,3 +256,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-15 18:49:02`: **responsive(mobile): switch skills matrix to 2-column grid on mobile**
 - `2026-06-15 18:19:22`: **perf(core): minimize layout shifts during horizontal scroll transitions**
 - `2026-06-15 19:54:34`: **style(hero): refine display font clamp sizing for ultra-wide screens**
+- `2026-06-15 20:43:27`: **style(nav): tune navigation link letter spacing and uppercase styling**
