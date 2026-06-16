@@ -261,3 +261,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-15 22:51:23`: **chore(config): verify package.json scripts and metadata**
 - `2026-06-16 09:29:58`: **feat(about): create 5fr/7fr asymmetric about section grid**
 - `2026-06-16 10:45:34`: **refactor(css): consolidate shared section label and title classes**
+- `2026-06-16 14:09:49`: **responsive(mobile): convert about section to single column layout**
