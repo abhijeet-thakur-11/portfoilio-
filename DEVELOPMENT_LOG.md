@@ -286,3 +286,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-20 09:25:37`: **style(scrollbar): customize webkit scrollbar colors to match palette**
 - `2026-06-20 10:44:23`: **perf(css): remove heavy backdrop-filter blur declarations**
 - `2026-06-20 12:15:30`: **feat(tokens): define 60/20/20 Cosmic Latte, Mocha Cream, Burgundy palette**
+- `2026-06-20 13:19:35`: **refactor(markup): clean up legacy inline styles in about section**
