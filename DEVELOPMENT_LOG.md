@@ -314,3 +314,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-25 16:19:38`: **feat(footer): create minimal monochrome footer bar**
 - `2026-06-25 18:05:38`: **perf(fonts): add preconnect tags for Google Fonts API and CDN**
 - `2026-06-25 19:15:50`: **perf(render): use will-change: transform on horizontal track**
+- `2026-06-25 19:07:39`: **refactor(css): purge decorative noise grain overlay**
