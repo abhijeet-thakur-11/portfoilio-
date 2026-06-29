@@ -331,3 +331,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-28 13:29:16`: **style(selection): set custom text selection background to burgundy**
 - `2026-06-28 20:04:50`: **docs(readme): add comprehensive design system specification**
 - `2026-06-29 10:09:50`: **feat(education): format degree and board education entries**
+- `2026-06-29 12:58:19`: **docs(readme): document Swiss Design + Brutalism principles**
