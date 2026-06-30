@@ -338,3 +338,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-06-29 19:04:36`: **feat(tokens): configure Inter grotesque typography scale and weights**
 - `2026-06-29 19:03:58`: **feat(layout): initialize 12-column Swiss typographic grid layout**
 - `2026-06-29 21:10:18`: **chore(git): configure project .gitignore rules**
+- `2026-06-30 13:31:47`: **refactor(markup): update Google Fonts link to Inter only**
