@@ -429,3 +429,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-07-16 22:58:29`: **feat(layout): initialize 12-column Swiss typographic grid layout**
 - `2026-07-17 09:34:40`: **chore(git): configure project .gitignore rules**
 - `2026-07-17 13:10:27`: **refactor(markup): update Google Fonts link to Inter only**
+- `2026-07-17 13:04:44`: **docs(tokens): document color palette and 60/20/20 distribution ratios**
