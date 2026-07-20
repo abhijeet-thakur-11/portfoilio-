@@ -442,3 +442,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-07-19 20:17:43`: **feat(about): create 5fr/7fr asymmetric about section grid**
 - `2026-07-19 22:00:49`: **refactor(css): consolidate shared section label and title classes**
 - `2026-07-20 16:57:51`: **responsive(mobile): convert about section to single column layout**
+- `2026-07-20 18:57:14`: **feat(projects): add brutalist project card layout with drop shadows**
