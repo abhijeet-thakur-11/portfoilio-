@@ -447,3 +447,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-07-20 22:49:51`: **feat(projects): integrate Vision-Aid wearable AI project card**
 - `2026-07-21 13:49:40`: **feat(contact): add high contrast interactive contact buttons**
 - `2026-07-21 18:42:06`: **style(nav): set 44px minimum touch target for mobile navigation**
+- `2026-07-21 19:43:57`: **style(hero): format static scroll indicator bar**
