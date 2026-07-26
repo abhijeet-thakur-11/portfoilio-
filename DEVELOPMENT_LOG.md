@@ -474,3 +474,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-07-25 19:39:39`: **refactor(css): standardize CSS custom properties in :root**
 - `2026-07-25 22:56:14`: **refactor(css): purge legacy sci-fi glowing box shadows**
 - `2026-07-26 19:29:44`: **docs(changelog): document component-by-component redesign phases**
+- `2026-07-26 22:58:19`: **responsive(mobile): collapse contact heading and stack action buttons**
