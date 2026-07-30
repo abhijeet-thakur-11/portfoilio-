@@ -497,3 +497,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-07-30 12:35:55`: **refactor(css): purge decorative noise grain overlay**
 - `2026-07-30 18:13:14`: **feat(skills): add interactive category blocks for tech stack**
 - `2026-07-30 21:37:21`: **style(skills): set 0px border-radius across all pill badges**
+- `2026-07-30 22:13:49`: **responsive(mobile): stack navigation links cleanly below 768px**
