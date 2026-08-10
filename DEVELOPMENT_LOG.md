@@ -552,3 +552,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-08 21:14:27`: **feat(a11y): add aria-label attributes to navigation landmark**
 - `2026-08-09 18:53:17`: **style(projects): style oversized numeral background badges**
 - `2026-08-09 19:44:01`: **style(about): adjust column gaps and vertical rhythm**
+- `2026-08-10 09:36:40`: **style(contact): adjust headline letter-spacing and typography hierarchy**
