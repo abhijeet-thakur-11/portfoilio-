@@ -558,3 +558,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-10 14:04:47`: **feat(tokens): define 60/20/20 Cosmic Latte, Mocha Cream, Burgundy palette**
 - `2026-08-10 14:09:33`: **refactor(markup): clean up legacy inline styles in about section**
 - `2026-08-10 22:47:13`: **refactor(css): remove deprecated bento grid rules**
+- `2026-08-11 11:36:48`: **refactor(js): update TextScramble character accent color**
