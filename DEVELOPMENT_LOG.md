@@ -566,3 +566,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-11 20:09:17`: **docs(changelog): document component-by-component redesign phases**
 - `2026-08-11 21:10:28`: **responsive(mobile): collapse contact heading and stack action buttons**
 - `2026-08-12 12:07:37`: **refactor(js): safe-guard 3D carousel hooks against missing DOM nodes**
+- `2026-08-12 13:22:31`: **style(about): refine statistics numerals weight and line height**
