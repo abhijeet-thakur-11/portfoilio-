@@ -569,3 +569,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-12 13:22:31`: **style(about): refine statistics numerals weight and line height**
 - `2026-08-12 15:27:33`: **feat(education): create structured academic credentials card layout**
 - `2026-08-12 16:07:42`: **style(education): add 6px hard drop shadows to card elements**
+- `2026-08-12 17:18:19`: **responsive(tablet): adjust 1024px grid column collapses**
