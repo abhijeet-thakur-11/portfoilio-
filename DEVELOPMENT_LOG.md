@@ -585,3 +585,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-14 15:58:36`: **perf(fonts): add preconnect tags for Google Fonts API and CDN**
 - `2026-08-14 15:04:25`: **perf(render): use will-change: transform on horizontal track**
 - `2026-08-14 20:55:45`: **refactor(css): purge decorative noise grain overlay**
+- `2026-08-14 22:20:40`: **feat(skills): add interactive category blocks for tech stack**
