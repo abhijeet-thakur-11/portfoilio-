@@ -602,3 +602,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-18 10:11:41`: **docs(readme): add comprehensive design system specification**
 - `2026-08-18 11:38:04`: **feat(education): format degree and board education entries**
 - `2026-08-18 12:09:11`: **docs(readme): document Swiss Design + Brutalism principles**
+- `2026-08-18 12:48:49`: **feat(tokens): standardize brutalist border and shadow tokens**
