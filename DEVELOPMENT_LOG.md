@@ -599,3 +599,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-17 14:07:22`: **feat(skills): construct 3-column brutalist pill matrix**
 - `2026-08-17 20:33:22`: **refactor(js): integrate Lenis smooth scroll with GSAP ticker**
 - `2026-08-17 21:32:46`: **style(selection): set custom text selection background to burgundy**
+- `2026-08-18 10:11:41`: **docs(readme): add comprehensive design system specification**
