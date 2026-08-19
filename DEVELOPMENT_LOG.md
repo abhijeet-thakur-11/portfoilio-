@@ -606,3 +606,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-18 13:48:40`: **responsive(mobile): collapse hero portrait and align content full-width**
 - `2026-08-19 16:20:28`: **style(contact): style full-width interactive action buttons**
 - `2026-08-19 18:55:40`: **feat(tokens): configure Inter grotesque typography scale and weights**
+- `2026-08-19 18:40:19`: **feat(layout): initialize 12-column Swiss typographic grid layout**
