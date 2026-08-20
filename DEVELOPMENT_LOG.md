@@ -614,3 +614,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-19 21:30:22`: **chore(release): bump portfolio production build version**
 - `2026-08-20 09:18:39`: **feat(a11y): add prefers-reduced-motion media query handling**
 - `2026-08-20 09:04:38`: **responsive(mobile): switch skills matrix to 2-column grid on mobile**
+- `2026-08-20 14:41:32`: **perf(core): minimize layout shifts during horizontal scroll transitions**
