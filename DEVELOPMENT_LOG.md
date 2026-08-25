@@ -637,3 +637,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-25 11:41:19`: **style(achievements): style inverted burgundy surface block**
 - `2026-08-25 11:44:35`: **feat(nav): implement fixed header navigation with brutalist borders**
 - `2026-08-25 14:42:24`: **responsive(tablet): tune hero display font size on medium displays**
+- `2026-08-25 14:25:41`: **perf(images): optimize portrait PNG rendering and aspect ratio**
