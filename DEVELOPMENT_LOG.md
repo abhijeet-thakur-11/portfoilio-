@@ -644,3 +644,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-26 09:19:08`: **style(about): adjust column gaps and vertical rhythm**
 - `2026-08-26 10:11:09`: **style(contact): adjust headline letter-spacing and typography hierarchy**
 - `2026-08-26 14:13:04`: **style(scrollbar): customize webkit scrollbar colors to match palette**
+- `2026-08-26 14:21:18`: **perf(css): remove heavy backdrop-filter blur declarations**
