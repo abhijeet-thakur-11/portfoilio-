@@ -672,3 +672,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-08-30 16:35:54`: **style(skills): format mocha surface block styling**
 - `2026-08-30 19:59:33`: **feat(a11y): add WCAG AA compliant color contrast ratios**
 - `2026-08-30 22:06:54`: **feat(footer): create minimal monochrome footer bar**
+- `2026-08-31 11:57:27`: **perf(fonts): add preconnect tags for Google Fonts API and CDN**
