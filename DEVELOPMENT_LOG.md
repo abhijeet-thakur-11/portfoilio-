@@ -695,3 +695,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-03 17:15:31`: **feat(tokens): standardize brutalist border and shadow tokens**
 - `2026-09-03 18:26:38`: **responsive(mobile): collapse hero portrait and align content full-width**
 - `2026-09-03 20:40:34`: **style(contact): style full-width interactive action buttons**
+- `2026-09-03 21:50:01`: **feat(tokens): configure Inter grotesque typography scale and weights**
