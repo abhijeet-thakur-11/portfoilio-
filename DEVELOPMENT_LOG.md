@@ -705,3 +705,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-05 10:50:24`: **feat(a11y): add prefers-reduced-motion media query handling**
 - `2026-09-05 17:32:55`: **responsive(mobile): switch skills matrix to 2-column grid on mobile**
 - `2026-09-05 17:35:30`: **perf(core): minimize layout shifts during horizontal scroll transitions**
+- `2026-09-05 17:01:02`: **style(hero): refine display font clamp sizing for ultra-wide screens**
