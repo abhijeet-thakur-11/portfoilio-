@@ -713,3 +713,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-06 20:46:37`: **refactor(css): consolidate shared section label and title classes**
 - `2026-09-07 09:41:44`: **responsive(mobile): convert about section to single column layout**
 - `2026-09-07 11:11:30`: **feat(projects): add brutalist project card layout with drop shadows**
+- `2026-09-07 14:53:40`: **perf(scroll): tune Lenis scroll duration and easing curve**
