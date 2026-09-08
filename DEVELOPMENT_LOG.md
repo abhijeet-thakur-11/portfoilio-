@@ -726,3 +726,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-08 13:48:21`: **feat(projects): configure GSAP horizontal scroll track**
 - `2026-09-08 14:41:17`: **style(achievements): style inverted burgundy surface block**
 - `2026-09-08 17:12:07`: **feat(nav): implement fixed header navigation with brutalist borders**
+- `2026-09-08 21:18:51`: **responsive(tablet): tune hero display font size on medium displays**
