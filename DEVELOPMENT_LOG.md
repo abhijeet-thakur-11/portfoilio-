@@ -748,3 +748,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-11 21:32:09`: **refactor(js): safe-guard 3D carousel hooks against missing DOM nodes**
 - `2026-09-12 09:41:02`: **style(about): refine statistics numerals weight and line height**
 - `2026-09-12 10:23:38`: **feat(education): create structured academic credentials card layout**
+- `2026-09-12 11:23:09`: **style(education): add 6px hard drop shadows to card elements**
