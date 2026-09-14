@@ -755,3 +755,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-13 14:08:20`: **refactor(js): optimize TextScramble effect frame rate**
 - `2026-09-13 16:33:41`: **style(projects): format project tech stack chip pills**
 - `2026-09-13 21:23:17`: **style(projects): set 65vw card dimensions and responsive padding**
+- `2026-09-14 09:33:07`: **chore(assets): organize portfolio imagery and transparency masks**
