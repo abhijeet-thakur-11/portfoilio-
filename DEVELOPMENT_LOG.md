@@ -793,3 +793,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-22 13:08:34`: **refactor(css): remove chromatic aberration rgb-split keyframes**
 - `2026-09-22 17:40:05`: **chore(release): bump portfolio production build version**
 - `2026-09-22 19:19:32`: **feat(a11y): add prefers-reduced-motion media query handling**
+- `2026-09-23 11:53:02`: **responsive(mobile): switch skills matrix to 2-column grid on mobile**
