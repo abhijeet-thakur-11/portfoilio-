@@ -835,3 +835,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-29 13:02:18`: **refactor(css): purge legacy sci-fi glowing box shadows**
 - `2026-09-29 14:25:04`: **docs(changelog): document component-by-component redesign phases**
 - `2026-09-29 15:03:24`: **responsive(mobile): collapse contact heading and stack action buttons**
+- `2026-09-29 20:36:32`: **refactor(js): safe-guard 3D carousel hooks against missing DOM nodes**
