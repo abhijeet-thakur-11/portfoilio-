@@ -837,3 +837,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-09-29 15:03:24`: **responsive(mobile): collapse contact heading and stack action buttons**
 - `2026-09-29 20:36:32`: **refactor(js): safe-guard 3D carousel hooks against missing DOM nodes**
 - `2026-09-29 22:35:28`: **style(about): refine statistics numerals weight and line height**
+- `2026-09-30 10:06:23`: **feat(education): create structured academic credentials card layout**
