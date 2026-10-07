@@ -880,3 +880,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-07 16:22:44`: **chore(git): configure project .gitignore rules**
 - `2026-10-07 16:43:16`: **refactor(markup): update Google Fonts link to Inter only**
 - `2026-10-07 17:49:39`: **docs(tokens): document color palette and 60/20/20 distribution ratios**
+- `2026-10-07 19:55:30`: **refactor(css): remove chromatic aberration rgb-split keyframes**
