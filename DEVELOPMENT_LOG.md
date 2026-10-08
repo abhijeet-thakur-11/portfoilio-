@@ -882,3 +882,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-07 17:49:39`: **docs(tokens): document color palette and 60/20/20 distribution ratios**
 - `2026-10-07 19:55:30`: **refactor(css): remove chromatic aberration rgb-split keyframes**
 - `2026-10-08 12:49:45`: **chore(release): bump portfolio production build version**
+- `2026-10-08 13:18:31`: **feat(a11y): add prefers-reduced-motion media query handling**
