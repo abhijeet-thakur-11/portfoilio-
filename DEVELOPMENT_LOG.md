@@ -992,3 +992,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-27 10:38:43`: **feat(hero): add high contrast portrait frame container**
 - `2026-10-27 10:02:45`: **feat(achievements): implement recognition leaderboard section**
 - `2026-10-27 12:28:55`: **responsive(small): refine 480px extra small display padding and typography**
+- `2026-10-27 12:38:03`: **refactor(markup): ensure semantic HTML5 landmarks across sections**
