@@ -1003,3 +1003,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-29 18:42:37`: **style(projects): style oversized numeral background badges**
 - `2026-10-29 18:33:56`: **style(about): adjust column gaps and vertical rhythm**
 - `2026-10-29 19:14:47`: **style(contact): adjust headline letter-spacing and typography hierarchy**
+- `2026-10-29 21:26:58`: **style(scrollbar): customize webkit scrollbar colors to match palette**
