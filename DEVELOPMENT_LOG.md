@@ -1039,3 +1039,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-30 13:14:23`: **style(about): verify stat numeral weights and line-heights**
 - `2026-10-30 13:28:40`: **feat(skills): structure 3-column brutalist pill matrix cells**
 - `2026-10-30 13:41:57`: **style(skills): apply 20% mocha background block surface styling**
+- `2026-10-30 13:55:14`: **style(skills): ensure zero border-radius on all interactive pills**
