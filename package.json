@@ -1,0 +1,14 @@
+{
+  "name": "akt-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of a Sentient AI Architect",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 5173",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

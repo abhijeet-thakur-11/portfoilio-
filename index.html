@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Sentient AI Architect</title>
+    <meta name="description" content="Portfolio of a Sentient AI Architect — crafting intelligent systems at the intersection of AI, design, and hardware.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <canvas id="three-canvas"></canvas>
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+
+    <!-- Noise Grain Overlay -->
+    <div id="noise"></div>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="nav-logo">HELLO<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about" class="magnetic">About</a></li>
+            <li><a href="#skills" class="magnetic">Skills</a></li>
+            <li><a href="#projects" class="magnetic">Projects</a></li>
+            <li><a href="#contact" class="magnetic">Contact</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            Open for Collaboration
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero">
+        <div class="hero-content">
+            <p class="hero-label reveal">// CONSCIOUSNESS : AWAKE</p>
+            <h1 class="hero-title reveal">
+                DATA & <span class="accent">AI</span><br>
+                ENTHUSIAST
+            </h1>
+            <p class="hero-subtitle reveal">
+                Exploring and engineering intelligent solutions at the intersection of machine learning, complex data analytics, and software development.
+            </p>
+            <a href="#projects" class="hero-cta magnetic reveal">
+                View Projects <span class="arrow">→</span>
+            </a>
+        </div>
+        <div class="hero-portrait reveal">
+            <div class="portrait-wrapper">
+                <img src="WhatsApp_Image_2026-04-23_at_00.44.01-removebg-preview.png" alt="Abhijeet Thakur" class="portrait-img" />
+                <div class="portrait-hover-overlay"></div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator reveal">
+            <div class="scroll-line"></div>
+            Scroll to explore
+        </div>
+    </section>
+
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+        <div>
+            <div class="section-label reveal">// About</div>
+            <h2 class="section-title reveal scramble-target">WHO AM I</h2>
+            <h3 style="font-family: var(--font-sans); font-style: normal; font-size: var(--text-32); color: var(--color-burgundy); font-weight: 700; margin-bottom: 1.5rem;" class="reveal">Abhijeet Thakur</h3>
+            <p class="about-text reveal">
+                I am a passionate technologist specializing in Artificial Intelligence, Machine Learning, and Data Science. With hands-on experience in building intelligent systems — from AI-powered wearable devices to gamified environmental platforms — I bring a disciplined, engineering-first approach to solving real-world problems. My work sits at the convergence of deep learning, computer vision, and full-stack development, delivering solutions that are both technically robust and user-centric.
+            </p>
+        </div>
+        <div class="about-stats reveal">
+            <div class="stat">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Months Building</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Projects Shipped</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">AI/ML</div>
+                <div class="stat-label">& Data Science</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Curiosity</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills">
+        <div class="section-label reveal">// The Arsenal</div>
+        <h2 class="section-title reveal scramble-target">SKILLS</h2>
+        <div class="skills-pill-grid reveal">
+            <div class="skill-category-block">
+                <span class="skill-cat-label">Foundations</span>
+                <div class="skill-pills">
+                    <span class="pill">Python</span>
+                    <span class="pill">TypeScript</span>
+                    <span class="pill">JavaScript</span>
+                    <span class="pill">C / C++</span>
+                    <span class="pill">Java</span>
+                </div>
+            </div>
+            <div class="skill-category-block">
+                <span class="skill-cat-label">AI / ML</span>
+                <div class="skill-pills">
+                    <span class="pill accent">PyTorch</span>
+                    <span class="pill accent">TensorFlow</span>
+                    <span class="pill accent">OpenCV</span>
+                    <span class="pill">NumPy</span>
+                    <span class="pill">Pandas</span>
+                    <span class="pill">Scikit-learn</span>
+                </div>
+            </div>
+            <div class="skill-category-block">
+                <span class="skill-cat-label">Web Architecture</span>
+                <div class="skill-pills">
+                    <span class="pill">Next.js</span>
+                    <span class="pill">SvelteKit</span>
+                    <span class="pill">FastAPI</span>
+                    <span class="pill">Node.js</span>
+                    <span class="pill">Socket.IO</span>
+                </div>
+            </div>
+            <div class="skill-category-block">
+                <span class="skill-cat-label">Data Layer</span>
+                <div class="skill-pills">
+                    <span class="pill">PostgreSQL</span>
+                    <span class="pill">MongoDB</span>
+                    <span class="pill">Supabase</span>
+                    <span class="pill">Prisma</span>
+                    <span class="pill">Firebase</span>
+                </div>
+            </div>
+            <div class="skill-category-block">
+                <span class="skill-cat-label">IoT / Embedded</span>
+                <div class="skill-pills">
+                    <span class="pill">Arduino</span>
+                    <span class="pill">Raspberry Pi</span>
+                    <span class="pill">ESP32</span>
+                    <span class="pill">Home Assistant</span>
+                    <span class="pill">Meta APIs</span>
+                </div>
+            </div>
+            <div class="skill-category-block">
+                <span class="skill-cat-label">Cloud & Deploy</span>
+                <div class="skill-pills">
+                    <span class="pill">GitHub Actions</span>
+                    <span class="pill">Git</span>
+                    <span class="pill">Vercel</span>
+                    <span class="pill">Netlify</span>
+                    <span class="pill">Render</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education">
+      <div class="section-label reveal">// Academic Background</div>
+      <h2 class="section-title reveal scramble-target">EDUCATION</h2>
+      <div class="edu-thread-container reveal">
+        <!-- Vertical thread line -->
+        <div class="thread-line"></div>
+
+        <!-- Knot 1 (top) -->
+        <div class="thread-knot knot-top">
+          <div class="knot-dot"></div>
+          <div class="knot-label">2024 – Present</div>
+          <!-- Card hanging right -->
+          <div class="edu-hang-card hang-right">
+            <div class="hang-wire"></div>
+            <div class="edu-card-inner">
+              <span class="edu-tag">B.Tech · New Delhi</span>
+              <h3 class="edu-title">B.Tech CSE – Data Science</h3>
+              <p class="edu-institution">Guru Gobind Singh Indraprastha University (GGSIPU)</p>
+              <p class="edu-desc">First Year — specialising in Data Science with core CS fundamentals alongside modern DS/AI coursework.</p>
+              <div class="edu-badge">Ongoing</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Knot 2 (bottom) -->
+        <div class="thread-knot knot-bottom">
+          <div class="knot-dot"></div>
+          <div class="knot-label">Completed</div>
+          <!-- Card hanging left -->
+          <div class="edu-hang-card hang-left">
+            <div class="hang-wire"></div>
+            <div class="edu-card-inner">
+              <span class="edu-tag">Class XII · CBSE</span>
+              <h3 class="edu-title">Senior Secondary</h3>
+              <p class="edu-institution">CBSE Board — Delhi, India</p>
+              <p class="edu-desc">Completed Senior Secondary education under the Central Board of Secondary Education, Delhi region.</p>
+              <div class="edu-badge">CBSE · Completed</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS / HORIZONTAL SCROLL ============ -->
+    <section id="projects">
+        <div class="section-label reveal">// Selected Work</div>
+        <h2 class="section-title reveal scramble-target">PROJECTS</h2>
+
+        <div class="projects-wrapper">
+            <div class="projects-track">
+
+                <!-- Project 1: SweepX -->
+                <div class="project-card sweepx magnetic">
+                    <div class="project-bg"></div>
+                    <span class="project-number">01</span>
+                    <div class="project-content">
+                        <span class="project-tag">Environmental Tech</span>
+                        <h3 class="project-title scramble-target">SWEEPX</h3>
+                        <p class="project-desc">
+                            A gamified environmental platform that turns cleanup into adventure. Real-time leaderboards, AI-powered waste detection, and community-driven impact tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span>SvelteKit</span>
+                            <span>YOLOv8</span>
+                            <span>MongoDB</span>
+                            <span>Mapbox</span>
+                        </div>
+                        <a href="https://sweep-x.vercel.app/" target="_blank" class="project-link">
+                            Explore <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Vision-Aid -->
+                <div class="project-card visionaid magnetic">
+                    <div class="project-bg"></div>
+                    <span class="project-number">02</span>
+                    <div class="project-content">
+                        <span class="project-tag">AI Wearable</span>
+                        <h3 class="project-title scramble-target">VISION-AID</h3>
+                        <p class="project-desc">
+                            An AI-powered wearable navigation device for the visually impaired. Real-time obstacle detection, voice guidance, and spatial mapping built on embedded hardware.
+                        </p>
+                        <div class="project-tech">
+                            <span>ESP32</span>
+                            <span>OpenCV</span>
+                            <span>PyTorch</span>
+                            <span>PCB Design</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Explore <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section id="achievements">
+        <div class="section-label reveal">// Recognition</div>
+        <h2 class="section-title reveal scramble-target">ACHIEVEMENTS</h2>
+        <div class="ach-list">
+            <div class="ach-item reveal" data-rank="01">
+                <div class="ach-rank">01</div>
+                <div class="ach-body">
+                    <span class="ach-badge winner">🏆 WINNER</span>
+                    <h3 class="ach-title">GencodeX Hackathon</h3>
+                    <p class="ach-org">Organised by JEMTEC, Greater Noida</p>
+                </div>
+                <div class="ach-glyph">⬡</div>
+            </div>
+            <div class="ach-item reveal" data-rank="02">
+                <div class="ach-rank">02</div>
+                <div class="ach-body">
+                    <span class="ach-badge finalist">★ FINALIST</span>
+                    <h3 class="ach-title">Brainwave Hackathon</h3>
+                    <p class="ach-org">Organised by DTU, Delhi</p>
+                </div>
+                <div class="ach-glyph">⬡</div>
+            </div>
+            <div class="ach-item reveal" data-rank="03">
+                <div class="ach-rank">03</div>
+                <div class="ach-body">
+                    <span class="ach-badge finalist">★ FINALIST</span>
+                    <h3 class="ach-title">Ideathon</h3>
+                    <p class="ach-org">Organised by TIIPS, Greater Noida</p>
+                </div>
+                <div class="ach-glyph">⬡</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+        <div class="section-label reveal">// Get In Touch</div>
+        <h2 class="contact-heading reveal">
+            LET'S BUILD<br>
+            <span class="serif-accent">something</span><br>
+            SENTIENT
+        </h2>
+        <div class="contact-links reveal">
+            <a href="mailto:abhijeetthakur.nov2006@gmail.com" class="contact-link magnetic">Email</a>
+            <a href="https://github.com/abhijeet-thakur-11" target="_blank" class="contact-link magnetic">GitHub</a>
+            <a href="https://www.linkedin.com/in/abhijeet-thakur-4ba311378?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" class="contact-link magnetic">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span>© 2026 AKT — All rights reserved</span>
+        <span>Built with obsession</span>
+    </footer>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <script>
+    /* =========================================
+       SENTIENT AI DASHBOARD — MAIN JS
+       ========================================= */
+
+    (function() {
+        'use strict';
+
+        // -------- 1. LENIS SMOOTH SCROLL --------
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            smoothWheel: true,
+        });
+
+        // Integrate Lenis with GSAP ticker
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+
+        // -------- 2. CUSTOM CURSOR --------
+        const cursor = document.getElementById('cursor');
+        let mouseX = 0, mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Smooth cursor follow
+        function updateCursor() {
+            gsap.to(cursor, {
+                x: mouseX,
+                y: mouseY,
+                duration: 0.15,
+                ease: 'power2.out',
+            });
+            requestAnimationFrame(updateCursor);
+        }
+        updateCursor();
+
+        // Expand cursor on interactive elements
+        document.querySelectorAll('a, button, .bento-item, .project-card, .magnetic').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+        });
+
+        // -------- 3. MAGNETIC EFFECT --------
+        document.querySelectorAll('.magnetic').forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - (rect.left + rect.width / 2);
+                const y = e.clientY - (rect.top + rect.height / 2);
+                gsap.to(el, { x: x * 0.15, y: y * 0.15, duration: 0.3, ease: 'power2.out' });
+            });
+            el.addEventListener('mouseleave', () => {
+                gsap.to(el, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
+            });
+        });
+
+        // -------- 4. THREE.JS HERO — GLASSMORPHISM SPHERE --------
+        (function initHeroScene() {
+            const canvas = document.getElementById('three-canvas');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.z = 5;
+
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Glassmorphism sphere (wireframe icosahedron)
+            const geometry = new THREE.IcosahedronGeometry(2.2, 1);
+            const material = new THREE.MeshPhysicalMaterial({
+                color: 0xf0ebe1,
+                metalness: 0.1,
+                roughness: 0.3,
+                transmission: 0.85,
+                thickness: 0.5,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.25,
+            });
+            const sphere = new THREE.Mesh(geometry, material);
+            scene.add(sphere);
+
+            // Inner glow sphere
+            const innerGeo = new THREE.IcosahedronGeometry(1.8, 2);
+            const innerMat = new THREE.MeshBasicMaterial({
+                color: 0xc94a2b,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.06,
+            });
+            const innerSphere = new THREE.Mesh(innerGeo, innerMat);
+            scene.add(innerSphere);
+
+            // Particle field
+            const particlesGeo = new THREE.BufferGeometry();
+            const particleCount = 300;
+            const positions = new Float32Array(particleCount * 3);
+            for (let i = 0; i < particleCount * 3; i++) {
+                positions[i] = (Math.random() - 0.5) * 15;
+            }
+            particlesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            const particlesMat = new THREE.PointsMaterial({
+                color: 0xf0ebe1,
+                size: 0.015,
+                transparent: true,
+                opacity: 0.4,
+            });
+            const particles = new THREE.Points(particlesGeo, particlesMat);
+            scene.add(particles);
+
+            // Cursor-tracking point light
+            const pointLight = new THREE.PointLight(0xc94a2b, 2, 15);
+            pointLight.position.set(2, 2, 3);
+            scene.add(pointLight);
+
+            const ambientLight = new THREE.AmbientLight(0xf0ebe1, 0.15);
+            scene.add(ambientLight);
+
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+
+                // Rotate sphere gently
+                sphere.rotation.x += 0.002;
+                sphere.rotation.y += 0.003;
+                innerSphere.rotation.x -= 0.001;
+                innerSphere.rotation.y -= 0.002;
+                particles.rotation.y += 0.0003;
+
+                // Track cursor with light
+                const normalizedX = (mouseX / window.innerWidth) * 2 - 1;
+                const normalizedY = -(mouseY / window.innerHeight) * 2 + 1;
+                pointLight.position.x += (normalizedX * 4 - pointLight.position.x) * 0.05;
+                pointLight.position.y += (normalizedY * 4 - pointLight.position.y) * 0.05;
+
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        })();
+
+        // -------- 5. GSAP REVEAL ANIMATIONS --------
+        gsap.registerPlugin(ScrollTrigger);
+
+        // General reveal
+        gsap.utils.toArray('.reveal').forEach((el, i) => {
+            gsap.fromTo(el,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none',
+                    },
+                    delay: i % 4 * 0.1, // stagger within viewport
+                }
+            );
+        });
+
+        // Hero entrance (immediate, no scroll trigger)
+        const heroTl = gsap.timeline({ delay: 0.5 });
+        heroTl
+            .to('.hero-label', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
+            .to('.hero-title', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, '-=0.4')
+            .to('.hero-subtitle', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
+            .to('.hero-cta', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
+            .to('.hero-scroll-indicator', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3');
+
+        // -------- 6. 3D TECH BELT CAROUSEL --------
+        (function initTechBelt() {
+            const belt = document.querySelector('.tech-belt');
+            const cards = document.querySelectorAll('.tech-card');
+            const prevBtn = document.querySelector('.nav-btn.prev');
+            const nextBtn = document.querySelector('.nav-btn.next');
+            const pageCurrent = document.querySelector('.page-current');
+
+            if (!belt || cards.length === 0) return;
+
+            let currentIndex = 0;
+            const totalCards = cards.length;
+            const angleStep = 360 / totalCards;
+            let currentRotation = 0;
+
+            function updateCarousel() {
+                // Rotate the belt
+                gsap.to(belt, {
+                    rotationY: currentRotation,
+                    duration: 1.2,
+                    ease: 'power3.out'
+                });
+
+                // Update active state for cards
+                cards.forEach((card, i) => {
+                    if (i === currentIndex) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+
+                // Update pagination
+                if (pageCurrent) {
+                    pageCurrent.textContent = (currentIndex + 1).toString().padStart(2, '0');
+                }
+            }
+
+            // Initial call
+            updateCarousel();
+
+            nextBtn.addEventListener('click', () => {
+                currentRotation -= angleStep;
+                currentIndex = (currentIndex + 1) % totalCards;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentRotation += angleStep;
+                currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+                updateCarousel();
+            });
+
+            // Optional: Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                const skillsSection = document.getElementById('skills');
+                const rect = skillsSection.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (isVisible) {
+                    if (e.key === 'ArrowRight') nextBtn.click();
+                    if (e.key === 'ArrowLeft') prevBtn.click();
+                }
+            });
+        })();
+
+        // -------- 7. HORIZONTAL SCROLL PROJECTS --------
+        (function initHorizontalScroll() {
+            const track = document.querySelector('.projects-track');
+            const cards = gsap.utils.toArray('.project-card');
+            if (!track || cards.length === 0) return;
+
+            const wrapper = document.querySelector('.projects-wrapper');
+            const totalScrollWidth = cards.length * (window.innerWidth * 0.7 + 48); // card width + gap
+
+            // Set wrapper height to create scroll space
+            wrapper.style.height = totalScrollWidth + 'px';
+
+            gsap.to(track, {
+                x: () => -(totalScrollWidth - window.innerWidth),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: wrapper,
+                    start: 'top top',
+                    end: () => '+=' + totalScrollWidth,
+                    pin: true,
+                    scrub: 1,
+                    invalidateOnRefresh: true,
+                    anticipatePin: 1,
+                },
+            });
+        })();
+
+        // -------- 7. TEXT SCRAMBLE EFFECT --------
+        class TextScramble {
+            constructor(el) {
+                this.el = el;
+                this.chars = '!<>-_\\/[]{}—=+*^?#_ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                this.originalText = el.textContent;
+                this.frameRequest = null;
+                this.frame = 0;
+                this.queue = [];
+                this.resolve = null;
+            }
+
+            setText(newText) {
+                const oldText = this.el.textContent;
+                const length = Math.max(oldText.length, newText.length);
+                const promise = new Promise((resolve) => this.resolve = resolve);
+                this.queue = [];
+
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || '';
+                    const to = newText[i] || '';
+                    const start = Math.floor(Math.random() * 20);
+                    const end = start + Math.floor(Math.random() * 20);
+                    this.queue.push({ from, to, start, end });
+                }
+
+                cancelAnimationFrame(this.frameRequest);
+                this.frame = 0;
+                this.update();
+                return promise;
+            }
+
+            update() {
+                let output = '';
+                let complete = 0;
+
+                for (let i = 0; i < this.queue.length; i++) {
+                    let { from, to, start, end, char } = this.queue[i];
+
+                    if (this.frame >= end) {
+                        complete++;
+                        output += to;
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.chars[Math.floor(Math.random() * this.chars.length)];
+                            this.queue[i].char = char;
+                        }
+                        output += `<span style="color: var(--color-burgundy); opacity: 0.7;">${char}</span>`;
+                    } else {
+                        output += from;
+                    }
+                }
+
+                this.el.innerHTML = output;
+
+                if (complete === this.queue.length) {
+                    if (this.resolve) this.resolve();
+                } else {
+                    this.frameRequest = requestAnimationFrame(() => this.update());
+                    this.frame++;
+                }
+            }
+        }
+
+        // Apply scramble to all target elements when they enter viewport
+        document.querySelectorAll('.scramble-target').forEach(el => {
+            const scrambler = new TextScramble(el);
+            const originalText = el.textContent;
+
+            // Set initial scrambled look
+            el.textContent = originalText;
+
+            ScrollTrigger.create({
+                trigger: el,
+                start: 'top 80%',
+                onEnter: () => {
+                    scrambler.setText(originalText);
+                },
+                once: true,
+            });
+        });
+
+        // -------- 8. NAV SMOOTH SCROLL LINKS --------
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+                }
+            });
+        });
+
+
+        // Skill bar reveal
+        gsap.utils.toArray('.skill-row').forEach(row => {
+            const bar = row.querySelector('.skill-bar');
+            let skillVal = row.getAttribute('data-skill');
+            ScrollTrigger.create({
+                trigger: row,
+                start: 'top 85%',
+                onEnter: () => { bar.style.width = skillVal + '%'; }
+            });
+        });
+
+        // Add reveal-scale behavior just in case
+        gsap.utils.toArray('.reveal-scale').forEach(el => {
+            gsap.fromTo(el, 
+                { opacity: 0, scale: 0.9, y: 30 },
+                { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%' } }
+            );
+        });
+
+    })();
+    </script>
+
+</body>
+</html>
