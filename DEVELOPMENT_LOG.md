@@ -1030,3 +1030,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-30 11:14:50`: **feat(nav): ensure 44px minimum touch targets on all navigation links**
 - `2026-10-30 11:27:07`: **feat(nav): add aria-label landmark for assistive technologies**
 - `2026-10-30 11:40:24`: **style(nav): tune fixed header z-index and border-bottom contrast**
+- `2026-10-30 11:54:41`: **feat(hero): align 12-column grid tracks with global margin tokens**
