@@ -1042,3 +1042,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-30 13:55:14`: **style(skills): ensure zero border-radius on all interactive pills**
 - `2026-10-30 14:08:31`: **feat(skills): add instant color inversion hover states on pills**
 - `2026-10-30 14:21:48`: **feat(education): format academic credentials in clean 2-column cards**
+- `2026-10-30 14:35:05`: **style(education): add 6px solid brutalist drop shadows without blur**
