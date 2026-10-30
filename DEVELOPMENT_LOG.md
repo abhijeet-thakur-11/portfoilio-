@@ -1046,3 +1046,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-30 14:48:22`: **style(education): format ongoing status badge and degree titles**
 - `2026-10-30 15:02:39`: **feat(projects): preserve GSAP horizontal scroll track functionality**
 - `2026-10-30 15:15:56`: **style(projects): format brutalist project cards in mocha surface**
+- `2026-10-30 15:28:13`: **style(projects): ensure oversized background numbers have 0.12 opacity**
