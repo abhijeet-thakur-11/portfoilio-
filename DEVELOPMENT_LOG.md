@@ -1017,3 +1017,4 @@ Chronological audit trail of development milestones and redesign commits for the
 - `2026-10-30 19:34:03`: **responsive(mobile): collapse contact heading and stack action buttons**
 - `2026-10-30 19:30:35`: **refactor(js): safe-guard 3D carousel hooks against missing DOM nodes**
 - `2026-10-30 21:15:26`: **feat: complete Swiss Design + Brutalism UI redesign across all portfolio pages**
+- `2026-10-30 09:00:00`: **docs: add comprehensive design architecture in README**
