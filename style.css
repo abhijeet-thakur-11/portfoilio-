@@ -217,8 +217,8 @@ nav {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
     font-weight: var(--fw-bold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-transform: none;
     color: var(--color-burgundy);
     padding: var(--sp-8) var(--sp-16);
     border: var(--border-thin);
@@ -253,8 +253,8 @@ nav {
 .meta-tag {
     font-size: var(--text-xs);
     font-weight: var(--fw-bold);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-transform: none;
     color: var(--color-burgundy);
     padding: var(--sp-4) var(--sp-12);
     border: var(--border-thin);
@@ -269,7 +269,7 @@ nav {
     font-weight: var(--fw-black);
     line-height: var(--lh-display);
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--color-burgundy);
     margin-bottom: var(--sp-32);
 }
@@ -414,13 +414,14 @@ nav {
 
 .portrait-caption {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: var(--sp-12) var(--sp-24);
     background-color: var(--color-burgundy);
     font-size: var(--text-xs);
     font-weight: var(--fw-bold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-transform: none;
     color: var(--color-latte);
 }
 
@@ -845,74 +846,107 @@ nav {
     box-shadow: var(--shadow-hard);
 }
 
-/* --- 10. ACHIEVEMENTS SECTION (20% DEEP BURGUNDY INVERTED) --- */
+/* --- 10. ACHIEVEMENTS SECTION — TIMELINE SPINE --- */
 #achievements {
-    padding: var(--page-padding-v) var(--page-padding-h);
-    background-color: var(--color-burgundy); /* 20% Deep Burgundy Block */
+    padding: var(--sp-48) var(--page-padding-h);
+    background-color: var(--color-burgundy);
     color: var(--color-latte);
     border-bottom: var(--border-thick);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.ach-header {
+    margin-bottom: var(--sp-24);
 }
 
 #achievements .section-label {
     background-color: var(--color-burgundy);
     color: var(--color-latte);
-    border-color: var(--color-latte);
+    border-color: rgba(200, 169, 139, 0.6);
 }
 
 #achievements .section-title {
     color: var(--color-latte);
+    margin-top: var(--sp-8);
+    margin-bottom: 0;
 }
 
-.achievements-layout {
+/* ---- Timeline grid ---- */
+.ach-timeline {
+    position: relative;
     display: grid;
-    grid-template-columns: 7fr 5fr;
-    gap: var(--sp-48);
-    align-items: start;
+    grid-template-columns: 1fr 24px 1fr;
+    /* 5 rows, auto height, evenly distributed */
+    grid-template-rows: repeat(5, 1fr);
+    flex: 1;
+    min-height: 0;
 }
 
-.ach-table {
+/* The vertical spine in the centre column */
+.ach-spine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--color-mocha);
+    z-index: 0;
+}
+
+/* Each milestone row — display:contents so children slot into parent grid */
+.ach-item { display: contents; }
+
+/* Left-side items: card in col 1, node in col 2 */
+.ach-left .ach-card  { grid-column: 1; justify-self: end;   align-self: center; padding-right: var(--sp-24); }
+.ach-left .ach-node  { grid-column: 2; justify-self: center; align-self: center; }
+/* Placeholder to keep right column occupied */
+.ach-left .ach-card  + .ach-node { /* no right-cell needed, CSS grid fills implicitly */ }
+
+/* Right-side items: node in col 2, card in col 3 */
+.ach-right .ach-node { grid-column: 2; justify-self: center; align-self: center; }
+.ach-right .ach-card { grid-column: 3; justify-self: start;  align-self: center; padding-left: var(--sp-24); }
+
+/* Spine node dot */
+.ach-node {
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-burgundy);
+    border: 3px solid var(--color-mocha);
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* Card */
+.ach-card {
+    border: 2px solid rgba(200, 169, 139, 0.5);
+    background-color: rgba(63, 5, 20, 0.55);
+    padding: var(--sp-12) var(--sp-16);
     display: flex;
     flex-direction: column;
-    border-top: 2px solid var(--color-mocha);
+    gap: var(--sp-8);
+    width: 100%;
+    max-width: 360px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.ach-row {
-    display: grid;
-    grid-template-columns: 80px 1fr 40px;
-    align-items: center;
-    gap: var(--sp-24);
-    padding: var(--sp-24) 0;
-    border-bottom: 2px solid rgba(200, 169, 139, 0.35);
-    transition: var(--trans-fast);
-}
-
-.ach-row:hover {
-    background-color: rgba(200, 169, 139, 0.1);
-    padding-left: var(--sp-16);
-    padding-right: var(--sp-16);
-}
-
-.ach-rank-num {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: var(--fw-black);
-    color: var(--color-mocha);
-    line-height: 1;
-}
-
-.ach-content {
-    display: flex;
-    flex-direction: column;
+.ach-card:hover {
+    border-color: var(--color-mocha);
+    background-color: rgba(63, 5, 20, 0.8);
 }
 
 .ach-badge {
     font-size: var(--text-xs);
     font-weight: var(--fw-bold);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: var(--sp-4) var(--sp-12);
-    border: 2px solid var(--color-mocha);
+    letter-spacing: 0.08em;
+    padding: 3px var(--sp-8);
+    border: 1px solid var(--color-mocha);
     align-self: flex-start;
-    margin-bottom: var(--sp-8);
 }
 
 .ach-badge.winner {
@@ -921,86 +955,45 @@ nav {
     border-color: var(--color-mocha);
 }
 
+.ach-badge.runner-up {
+    background-color: transparent;
+    color: var(--color-mocha-light);
+    border-color: var(--color-mocha-light);
+}
+
 .ach-badge.finalist {
     background-color: transparent;
     color: var(--color-mocha);
+    border-color: rgba(200, 169, 139, 0.5);
 }
 
 .ach-name {
-    font-size: var(--text-lg);
-    font-weight: var(--fw-black);
-    text-transform: uppercase;
-    color: var(--color-latte);
-    line-height: var(--lh-heading);
-    margin-bottom: var(--sp-4);
-}
-
-.ach-org {
-    font-size: var(--text-sm);
-    color: var(--color-mocha);
-    font-weight: var(--fw-medium);
-}
-
-.ach-icon {
-    font-size: var(--text-xl);
-    color: var(--color-mocha);
-    opacity: 0.6;
-    text-align: right;
-}
-
-/* Verified Trophy Plaque */
-.ach-trophy-card {
-    border: var(--border-thick);
-    border-color: var(--color-mocha);
-    background-color: #420715;
-    box-shadow: 10px 10px 0px var(--color-mocha);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.ach-trophy-img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: top center;
-    border-bottom: var(--border-thick);
-    border-color: var(--color-mocha);
-    filter: contrast(1.05) saturate(1.05);
-}
-
-.ach-trophy-meta {
-    padding: var(--sp-24);
-    display: flex;
-    flex-direction: column;
-    gap: var(--sp-8);
-}
-
-.ach-trophy-badge {
-    font-size: var(--text-xs);
-    font-weight: var(--fw-bold);
-    letter-spacing: 0.15em;
-    color: var(--color-burgundy);
-    background-color: var(--color-mocha);
-    padding: var(--sp-4) var(--sp-12);
-    align-self: flex-start;
-    text-transform: uppercase;
-}
-
-.ach-trophy-title {
-    font-size: var(--text-md);
+    font-size: var(--text-base);
     font-weight: var(--fw-black);
     color: var(--color-latte);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    line-height: 1.2;
     margin: 0;
 }
 
-.ach-trophy-desc {
-    font-size: var(--text-xs);
+.ach-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+}
+
+.ach-tag {
+    font-size: 0.68rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.04em;
     color: var(--color-mocha);
-    line-height: var(--lh-body);
-    margin: 0;
+    border: 1px solid rgba(200, 169, 139, 0.35);
+    padding: 2px var(--sp-8);
+}
+
+.ach-tag.highlight {
+    background-color: rgba(200, 169, 139, 0.15);
+    color: var(--color-mocha-light);
+    border-color: rgba(200, 169, 139, 0.5);
 }
 
 /* --- 11. CONTACT SECTION --- */
@@ -1138,8 +1131,7 @@ footer {
 
     .achievements-layout {
         grid-template-columns: 1fr;
-    }
-}
+    }}
 
 @media (max-width: 768px) {
     :root {
@@ -1182,13 +1174,13 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .ach-row {
-        grid-template-columns: 60px 1fr;
-        gap: var(--sp-16);
+    /* Timeline responsive: stack to single column on mobile */
+    .ach-timeline {
+        grid-template-columns: 1fr 18px 1fr;
     }
 
-    .ach-icon {
-        display: none;
+    .ach-card {
+        max-width: 260px;
     }
 
     .footer-inner {
