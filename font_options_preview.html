@@ -8,7 +8,7 @@
     <!-- Google Fonts Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=Italiana&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;600;700;800&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Prata&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=Italiana&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;600;700;800&family=Marcellus&family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Prata&family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -329,6 +329,13 @@
         .creative-5 .mockup-text { font-family: 'Inter', sans-serif; font-size: 1rem; }
         .creative-5 .mock-number { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 3.8rem; }
 
+        /* FONTJOY COMBO: Alex Brush + Raleway + Montserrat Alternates */
+        .fontjoy-combo .mockup-title { font-family: 'Alex Brush', cursive; font-size: 5.5rem; text-transform: none; line-height: 1.1; letter-spacing: 0.02em; }
+        .fontjoy-combo .mockup-name { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 2.2rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .fontjoy-combo .mockup-label, .fontjoy-combo .mock-stat-label, .fontjoy-combo .timeline-badge { font-family: 'Raleway', sans-serif; font-weight: 800; letter-spacing: 0.18em; }
+        .fontjoy-combo .mockup-text { font-family: 'Montserrat Alternates', sans-serif; font-weight: 400; font-size: 0.98rem; line-height: 1.72; }
+        .fontjoy-combo .mock-number { font-family: 'Alex Brush', cursive; font-size: 4.5rem; line-height: 0.85; }
+
         @media (max-width: 900px) {
             .mockup-grid { grid-template-columns: 1fr; }
             .option-panel { padding: 24px; }
@@ -344,10 +351,11 @@
             <span class="masthead-badge">5 Creative Variations</span>
         </div>
         <nav class="nav-sections">
-            <button class="tab-btn active" onclick="showOption('c1')">1. Florentine Avant-Garde (Italiana)</button>
-            <button class="tab-btn" onclick="showOption('c2')">2. Parisian Haute-Editorial (Prata)</button>
-            <button class="tab-btn" onclick="showOption('c3')">3. Sculptural (Fraunces Wonky)</button>
-            <button class="tab-btn" onclick="showOption('c4')">4. Hybrid Monograph (Serif+Syne)</button>
+            <button class="tab-btn active" onclick="showOption('fontjoy')">✨ Fontjoy (Alex Brush + Raleway + Montserrat)</button>
+            <button class="tab-btn" onclick="showOption('c1')">1. Florentine (Italiana)</button>
+            <button class="tab-btn" onclick="showOption('c2')">2. Parisian (Prata)</button>
+            <button class="tab-btn" onclick="showOption('c3')">3. Sculptural (Fraunces)</button>
+            <button class="tab-btn" onclick="showOption('c4')">4. Hybrid (Serif+Syne)</button>
             <button class="tab-btn" onclick="showOption('c5')">5. Cryptographer (Newsreader)</button>
         </nav>
     </header>
@@ -355,7 +363,7 @@
     <main class="main-container">
 
         <!-- CREATIVE 1: Florentine Avant-Garde -->
-        <section id="c1" class="option-panel creative-1 active">
+        <section id="c1" class="option-panel creative-1">
             <div class="spec-bar">
                 <div class="spec-item">
                     <span class="spec-label">Header Display</span>
@@ -636,6 +644,72 @@
                 <div class="spec-item">
                     <span class="spec-label">Vibe &amp; Distinction</span>
                     <span class="spec-value">Academic Cryptography &amp; Scholarly Monograph</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">// About · Intelligent Systems</div>
+                    <h1 class="mockup-title">Who am I</h1>
+                    <h2 class="mockup-name">Abhijeet Thakur</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">Hackathon Winner</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">Repositories Shipped</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">🏆 3x WINNER</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">★ 10x FINALIST</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FONTJOY COMBO: Alex Brush + Raleway + Montserrat Alternates -->
+        <section id="fontjoy" class="option-panel fontjoy-combo active">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Font</span>
+                    <span class="spec-value">Alex Brush (Calligraphic Script)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Metadata</span>
+                    <span class="spec-value">Raleway (Geometric 800)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">Montserrat Alternates (400)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Design Aesthetic</span>
+                    <span class="spec-value">Handwritten Calligraphy + Clean Architecture</span>
                 </div>
             </div>
 
