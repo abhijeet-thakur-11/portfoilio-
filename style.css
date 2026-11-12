@@ -451,6 +451,17 @@ nav {
     border-bottom: var(--border-thick);
 }
 
+#about .section-title {
+    font-family: var(--font-sub);
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--color-burgundy);
+    line-height: var(--lh-heading);
+    margin-bottom: var(--sp-48);
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
