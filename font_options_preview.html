@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography System — Font Options Showcase</title>
+
+    <!-- Google Fonts Stack -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;600;700;800&family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-latte: #FFF8E7;
+            --color-latte-card: #FFFDF5;
+            --color-mocha: #C8A98B;
+            --color-mocha-light: #DEC9B5;
+            --color-mocha-dark: #A58161;
+            --color-burgundy: #5C0A1E;
+            --color-burgundy-dark: #3F0514;
+            --border-thin: 2px solid var(--color-burgundy);
+            --border-thick: 4px solid var(--color-burgundy);
+            --shadow-hard: 6px 6px 0px var(--color-burgundy);
+            --shadow-hard-lg: 9px 9px 0px var(--color-burgundy);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 0 !important;
+        }
+
+        body {
+            background-color: var(--color-latte);
+            color: var(--color-burgundy);
+            font-family: 'Inter', sans-serif;
+            padding: 0 0 80px 0;
+            line-height: 1.6;
+        }
+
+        /* Top Bar */
+        .masthead {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--color-latte);
+            border-bottom: var(--border-thick);
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .masthead-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background-color: var(--color-latte-card);
+            border: var(--border-thin);
+            color: var(--color-burgundy);
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px var(--color-burgundy);
+            transition: all 0.15s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--color-mocha);
+            transform: translate(-1px, -1px);
+        }
+
+        .tab-btn.active {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            box-shadow: 3px 3px 0px var(--color-burgundy-dark);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .option-panel {
+            display: none;
+            background-color: var(--color-latte-card);
+            border: var(--border-thick);
+            box-shadow: var(--shadow-hard-lg);
+            padding: 48px;
+            margin-bottom: 48px;
+        }
+
+        .option-panel.active {
+            display: block;
+        }
+
+        /* Option Meta Header */
+        .spec-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            padding: 20px 24px;
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--color-mocha);
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .spec-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-mocha-light);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        .spec-value {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        /* Mockup Layout */
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .mockup-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .mockup-label {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border: var(--border-thin);
+            background-color: var(--color-latte);
+            color: var(--color-burgundy);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .mockup-title {
+            font-size: clamp(2.5rem, 5vw, 4.25rem);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: var(--color-burgundy);
+            margin-bottom: 12px;
+        }
+
+        .mockup-name {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: var(--color-burgundy);
+            margin-bottom: 20px;
+        }
+
+        .mockup-text {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--color-burgundy);
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .mockup-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            width: 100%;
+        }
+
+        .mock-card {
+            background-color: var(--color-latte);
+            border: var(--border-thick);
+            box-shadow: var(--shadow-hard);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mock-card.highlight {
+            background-color: var(--color-mocha);
+        }
+
+        .mock-number {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--color-burgundy);
+            margin-bottom: 8px;
+        }
+
+        .mock-stat-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-burgundy);
+        }
+
+        .timeline-preview {
+            margin-top: 36px;
+            padding-top: 36px;
+            border-top: var(--border-thick);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .timeline-card {
+            background-color: var(--color-latte);
+            border: var(--border-thin);
+            padding: 16px 20px;
+            box-shadow: 4px 4px 0px var(--color-burgundy);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .timeline-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 8px;
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            letter-spacing: 0.05em;
+        }
+
+        .timeline-name {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--color-burgundy);
+        }
+
+        .timeline-tags {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-mocha-dark);
+        }
+
+        /* Specific Pairing Fonts */
+        /* OPTION 1: Architectural Studio */
+        .pairing-1 .mockup-title { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; text-transform: none; font-size: 4.8rem; }
+        .pairing-1 .mockup-label, .pairing-1 .mock-stat-label, .pairing-1 .timeline-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+        .pairing-1 .mockup-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; }
+        .pairing-1 .mockup-text { font-family: 'Inter', sans-serif; }
+        .pairing-1 .mock-number { font-family: 'Instrument Serif', Georgia, serif; font-size: 3.5rem; }
+
+        /* OPTION 2: Academic Brutalist */
+        .pairing-2 .mockup-title { font-family: 'Bodoni Moda', serif; font-weight: 800; letter-spacing: -0.03em; font-size: 4rem; }
+        .pairing-2 .mockup-label, .pairing-2 .mock-stat-label, .pairing-2 .timeline-badge { font-family: 'Space Grotesk', monospace; font-weight: 700; letter-spacing: 0.15em; }
+        .pairing-2 .mockup-name { font-family: 'Bodoni Moda', serif; font-weight: 900; }
+        .pairing-2 .mockup-text { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; }
+        .pairing-2 .mock-number { font-family: 'Bodoni Moda', serif; font-weight: 900; }
+
+        /* OPTION 3: Pure Swiss Modernist */
+        .pairing-3 .mockup-title { font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 3.8rem; }
+        .pairing-3 .mockup-label, .pairing-3 .mock-stat-label, .pairing-3 .timeline-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: 0.2em; }
+        .pairing-3 .mockup-name { font-family: 'Syne', sans-serif; font-weight: 900; }
+        .pairing-3 .mockup-text { font-family: 'Manrope', sans-serif; font-weight: 500; }
+        .pairing-3 .mock-number { font-family: 'Syne', sans-serif; font-weight: 900; }
+
+        /* OPTION 4: Classic Heritage Monograph */
+        .pairing-4 .mockup-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 4.5rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .pairing-4 .mockup-label, .pairing-4 .mock-stat-label, .pairing-4 .timeline-badge { font-family: 'Marcellus', serif; letter-spacing: 0.2em; font-weight: 400; }
+        .pairing-4 .mockup-name { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; }
+        .pairing-4 .mockup-text { font-family: 'Lora', Georgia, serif; font-size: 1.05rem; }
+        .pairing-4 .mock-number { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 3.8rem; }
+
+        /* OPTION 5: Cyber-Technical Specialist */
+        .pairing-5 .mockup-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 3.8rem; letter-spacing: -0.03em; }
+        .pairing-5 .mockup-label, .pairing-5 .mock-stat-label, .pairing-5 .timeline-badge { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.1em; }
+        .pairing-5 .mockup-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+        .pairing-5 .mockup-text { font-family: 'Inter', sans-serif; }
+        .pairing-5 .mock-number { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 3rem; }
+
+        @media (max-width: 900px) {
+            .mockup-grid { grid-template-columns: 1fr; }
+            .option-panel { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="masthead">
+        <div class="masthead-title">Typography Workbench · 5 Curated Pairings</div>
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="showOption('opt1')">1. Architectural Studio</button>
+            <button class="tab-btn" onclick="showOption('opt2')">2. Academic Brutalist</button>
+            <button class="tab-btn" onclick="showOption('opt3')">3. Swiss Modernist</button>
+            <button class="tab-btn" onclick="showOption('opt4')">4. Classic Heritage</button>
+            <button class="tab-btn" onclick="showOption('opt5')">5. Cyber-Technical</button>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <!-- OPTION 1 -->
+        <section id="opt1" class="option-panel pairing-1 active">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Font</span>
+                    <span class="spec-value">Instrument Serif (Italic)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-value">Plus Jakarta Sans (Bold 800)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">Inter (Regular 400)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vibe &amp; Persona</span>
+                    <span class="spec-value">High-Fashion Editorial &amp; Studio</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">// About · Intelligent Systems</div>
+                    <h1 class="mockup-title">Who am I</h1>
+                    <h2 class="mockup-name">Abhijeet Thakur</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">Hackathon Winner</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">Repositories Shipped</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">🏆 3x WINNER</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">★ 10x FINALIST</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPTION 2 -->
+        <section id="opt2" class="option-panel pairing-2">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Font</span>
+                    <span class="spec-value">Bodoni Moda (Bold 800)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-value">Space Grotesk (700 Mono-Hybrid)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">DM Sans (Humanist 400)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vibe &amp; Persona</span>
+                    <span class="spec-value">Academic Brutalism &amp; Luxury Editorial</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">// About · Intelligent Systems</div>
+                    <h1 class="mockup-title">WHO AM I</h1>
+                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">Hackathon Winner</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">Repositories Shipped</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">🏆 3x WINNER</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">★ 10x FINALIST</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPTION 3 -->
+        <section id="opt3" class="option-panel pairing-3">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Font</span>
+                    <span class="spec-value">Syne (Extra-Bold 800)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-value">Plus Jakarta Sans (Bold 800)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">Manrope (Clean Geometric)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vibe &amp; Persona</span>
+                    <span class="spec-value">Pure Swiss International Modernist</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">// About · Intelligent Systems</div>
+                    <h1 class="mockup-title">WHO AM I</h1>
+                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">Hackathon Winner</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">Repositories Shipped</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">🏆 3x WINNER</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">★ 10x FINALIST</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPTION 4 -->
+        <section id="opt4" class="option-panel pairing-4">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Font</span>
+                    <span class="spec-value">Cormorant Garamond (Bold 700)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-value">Marcellus (Classical Roman Serif)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">Lora (Warm Literary Serif)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vibe &amp; Persona</span>
+                    <span class="spec-value">Classic Heritage Monograph &amp; Scholarship</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">// About · Intelligent Systems</div>
+                    <h1 class="mockup-title">WHO AM I</h1>
+                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">Hackathon Winner</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">Repositories Shipped</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">🏆 3x WINNER</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">★ 10x FINALIST</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPTION 5 -->
+        <section id="opt5" class="option-panel pairing-5">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Font</span>
+                    <span class="spec-value">Space Grotesk (Bold 700)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-value">JetBrains Mono (Technical 700)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">Inter (Modern Screen 400)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vibe &amp; Persona</span>
+                    <span class="spec-value">Cybernetic Specialist &amp; Systems Engineer</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">// About · Intelligent Systems</div>
+                    <h1 class="mockup-title">WHO AM I</h1>
+                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">Hackathon Winner</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">Repositories Shipped</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">🏆 3x WINNER</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">★ 10x FINALIST</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function showOption(optId) {
+            document.querySelectorAll('.option-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            
+            const target = document.getElementById(optId);
+            if (target) {
+                target.classList.add('active');
+            }
+            
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(optId));
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
+
