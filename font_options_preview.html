@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography System — Font Options Showcase</title>
+    <title>Typography Studio — Creative Editorial &amp; Studio Directions</title>
 
     <!-- Google Fonts Stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;600;700;800&family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=Italiana&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;600;700;800&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Prata&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -36,7 +36,7 @@
             background-color: var(--color-latte);
             color: var(--color-burgundy);
             font-family: 'Inter', sans-serif;
-            padding: 0 0 80px 0;
+            padding: 0 0 100px 0;
             line-height: 1.6;
         }
 
@@ -47,24 +47,36 @@
             z-index: 100;
             background-color: var(--color-latte);
             border-bottom: var(--border-thick);
-            padding: 16px 32px;
+            padding: 14px 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 12px;
         }
 
         .masthead-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 900;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .tabs {
+        .masthead-badge {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-sections {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
         }
 
@@ -72,13 +84,14 @@
             background-color: var(--color-latte-card);
             border: var(--border-thin);
             color: var(--color-burgundy);
-            padding: 8px 16px;
-            font-size: 0.8rem;
+            padding: 8px 14px;
+            font-size: 0.78rem;
             font-weight: 700;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.04em;
             cursor: pointer;
             box-shadow: 2px 2px 0px var(--color-burgundy);
             transition: all 0.15s ease;
+            white-space: nowrap;
         }
 
         .tab-btn:hover {
@@ -94,7 +107,7 @@
 
         .main-container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 36px auto;
             padding: 0 24px;
         }
 
@@ -111,14 +124,14 @@
             display: block;
         }
 
-        /* Option Meta Header */
+        /* Spec Bar */
         .spec-bar {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
             gap: 16px;
             background-color: var(--color-burgundy);
             color: var(--color-latte);
-            padding: 20px 24px;
+            padding: 22px 28px;
             margin-bottom: 40px;
             border-bottom: 4px solid var(--color-mocha);
         }
@@ -139,11 +152,11 @@
         }
 
         .spec-value {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 800;
         }
 
-        /* Mockup Layout */
+        /* Mockup Grid */
         .mockup-grid {
             display: grid;
             grid-template-columns: 7fr 5fr;
@@ -173,29 +186,28 @@
         }
 
         .mockup-title {
-            font-size: clamp(2.5rem, 5vw, 4.25rem);
-            line-height: 1;
+            font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+            line-height: 1.02;
             letter-spacing: -0.02em;
-            text-transform: uppercase;
             color: var(--color-burgundy);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .mockup-name {
-            font-size: 2rem;
+            font-size: 2.1rem;
             font-weight: 900;
             letter-spacing: -0.01em;
-            text-transform: uppercase;
             color: var(--color-burgundy);
             margin-bottom: 20px;
         }
 
         .mockup-text {
             font-size: 1rem;
-            line-height: 1.65;
+            line-height: 1.68;
             color: var(--color-burgundy);
-            opacity: 0.9;
+            opacity: 0.92;
             margin-bottom: 24px;
+            max-width: 580px;
         }
 
         .mockup-metrics {
@@ -220,7 +232,7 @@
         }
 
         .mock-number {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 900;
             line-height: 1;
             color: var(--color-burgundy);
@@ -252,10 +264,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .timeline-badge {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 800;
             padding: 4px 8px;
             background-color: var(--color-burgundy);
@@ -264,52 +278,56 @@
         }
 
         .timeline-name {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: var(--color-burgundy);
         }
 
         .timeline-tags {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--color-mocha-dark);
         }
 
-        /* Specific Pairing Fonts */
-        /* OPTION 1: Architectural Studio */
-        .pairing-1 .mockup-title { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; text-transform: none; font-size: 4.8rem; }
-        .pairing-1 .mockup-label, .pairing-1 .mock-stat-label, .pairing-1 .timeline-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
-        .pairing-1 .mockup-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; }
-        .pairing-1 .mockup-text { font-family: 'Inter', sans-serif; }
-        .pairing-1 .mock-number { font-family: 'Instrument Serif', Georgia, serif; font-size: 3.5rem; }
+        /* ------------------------------------------------------------------
+           5 CREATIVE VARIATIONS OF OPTION 1 (HIGH-END EDITORIAL & STUDIO)
+        ------------------------------------------------------------------ */
 
-        /* OPTION 2: Academic Brutalist */
-        .pairing-2 .mockup-title { font-family: 'Bodoni Moda', serif; font-weight: 800; letter-spacing: -0.03em; font-size: 4rem; }
-        .pairing-2 .mockup-label, .pairing-2 .mock-stat-label, .pairing-2 .timeline-badge { font-family: 'Space Grotesk', monospace; font-weight: 700; letter-spacing: 0.15em; }
-        .pairing-2 .mockup-name { font-family: 'Bodoni Moda', serif; font-weight: 900; }
-        .pairing-2 .mockup-text { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; }
-        .pairing-2 .mock-number { font-family: 'Bodoni Moda', serif; font-weight: 900; }
+        /* CREATIVE 1: The Florentine Avant-Garde (Italiana) */
+        .creative-1 .mockup-title { font-family: 'Italiana', Georgia, serif; font-weight: 400; font-size: 5rem; letter-spacing: 0.02em; text-transform: none; }
+        .creative-1 .mockup-name { font-family: 'Italiana', Georgia, serif; font-weight: 400; font-size: 2.6rem; letter-spacing: 0.04em; }
+        .creative-1 .mockup-label, .creative-1 .mock-stat-label, .creative-1 .timeline-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: 0.2em; }
+        .creative-1 .mockup-text { font-family: 'Inter', sans-serif; font-weight: 400; }
+        .creative-1 .mock-number { font-family: 'Italiana', Georgia, serif; font-weight: 400; font-size: 4rem; }
 
-        /* OPTION 3: Pure Swiss Modernist */
-        .pairing-3 .mockup-title { font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 3.8rem; }
-        .pairing-3 .mockup-label, .pairing-3 .mock-stat-label, .pairing-3 .timeline-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: 0.2em; }
-        .pairing-3 .mockup-name { font-family: 'Syne', sans-serif; font-weight: 900; }
-        .pairing-3 .mockup-text { font-family: 'Manrope', sans-serif; font-weight: 500; }
-        .pairing-3 .mock-number { font-family: 'Syne', sans-serif; font-weight: 900; }
+        /* CREATIVE 2: The Parisian Haute-Editorial (Prata) */
+        .creative-2 .mockup-title { font-family: 'Prata', Georgia, serif; font-weight: 400; font-size: 4.6rem; letter-spacing: -0.01em; text-transform: none; }
+        .creative-2 .mockup-name { font-family: 'Prata', Georgia, serif; font-weight: 400; font-size: 2.4rem; }
+        .creative-2 .mockup-label, .creative-2 .mock-stat-label, .creative-2 .timeline-badge { font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: 0.16em; }
+        .creative-2 .mockup-text { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 1.05rem; }
+        .creative-2 .mock-number { font-family: 'Prata', Georgia, serif; font-size: 3.6rem; }
 
-        /* OPTION 4: Classic Heritage Monograph */
-        .pairing-4 .mockup-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 4.5rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        .pairing-4 .mockup-label, .pairing-4 .mock-stat-label, .pairing-4 .timeline-badge { font-family: 'Marcellus', serif; letter-spacing: 0.2em; font-weight: 400; }
-        .pairing-4 .mockup-name { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; }
-        .pairing-4 .mockup-text { font-family: 'Lora', Georgia, serif; font-size: 1.05rem; }
-        .pairing-4 .mock-number { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 3.8rem; }
+        /* CREATIVE 3: The Sculptural Typographer (Fraunces Organic) */
+        .creative-3 .mockup-title { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'opsz' 144, 'wght' 700, 'SOFT' 50, 'WONK' 1; font-size: 4.8rem; line-height: 0.98; text-transform: none; }
+        .creative-3 .mockup-name { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'opsz' 72, 'wght' 800; font-size: 2.3rem; }
+        .creative-3 .mockup-label, .creative-3 .mock-stat-label, .creative-3 .timeline-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: 0.18em; }
+        .creative-3 .mockup-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; }
+        .creative-3 .mock-number { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 3.8rem; }
 
-        /* OPTION 5: Cyber-Technical Specialist */
-        .pairing-5 .mockup-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 3.8rem; letter-spacing: -0.03em; }
-        .pairing-5 .mockup-label, .pairing-5 .mock-stat-label, .pairing-5 .timeline-badge { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.1em; }
-        .pairing-5 .mockup-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
-        .pairing-5 .mockup-text { font-family: 'Inter', sans-serif; }
-        .pairing-5 .mock-number { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 3rem; }
+        /* CREATIVE 4: The Dual-Type Hybrid Monograph (Instrument Serif + Syne Heavy) */
+        .creative-4 .mockup-title { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; font-size: 5rem; text-transform: none; }
+        .creative-4 .mockup-title .grotesque-accent { font-family: 'Syne', sans-serif; font-style: normal; font-weight: 900; letter-spacing: -0.04em; text-transform: uppercase; font-size: 4.2rem; }
+        .creative-4 .mockup-name { font-family: 'Syne', sans-serif; font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; }
+        .creative-4 .mockup-label, .creative-4 .mock-stat-label, .creative-4 .timeline-badge { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.12em; }
+        .creative-4 .mockup-text { font-family: 'Inter', sans-serif; }
+        .creative-4 .mock-number { font-family: 'Instrument Serif', Georgia, serif; font-size: 4rem; }
+
+        /* CREATIVE 5: The Dark Academy Cryptographer (Newsreader Display) */
+        .creative-5 .mockup-title { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-variation-settings: 'opsz' 72, 'wght' 600; font-size: 4.8rem; text-transform: none; }
+        .creative-5 .mockup-name { font-family: 'Newsreader', Georgia, serif; font-style: normal; font-weight: 700; font-size: 2.4rem; letter-spacing: -0.01em; }
+        .creative-5 .mockup-label, .creative-5 .mock-stat-label, .creative-5 .timeline-badge { font-family: 'Space Grotesk', monospace; font-weight: 700; letter-spacing: 0.15em; }
+        .creative-5 .mockup-text { font-family: 'Inter', sans-serif; font-size: 1rem; }
+        .creative-5 .mock-number { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 3.8rem; }
 
         @media (max-width: 900px) {
             .mockup-grid { grid-template-columns: 1fr; }
@@ -321,36 +339,39 @@
 
     <!-- Header Navigation Bar -->
     <header class="masthead">
-        <div class="masthead-title">Typography Workbench · 5 Curated Pairings</div>
-        <nav class="tabs">
-            <button class="tab-btn active" onclick="showOption('opt1')">1. Architectural Studio</button>
-            <button class="tab-btn" onclick="showOption('opt2')">2. Academic Brutalist</button>
-            <button class="tab-btn" onclick="showOption('opt3')">3. Swiss Modernist</button>
-            <button class="tab-btn" onclick="showOption('opt4')">4. Classic Heritage</button>
-            <button class="tab-btn" onclick="showOption('opt5')">5. Cyber-Technical</button>
+        <div class="masthead-title">
+            Typography Studio
+            <span class="masthead-badge">5 Creative Variations</span>
+        </div>
+        <nav class="nav-sections">
+            <button class="tab-btn active" onclick="showOption('c1')">1. Florentine Avant-Garde (Italiana)</button>
+            <button class="tab-btn" onclick="showOption('c2')">2. Parisian Haute-Editorial (Prata)</button>
+            <button class="tab-btn" onclick="showOption('c3')">3. Sculptural (Fraunces Wonky)</button>
+            <button class="tab-btn" onclick="showOption('c4')">4. Hybrid Monograph (Serif+Syne)</button>
+            <button class="tab-btn" onclick="showOption('c5')">5. Cryptographer (Newsreader)</button>
         </nav>
     </header>
 
     <main class="main-container">
 
-        <!-- OPTION 1 -->
-        <section id="opt1" class="option-panel pairing-1 active">
+        <!-- CREATIVE 1: Florentine Avant-Garde -->
+        <section id="c1" class="option-panel creative-1 active">
             <div class="spec-bar">
                 <div class="spec-item">
-                    <span class="spec-label">Header Font</span>
-                    <span class="spec-value">Instrument Serif (Italic)</span>
+                    <span class="spec-label">Header Display</span>
+                    <span class="spec-value">Italiana (Florentine Serif)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-label">Subheader / Metadata</span>
                     <span class="spec-value">Plus Jakarta Sans (Bold 800)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Body Text</span>
-                    <span class="spec-value">Inter (Regular 400)</span>
+                    <span class="spec-value">Inter (Modern Screen 400)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Vibe &amp; Persona</span>
-                    <span class="spec-value">High-Fashion Editorial &amp; Studio</span>
+                    <span class="spec-label">Vibe &amp; Distinction</span>
+                    <span class="spec-value">Ultra-Slender Italian Renaissance Luxury</span>
                 </div>
             </div>
 
@@ -399,32 +420,32 @@
             </div>
         </section>
 
-        <!-- OPTION 2 -->
-        <section id="opt2" class="option-panel pairing-2">
+        <!-- CREATIVE 2: Parisian Haute-Editorial -->
+        <section id="c2" class="option-panel creative-2">
             <div class="spec-bar">
                 <div class="spec-item">
-                    <span class="spec-label">Header Font</span>
-                    <span class="spec-value">Bodoni Moda (Bold 800)</span>
+                    <span class="spec-label">Header Display</span>
+                    <span class="spec-value">Prata (Neoclassical Chiseled)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Subheader / Labels</span>
-                    <span class="spec-value">Space Grotesk (700 Mono-Hybrid)</span>
+                    <span class="spec-label">Subheader / Metadata</span>
+                    <span class="spec-value">DM Sans (Tracked 700)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Body Text</span>
                     <span class="spec-value">DM Sans (Humanist 400)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Vibe &amp; Persona</span>
-                    <span class="spec-value">Academic Brutalism &amp; Luxury Editorial</span>
+                    <span class="spec-label">Vibe &amp; Distinction</span>
+                    <span class="spec-value">Teardrop Terminals &amp; Chic French Editorial</span>
                 </div>
             </div>
 
             <div class="mockup-grid">
                 <div class="mockup-left">
                     <div class="mockup-label">// About · Intelligent Systems</div>
-                    <h1 class="mockup-title">WHO AM I</h1>
-                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <h1 class="mockup-title">Who am I</h1>
+                    <h2 class="mockup-name">Abhijeet Thakur</h2>
                     <p class="mockup-text">
                         I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
                     </p>
@@ -465,32 +486,32 @@
             </div>
         </section>
 
-        <!-- OPTION 3 -->
-        <section id="opt3" class="option-panel pairing-3">
+        <!-- CREATIVE 3: Sculptural Typographer -->
+        <section id="c3" class="option-panel creative-3">
             <div class="spec-bar">
                 <div class="spec-item">
-                    <span class="spec-label">Header Font</span>
-                    <span class="spec-value">Syne (Extra-Bold 800)</span>
+                    <span class="spec-label">Header Display</span>
+                    <span class="spec-value">Fraunces (Variable Soft-Wonk)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Subheader / Labels</span>
+                    <span class="spec-label">Subheader / Metadata</span>
                     <span class="spec-value">Plus Jakarta Sans (Bold 800)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Body Text</span>
-                    <span class="spec-value">Manrope (Clean Geometric)</span>
+                    <span class="spec-value">Plus Jakarta Sans (Medium 500)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Vibe &amp; Persona</span>
-                    <span class="spec-value">Pure Swiss International Modernist</span>
+                    <span class="spec-label">Vibe &amp; Distinction</span>
+                    <span class="spec-value">Artisanal Punch-Cutter &amp; Organic Sculptural Feel</span>
                 </div>
             </div>
 
             <div class="mockup-grid">
                 <div class="mockup-left">
                     <div class="mockup-label">// About · Intelligent Systems</div>
-                    <h1 class="mockup-title">WHO AM I</h1>
-                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <h1 class="mockup-title">Who am I</h1>
+                    <h2 class="mockup-name">Abhijeet Thakur</h2>
                     <p class="mockup-text">
                         I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
                     </p>
@@ -531,98 +552,98 @@
             </div>
         </section>
 
-        <!-- OPTION 4 -->
-        <section id="opt4" class="option-panel pairing-4">
+        <!-- CREATIVE 4: Hybrid Monograph -->
+        <section id="c4" class="option-panel creative-4">
             <div class="spec-bar">
                 <div class="spec-item">
-                    <span class="spec-label">Header Font</span>
-                    <span class="spec-value">Cormorant Garamond (Bold 700)</span>
+                    <span class="spec-label">Header Display</span>
+                    <span class="spec-value">Instrument Serif (Italic) + Syne (Black)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Subheader / Labels</span>
-                    <span class="spec-value">Marcellus (Classical Roman Serif)</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Body Text</span>
-                    <span class="spec-value">Lora (Warm Literary Serif)</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Vibe &amp; Persona</span>
-                    <span class="spec-value">Classic Heritage Monograph &amp; Scholarship</span>
-                </div>
-            </div>
-
-            <div class="mockup-grid">
-                <div class="mockup-left">
-                    <div class="mockup-label">// About · Intelligent Systems</div>
-                    <h1 class="mockup-title">WHO AM I</h1>
-                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
-                    <p class="mockup-text">
-                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
-                    </p>
-                </div>
-                <div class="mockup-right">
-                    <div class="mockup-metrics">
-                        <div class="mock-card">
-                            <div class="mock-number">3x</div>
-                            <div class="mock-stat-label">Hackathon Winner</div>
-                        </div>
-                        <div class="mock-card highlight">
-                            <div class="mock-number">10x</div>
-                            <div class="mock-stat-label">Hackathon Finalist</div>
-                        </div>
-                        <div class="mock-card">
-                            <div class="mock-number">10+</div>
-                            <div class="mock-stat-label">Repositories Shipped</div>
-                        </div>
-                        <div class="mock-card">
-                            <div class="mock-number">'29</div>
-                            <div class="mock-stat-label">2025 – 2029 Cohort</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-preview">
-                <div class="timeline-card">
-                    <span class="timeline-badge">🏆 3x WINNER</span>
-                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
-                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
-                </div>
-                <div class="timeline-card">
-                    <span class="timeline-badge">★ 10x FINALIST</span>
-                    <span class="timeline-name">National Hackathon Circuit</span>
-                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- OPTION 5 -->
-        <section id="opt5" class="option-panel pairing-5">
-            <div class="spec-bar">
-                <div class="spec-item">
-                    <span class="spec-label">Header Font</span>
-                    <span class="spec-value">Space Grotesk (Bold 700)</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Subheader / Labels</span>
-                    <span class="spec-value">JetBrains Mono (Technical 700)</span>
+                    <span class="spec-label">Subheader / Metadata</span>
+                    <span class="spec-value">JetBrains Mono (Code Bracketed)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Body Text</span>
                     <span class="spec-value">Inter (Modern Screen 400)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Vibe &amp; Persona</span>
-                    <span class="spec-value">Cybernetic Specialist &amp; Systems Engineer</span>
+                    <span class="spec-label">Vibe &amp; Distinction</span>
+                    <span class="spec-value">Intentional Tension: Poetic Serif vs Brutalist Sans</span>
+                </div>
+            </div>
+
+            <div class="mockup-grid">
+                <div class="mockup-left">
+                    <div class="mockup-label">[ // SYSTEM_IDENTITY ]</div>
+                    <h1 class="mockup-title">Who am <span class="grotesque-accent">I</span></h1>
+                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <p class="mockup-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                    </p>
+                </div>
+                <div class="mockup-right">
+                    <div class="mockup-metrics">
+                        <div class="mock-card">
+                            <div class="mock-number">3x</div>
+                            <div class="mock-stat-label">[ WINNER_CIRCUIT ]</div>
+                        </div>
+                        <div class="mock-card highlight">
+                            <div class="mock-number">10x</div>
+                            <div class="mock-stat-label">[ FINALIST_HONORS ]</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">10+</div>
+                            <div class="mock-stat-label">[ REPOSITORIES ]</div>
+                        </div>
+                        <div class="mock-card">
+                            <div class="mock-number">'29</div>
+                            <div class="mock-stat-label">[ COHORT_2025_29 ]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-preview">
+                <div class="timeline-card">
+                    <span class="timeline-badge">[🏆 3x WINNER]</span>
+                    <span class="timeline-name">GenCodeX &amp; National Hackathons</span>
+                    <span class="timeline-tags">JIMS JEMTEC · ₹21,000+ Grand Prize</span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-badge">[★ 10x FINALIST]</span>
+                    <span class="timeline-name">National Hackathon Circuit</span>
+                    <span class="timeline-tags">Across India · 10x Finalist Finishes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CREATIVE 5: Dark Academy Cryptographer -->
+        <section id="c5" class="option-panel creative-5">
+            <div class="spec-bar">
+                <div class="spec-item">
+                    <span class="spec-label">Header Display</span>
+                    <span class="spec-value">Newsreader (Display Italic 72pt)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Subheader / Metadata</span>
+                    <span class="spec-value">Space Grotesk (700 Uppercase)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Body Text</span>
+                    <span class="spec-value">Inter (Modern Screen 400)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vibe &amp; Distinction</span>
+                    <span class="spec-value">Academic Cryptography &amp; Scholarly Monograph</span>
                 </div>
             </div>
 
             <div class="mockup-grid">
                 <div class="mockup-left">
                     <div class="mockup-label">// About · Intelligent Systems</div>
-                    <h1 class="mockup-title">WHO AM I</h1>
-                    <h2 class="mockup-name">ABHIJEET THAKUR</h2>
+                    <h1 class="mockup-title">Who am I</h1>
+                    <h2 class="mockup-name">Abhijeet Thakur</h2>
                     <p class="mockup-text">
                         I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
                     </p>
@@ -683,4 +704,3 @@
     </script>
 </body>
 </html>
-
