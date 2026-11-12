@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Section Redesign Showcase — 12 Interactive Designs — Abhijeet Thakur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-latte: #FFF8E7;
+            --color-latte-card: #FFFDF5;
+            --color-mocha: #C8A98B;
+            --color-mocha-light: #DEC9B5;
+            --color-mocha-dark: #A58161;
+            --color-burgundy: #5C0A1E;
+            --color-burgundy-dark: #3F0514;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --border-thin: 2px solid var(--color-burgundy);
+            --border-thick: 3px solid var(--color-burgundy);
+            --shadow-hard: 6px 6px 0px var(--color-burgundy);
+            --shadow-sm: 4px 4px 0px var(--color-burgundy);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-latte);
+            color: var(--color-burgundy);
+            padding: 40px 24px;
+            line-height: 1.6;
+        }
+
+        .showcase-header {
+            max-width: 1240px;
+            margin: 0 auto 24px;
+            padding-bottom: 24px;
+            border-bottom: var(--border-thick);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .showcase-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .showcase-sub {
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-mocha-dark);
+        }
+
+        /* Nav switcher buttons */
+        .options-nav {
+            max-width: 1240px;
+            margin: 0 auto 36px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-category-title {
+            width: 100%;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-mocha-dark);
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        .tab-btn {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 8px 14px;
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            color: var(--color-burgundy);
+            cursor: pointer;
+            box-shadow: 2px 2px 0px var(--color-burgundy);
+            transition: all 0.15s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--color-mocha-light);
+            transform: translate(-1px, -1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tab-btn.active {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            box-shadow: 3px 3px 0px var(--color-mocha-dark);
+        }
+
+        .tab-btn.new-badge {
+            position: relative;
+            border-color: var(--color-burgundy);
+        }
+
+        .tab-btn.new-badge::after {
+            content: "NEW";
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background-color: var(--color-mocha);
+            color: var(--color-burgundy);
+            font-size: 0.55rem;
+            font-weight: 900;
+            padding: 1px 4px;
+            border: 1px solid var(--color-burgundy);
+        }
+
+        /* Container for options */
+        .option-panel {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: none;
+            background-color: var(--color-latte);
+            border: var(--border-thick);
+            box-shadow: var(--shadow-hard);
+            padding: 48px;
+        }
+
+        .option-panel.active {
+            display: block;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .option-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            margin-bottom: 24px;
+        }
+
+        .sec-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .sec-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--color-burgundy);
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .bento-bio-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .bento-quote {
+            font-size: 1.05rem;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--color-mocha-dark);
+            border-left: 3px solid var(--color-mocha);
+            padding-left: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* --- Option A: Bento Matrix --- */
+        .bento-layout {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 32px;
+        }
+        .bento-bio-card {
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bento-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tech-pill {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border: var(--border-thin);
+            background-color: var(--color-latte);
+        }
+        .bento-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .bento-stat-card {
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            padding: 24px 20px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .bento-stat-card.highlight { background-color: var(--color-mocha); color: var(--color-burgundy); }
+        .stat-big { font-size: 2.75rem; font-weight: 900; line-height: 1; margin-bottom: 6px; }
+        .stat-sub { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+        .stat-detail { font-size: 0.7rem; color: var(--color-mocha-dark); margin-top: 4px; font-weight: 600; }
+        .bento-stat-card.highlight .stat-detail { color: var(--color-burgundy); opacity: 0.85; }
+
+        /* --- Option B: Tabbed Dossier --- */
+        .pillar-nav { display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 2px solid var(--color-mocha-light); padding-bottom: 16px; }
+        .pillar-btn { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 800; padding: 8px 16px; border: var(--border-thin); background: transparent; cursor: pointer; }
+        .pillar-btn.active { background-color: var(--color-burgundy); color: var(--color-latte); box-shadow: var(--shadow-sm); }
+        .pillar-content-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 32px; }
+        .pillar-pane { display: none; }
+        .pillar-pane.active { display: block; }
+
+        /* --- Option C: Ribbon --- */
+        .metric-ribbon {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: var(--border-thick);
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-hard);
+        }
+        .ribbon-cell { padding: 20px; border-right: 2px solid rgba(200, 169, 139, 0.4); display: flex; flex-direction: column; justify-content: center; }
+        .ribbon-cell:last-child { border-right: none; }
+        .ribbon-cell.highlight { background-color: var(--color-mocha); color: var(--color-burgundy); }
+        .ribbon-num { font-size: 2.25rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+        .ribbon-desc { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+        .triad-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .domain-stack { display: flex; flex-direction: column; gap: 12px; }
+        .domain-item { border: var(--border-thin); background-color: var(--color-latte-card); padding: 16px 20px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; }
+        .domain-title { font-size: 0.9rem; font-weight: 800; }
+        .domain-tag { font-size: 0.7rem; color: var(--color-mocha-dark); font-weight: 600; }
+
+        /* --- Option D: Monolith --- */
+        .monolith-layout { display: grid; grid-template-columns: 7fr 5fr; gap: 36px; }
+        .monolith-card { background-color: var(--color-burgundy); color: var(--color-latte); border: var(--border-thick); border-color: var(--color-mocha); box-shadow: var(--shadow-hard); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+        .monolith-header { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; color: var(--color-mocha); text-transform: uppercase; padding-bottom: 12px; border-bottom: 1px solid rgba(200, 169, 139, 0.4); margin-bottom: 16px; }
+        .monolith-stat-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px solid rgba(200, 169, 139, 0.25); }
+        .monolith-stat-row:last-child { border-bottom: none; }
+        .mono-num { font-size: 2.25rem; font-weight: 900; color: var(--color-mocha); }
+        .mono-label { font-size: 0.85rem; font-weight: 700; text-align: right; }
+
+        /* --- Option E: Streamlined Rows --- */
+        .streamline-layout { display: grid; grid-template-columns: 6fr 6fr; gap: 36px; align-items: center; }
+        .row-stack { display: flex; flex-direction: column; gap: 12px; }
+        .stream-row { border: var(--border-thin); background-color: var(--color-latte-card); box-shadow: var(--shadow-sm); padding: 16px 20px; display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 16px; }
+        .stream-row.highlight .stream-badge { background-color: var(--color-mocha); }
+        .stream-idx { font-size: 0.85rem; font-weight: 900; color: var(--color-mocha-dark); }
+        .stream-info h4 { font-size: 0.95rem; font-weight: 800; margin-bottom: 2px; }
+        .stream-info p { font-size: 0.75rem; color: var(--color-mocha-dark); font-weight: 600; }
+        .stream-badge { font-size: 1.25rem; font-weight: 900; padding: 4px 12px; border: var(--border-thin); background-color: var(--color-latte); }
+
+        /* ================= NEW OPTION F: SPLIT DIAGONAL INCLINE ================= */
+        .diagonal-container {
+            border: var(--border-thick);
+            box-shadow: var(--shadow-hard);
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            overflow: hidden;
+            background-color: var(--color-latte-card);
+        }
+        .diagonal-left {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .diagonal-right {
+            padding: 48px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            background-color: var(--color-latte-card);
+        }
+        .staircase-card {
+            border: var(--border-thin);
+            background-color: var(--color-latte);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease;
+        }
+        .staircase-card:nth-child(1) { margin-left: 0px; }
+        .staircase-card:nth-child(2) { margin-left: 20px; background-color: var(--color-mocha); color: var(--color-burgundy); }
+        .staircase-card:nth-child(3) { margin-left: 40px; }
+        .staircase-card:nth-child(4) { margin-left: 60px; }
+        .staircase-card:hover { transform: translateX(6px); }
+
+        /* ================= NEW OPTION G: MONOSPACED TELEMETRY LEDGER ================= */
+        .ledger-box {
+            font-family: var(--font-mono);
+            border: var(--border-thick);
+            background-color: var(--color-latte-card);
+            box-shadow: var(--shadow-hard);
+            padding: 32px;
+        }
+        .ledger-header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--color-burgundy);
+            margin-bottom: 24px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .ledger-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .ledger-field {
+            margin-bottom: 16px;
+        }
+        .ledger-key {
+            font-size: 0.7rem;
+            color: var(--color-mocha-dark);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .ledger-val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        .ledger-metrics-table {
+            border: 1px solid var(--color-burgundy);
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+        .ledger-metrics-table th, .ledger-metrics-table td {
+            padding: 10px 12px;
+            border: 1px solid var(--color-burgundy);
+            text-align: left;
+        }
+        .ledger-metrics-table th {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+        }
+
+        /* ================= NEW OPTION H: INTERACTIVE ACCORDION RAILS ================= */
+        .accordion-layout {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: 36px;
+            align-items: start;
+        }
+        .accordion-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .acc-rail {
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .acc-header {
+            padding: 16px 20px;
+            font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background-color: var(--color-latte-card);
+        }
+        .acc-header:hover {
+            background-color: var(--color-mocha-light);
+        }
+        .acc-body {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            border-top: 1px solid rgba(92, 10, 30, 0.15);
+        }
+        .acc-rail.open .acc-body {
+            padding: 16px 20px;
+            max-height: 200px;
+        }
+        .acc-rail.open .acc-header {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+        }
+
+        /* ================= NEW OPTION I: MAGAZINE SPREAD WITH WATERMARKS ================= */
+        .mag-spread {
+            border: var(--border-thick);
+            padding: 40px;
+            background-color: var(--color-latte-card);
+            box-shadow: var(--shadow-hard);
+        }
+        .mag-headline {
+            font-size: 2.2rem;
+            font-weight: 800;
+            font-style: italic;
+            line-height: 1.3;
+            color: var(--color-burgundy);
+            margin-bottom: 32px;
+            border-left: 4px solid var(--color-mocha);
+            padding-left: 24px;
+        }
+        .mag-cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .mag-card {
+            border: var(--border-thin);
+            padding: 24px 20px;
+            background-color: var(--color-latte);
+            position: relative;
+            overflow: hidden;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .watermark-num {
+            position: absolute;
+            right: -10px;
+            bottom: -20px;
+            font-size: 6rem;
+            font-weight: 900;
+            color: var(--color-mocha);
+            opacity: 0.25;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* ================= NEW OPTION J: HYBRID BENTO & LIVE PULSE ================= */
+        .pulse-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            margin-bottom: 24px;
+        }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10B981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10B981;
+        }
+        .hybrid-bento {
+            display: grid;
+            grid-template-columns: 6fr 3fr 3fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+        .hb-card {
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            box-shadow: var(--shadow-sm);
+            padding: 24px;
+        }
+        .hb-main { grid-column: 1; grid-row: 1 / 3; display: flex; flex-direction: column; justify-content: space-between; }
+        .hb-finalist { grid-column: 2 / 4; grid-row: 1; background-color: var(--color-mocha); color: var(--color-burgundy); }
+
+        /* ================= NEW OPTION K: 4-PHASE JOURNEY TRACK ================= */
+        .journey-track {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            position: relative;
+            margin-top: 32px;
+        }
+        .journey-track::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: 20px;
+            right: 20px;
+            height: 3px;
+            background-color: var(--color-mocha);
+            z-index: 0;
+        }
+        .journey-step {
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .journey-step.active {
+            background-color: var(--color-mocha);
+            color: var(--color-burgundy);
+        }
+        .step-bubble {
+            width: 32px;
+            height: 32px;
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            font-weight: 900;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--color-latte);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 8px;
+        }
+
+        /* ================= NEW OPTION L: INVERTED BURGUNDY PEDESTAL ================= */
+        .inverted-pedestal-panel {
+            background-color: var(--color-burgundy);
+            color: var(--color-latte);
+            border: var(--border-thick);
+            border-color: var(--color-mocha);
+            box-shadow: 8px 8px 0px var(--color-mocha);
+            padding: 48px;
+        }
+        .pedestal-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .pedestal-col {
+            border: 2px solid var(--color-mocha);
+            background-color: #420715;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 4px 4px 0px var(--color-mocha);
+            transition: transform 0.2s ease;
+        }
+        .pedestal-col:hover {
+            transform: translateY(-4px);
+            background-color: var(--color-mocha);
+            color: var(--color-burgundy);
+        }
+        .pedestal-col:hover .ped-num {
+            color: var(--color-burgundy);
+        }
+        .ped-num {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--color-mocha);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .banner-back {
+            max-width: 1240px;
+            margin: 32px auto 0;
+            padding: 16px 20px;
+            border: var(--border-thin);
+            background-color: var(--color-latte-card);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner-back a {
+            color: var(--color-burgundy);
+            font-weight: 800;
+            text-decoration: none;
+            border-bottom: 2px solid var(--color-burgundy);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="showcase-header">
+        <div>
+            <div class="showcase-sub">// Interactive Layout Explorer · 12 Archetypes</div>
+            <h1 class="showcase-title">About Section Redesign Showcase</h1>
+        </div>
+        <div class="showcase-sub">
+            Click any button below to switch layouts live
+        </div>
+    </div>
+
+    <!-- Layout Switcher Tabs -->
+    <div class="options-nav">
+        <div class="nav-category-title">// 7 New Architectural Directions:</div>
+        <button class="tab-btn new-badge active" onclick="switchOption('opt-f', this)">Option F: Split Diagonal Incline</button>
+        <button class="tab-btn new-badge" onclick="switchOption('opt-g', this)">Option G: Monospaced Telemetry Ledger</button>
+        <button class="tab-btn new-badge" onclick="switchOption('opt-h', this)">Option H: Interactive Accordion Rails</button>
+        <button class="tab-btn new-badge" onclick="switchOption('opt-i', this)">Option I: Magazine Spread & Watermark</button>
+        <button class="tab-btn new-badge" onclick="switchOption('opt-j', this)">Option J: Hybrid Bento & Activity Pulse</button>
+        <button class="tab-btn new-badge" onclick="switchOption('opt-k', this)">Option K: 4-Phase Horizontal Journey</button>
+        <button class="tab-btn new-badge" onclick="switchOption('opt-l', this)">Option L: Inverted Burgundy Pedestal</button>
+
+        <div class="nav-category-title">// Previous Core Options (Refined):</div>
+        <button class="tab-btn" onclick="switchOption('opt-a', this)">Option A: Linear Bento Matrix</button>
+        <button class="tab-btn" onclick="switchOption('opt-b', this)">Option B: 3-Pillar Tabbed Dossier</button>
+        <button class="tab-btn" onclick="switchOption('opt-c', this)">Option C: Top Metric Ribbon</button>
+        <button class="tab-btn" onclick="switchOption('opt-d', this)">Option D: Monolithic Stat Pillar</button>
+        <button class="tab-btn" onclick="switchOption('opt-e', this)">Option E: Streamlined Rows</button>
+    </div>
+
+    <!-- ================= PANEL F: SPLIT DIAGONAL INCLINE ================= -->
+    <div id="opt-f" class="option-panel active">
+        <span class="option-label">// Option F · Split Diagonal Incline (Brutalist Angular Architecture)</span>
+        
+        <div class="diagonal-container">
+            <div class="diagonal-left">
+                <div>
+                    <span style="font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; color: var(--color-mocha);">// 02 · IDENTITY</span>
+                    <h2 class="sec-title" style="color: var(--color-latte); margin-top: 8px;">WHO AM I</h2>
+                    <h3 class="sec-name" style="color: var(--color-mocha-light);">Abhijeet Thakur</h3>
+                    <p class="bento-bio-text" style="color: var(--color-latte);">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I sculpt complex algorithms into scalable, high-impact innovations across Applied AI, Post-Quantum Cryptography, and Edge Assistive Devices.
+                    </p>
+                </div>
+                <div style="font-size: 0.95rem; font-style: italic; color: var(--color-mocha); border-left: 2px solid var(--color-mocha); padding-left: 14px;">
+                    "Engineering resilient solutions at the nexus of math, security, and human utility."
+                </div>
+            </div>
+
+            <div class="diagonal-right">
+                <div class="staircase-card">
+                    <div>
+                        <div style="font-size: 0.9rem; font-weight: 800;">Hackathon Winner</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha-dark);">GenCodeX Champion · ₹21K Award</div>
+                    </div>
+                    <span class="stat-big" style="margin: 0;">3x</span>
+                </div>
+
+                <div class="staircase-card">
+                    <div>
+                        <div style="font-size: 0.9rem; font-weight: 800;">Hackathon Finalist</div>
+                        <div style="font-size: 0.7rem; color: var(--color-burgundy);">Zinnovatio 4.0 · DTU · TIIPS</div>
+                    </div>
+                    <span class="stat-big" style="margin: 0;">10x</span>
+                </div>
+
+                <div class="staircase-card">
+                    <div>
+                        <div style="font-size: 0.9rem; font-weight: 800;">Shipped Codebases</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha-dark);">Open Source AI & Wearables</div>
+                    </div>
+                    <span class="stat-big" style="margin: 0;">10+</span>
+                </div>
+
+                <div class="staircase-card">
+                    <div>
+                        <div style="font-size: 0.9rem; font-weight: 800;">GGSIPU DS Cohort</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha-dark);">Undergrad Class of 2029</div>
+                    </div>
+                    <span class="stat-big" style="margin: 0;">'29</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL G: MONOSPACED TELEMETRY LEDGER ================= -->
+    <div id="opt-g" class="option-panel">
+        <span class="option-label">// Option G · Monospaced Telemetry Ledger (High-Precision Technical)</span>
+        
+        <div class="ledger-box">
+            <div class="ledger-header">
+                <span>SYSTEM_ID: ABHIJEET_THAKUR // SPEC_2026</span>
+                <span>GEO_COORDS: 28.6139° N, 77.2090° E [DELHI]</span>
+                <span>STATUS: ACTIVE_SCHOLAR</span>
+            </div>
+
+            <div class="ledger-grid">
+                <div>
+                    <div class="ledger-field">
+                        <div class="ledger-key">// 01_IDENTITY_MANIFEST</div>
+                        <div class="ledger-val">
+                            Computer Science sophomore specializing in Data Science at GGSIPU (Class of 2029). Bridging algorithmic research with production software architectures.
+                        </div>
+                    </div>
+
+                    <div class="ledger-field">
+                        <div class="ledger-key">// 02_CORE_SYSTEM_DOMAINS</div>
+                        <div class="ledger-val">
+                            → Applied AI / ML (PyTorch, OpenCV, Wearables)<br>
+                            → Post-Quantum Cryptography (EncryptPlus)<br>
+                            → Environmental Intelligence (AERIS AI, SweepX)
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ledger-key" style="margin-bottom: 8px;">// 03_AUTHENTICATED_BENCHMARKS</div>
+                    <table class="ledger-metrics-table">
+                        <thead>
+                            <tr>
+                                <th>METRIC</th>
+                                <th>VALUE</th>
+                                <th>VALIDATION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HACKATHON WINS</td>
+                                <td><strong>3x</strong></td>
+                                <td>GenCodeX 1st Place</td>
+                            </tr>
+                            <tr style="background-color: var(--color-mocha-light);">
+                                <td>NATIONAL FINALIST</td>
+                                <td><strong>10x</strong></td>
+                                <td>DTU · Chandigarh · TIIPS</td>
+                            </tr>
+                            <tr>
+                                <td>SHIPPED REPOS</td>
+                                <td><strong>10+</strong></td>
+                                <td>GitHub Verified</td>
+                            </tr>
+                            <tr>
+                                <td>ACADEMIC COHORT</td>
+                                <td><strong>'29</strong></td>
+                                <td>GGSIPU CS-DS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL H: INTERACTIVE ACCORDION RAILS ================= -->
+    <div id="opt-h" class="option-panel">
+        <span class="option-label">// Option H · Interactive Accordion Rails (Progressive Disclosure)</span>
+
+        <div class="accordion-layout">
+            <div>
+                <h2 class="sec-title">WHO AM I</h2>
+                <h3 class="sec-name">Abhijeet Thakur</h3>
+                <p class="bento-bio-text">
+                    I sculpt complex algorithms into scalable, human-centered systems. Explore my three operational focus rails on the right.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px;">
+                    <div style="border: var(--border-thin); padding: 16px; background-color: var(--color-latte-card);">
+                        <div class="stat-big">3x</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">Grand Winner</div>
+                    </div>
+                    <div style="border: var(--border-thin); padding: 16px; background-color: var(--color-mocha);">
+                        <div class="stat-big">10x</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">Finalist</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-stack">
+                <div class="acc-rail open" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span>01 // THE SYSTEM ARCHITECT</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="acc-body">
+                        I engineer modular AI solutions from first principles. From edge computer vision wearables (Vision-AID) to real-time ambient telemetry (AERIS AI), my architectures prioritize low compute latency and high human reliability.
+                    </div>
+                </div>
+
+                <div class="acc-rail" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span>02 // THE COMPETITIVE ARENA</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="acc-body">
+                        3x Victories at GenCodeX (₹21,000 Grand Prize), Track-based Runner Up at Zinnovatio 4.0 (Chandigarh University), and 10 National Finalist finishes including Delhi Technological University (DTU) and TIIPS.
+                    </div>
+                </div>
+
+                <div class="acc-rail" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span>03 // THE ACADEMIC RESEARCHER</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="acc-body">
+                        Sophomore Data Science scholar at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. Current investigations focus on post-quantum cryptographic auditing and adversarial neural robustness.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL I: MAGAZINE SPREAD WITH WATERMARKS ================= -->
+    <div id="opt-i" class="option-panel">
+        <span class="option-label">// Option I · Magazine Double-Spread & Giant Watermarks</span>
+
+        <div class="mag-spread">
+            <span style="font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; color: var(--color-mocha-dark);">// PROFILE PROFILE // VOL. 2026</span>
+            <div class="mag-headline">
+                "An AI builder and GGSIPU data science scholar, sculpting complex algorithms into tangible, high-impact innovations."
+            </div>
+
+            <div class="mag-cols">
+                <div class="mag-card">
+                    <div>
+                        <h4 style="font-size: 1rem; font-weight: 800; margin-bottom: 8px;">The Foundations</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.6;">
+                            Computer Science sophomore at GGSIPU, Class of 2029. Rigorous computer science foundations married with hands-on systems deployment.
+                        </p>
+                    </div>
+                    <div style="font-size: 0.8rem; font-weight: 800; margin-top: 16px;">GGSIPU · CS-DS '29</div>
+                    <div class="watermark-num">'29</div>
+                </div>
+
+                <div class="mag-card" style="background-color: var(--color-mocha-light);">
+                    <div>
+                        <h4 style="font-size: 1rem; font-weight: 800; margin-bottom: 8px;">The Arena Record</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.6;">
+                            3x Grand Winner at GenCodeX and 10x National Finalist finishes across Chandigarh University, DTU, and TIIPS Greater Noida.
+                        </p>
+                    </div>
+                    <div style="font-size: 0.8rem; font-weight: 800; margin-top: 16px;">3 WINS · 10 FINALISTS</div>
+                    <div class="watermark-num">10x</div>
+                </div>
+
+                <div class="mag-card">
+                    <div>
+                        <h4 style="font-size: 1rem; font-weight: 800; margin-bottom: 8px;">The Codebases</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.6;">
+                            Over 10+ open-source and production repositories shipped, from quantum vulnerability scanners to environmental monitoring.
+                        </p>
+                    </div>
+                    <div style="font-size: 0.8rem; font-weight: 800; margin-top: 16px;">10+ SHIPPED SYSTEMS</div>
+                    <div class="watermark-num">10+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL J: HYBRID BENTO & LIVE PULSE ================= -->
+    <div id="opt-j" class="option-panel">
+        <span class="option-label">// Option J · Hybrid Bento & Live Activity Pulse</span>
+
+        <div class="pulse-badge">
+            <span class="pulse-dot"></span>
+            ACTIVE BUILDER // CS-DS'29 · GGSIPU NEW DELHI
+        </div>
+
+        <div class="hybrid-bento">
+            <div class="hb-card hb-main">
+                <div>
+                    <h2 class="sec-title">WHO AM I</h2>
+                    <h3 class="sec-name">Abhijeet Thakur</h3>
+                    <p class="bento-bio-text">
+                        I am an AI engineer and data science undergraduate with a proven record of shipping real systems under tight constraints. From post-quantum security auditing to assistive edge wearables, I bridge mathematical theory with user utility.
+                    </p>
+                </div>
+                <div class="bento-quote" style="margin-bottom: 0;">
+                    "3x Hackathon Victories · 10x National Finalist Finishes"
+                </div>
+            </div>
+
+            <div class="hb-card hb-finalist">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <div class="stat-big">10x</div>
+                    <div style="font-size: 0.75rem; font-weight: 800;">VERIFIED FINALIST</div>
+                </div>
+                <div style="font-size: 0.8rem; font-weight: 700; margin-top: 8px;">
+                    Zinnovatio 4.0 (Chandigarh Univ) · Brainwave (DTU) · Ideathon (TIIPS) · 4x National Circuit
+                </div>
+            </div>
+
+            <div class="hb-card">
+                <div class="stat-big">3x</div>
+                <div style="font-size: 0.8rem; font-weight: 800;">GENCODEX CHAMPION</div>
+                <div style="font-size: 0.7rem; color: var(--color-mocha-dark); margin-top: 4px;">₹21,000 Grand Prize</div>
+            </div>
+
+            <div class="hb-card">
+                <div class="stat-big">10+</div>
+                <div style="font-size: 0.8rem; font-weight: 800;">REPOSITORIES</div>
+                <div style="font-size: 0.7rem; color: var(--color-mocha-dark); margin-top: 4px;">Shipped Production Code</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL K: 4-PHASE HORIZONTAL JOURNEY ================= -->
+    <div id="opt-k" class="option-panel">
+        <span class="option-label">// Option K · 4-Phase Horizontal Journey Track</span>
+
+        <h2 class="sec-title">WHO AM I</h2>
+        <h3 class="sec-name">Abhijeet Thakur — System Evolution</h3>
+
+        <div class="journey-track">
+            <div class="journey-step">
+                <div class="step-bubble">01</div>
+                <div style="font-size: 0.7rem; font-weight: 800; color: var(--color-mocha-dark);">PHASE 01 // COHORT</div>
+                <h4 style="font-size: 1.1rem; font-weight: 900;">'29 GGSIPU</h4>
+                <p style="font-size: 0.75rem;">Admitted to Computer Science Data Science cohort at Guru Gobind Singh Indraprastha University.</p>
+            </div>
+
+            <div class="journey-step">
+                <div class="step-bubble">02</div>
+                <div style="font-size: 0.7rem; font-weight: 800; color: var(--color-mocha-dark);">PHASE 02 // VELOCITY</div>
+                <h4 style="font-size: 1.1rem; font-weight: 900;">10+ Shipped</h4>
+                <p style="font-size: 0.75rem;">Engineered open-source platforms across ambient intelligence, PQC, and assistive computer vision.</p>
+            </div>
+
+            <div class="journey-step active">
+                <div class="step-bubble">03</div>
+                <div style="font-size: 0.7rem; font-weight: 800; color: var(--color-burgundy);">PHASE 03 // ARENA</div>
+                <h4 style="font-size: 1.1rem; font-weight: 900;">10x Finalist</h4>
+                <p style="font-size: 0.75rem;">Runner-Up at Chandigarh University (Zinnovatio 4.0) and finalist across DTU Brainwave & TIIPS.</p>
+            </div>
+
+            <div class="journey-step">
+                <div class="step-bubble">04</div>
+                <div style="font-size: 0.7rem; font-weight: 800; color: var(--color-mocha-dark);">PHASE 04 // APEX</div>
+                <h4 style="font-size: 1.1rem; font-weight: 900;">3x Champion</h4>
+                <p style="font-size: 0.75rem;">Grand Prize winner at GenCodeX Hackathon, claiming trophy, gold medal, and ₹21,000 cash prize.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL L: INVERTED BURGUNDY PEDESTAL ================= -->
+    <div id="opt-l" class="option-panel">
+        <span class="option-label" style="background-color: var(--color-mocha); color: var(--color-burgundy);">// Option L · Inverted Burgundy Pedestal (High-Contrast Bold)</span>
+
+        <div class="inverted-pedestal-panel">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <span style="font-size: 0.8rem; font-weight: 800; letter-spacing: 0.2em; color: var(--color-mocha);">// ARCHITECTURAL DOSSIER</span>
+                <h2 style="font-size: 3.5rem; font-weight: 900; letter-spacing: -0.03em; margin: 8px 0 16px; color: var(--color-latte);">WHO AM I</h2>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-mocha-light); margin-bottom: 20px;">ABHIJEET THAKUR · CS-DS '29 GGSIPU</h3>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-latte); opacity: 0.95;">
+                    I sculpt complex algorithms into scalable, human-centered systems. From post-quantum cryptography to real-time assistive tech, I weave modular architecture into tangible innovations, bridging the gap between intelligent systems and human utility.
+                </p>
+            </div>
+
+            <div class="pedestal-grid">
+                <div class="pedestal-col">
+                    <div class="ped-num">3x</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Hackathon Winner</div>
+                    <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 4px;">GenCodeX Champion</div>
+                </div>
+
+                <div class="pedestal-col" style="background-color: var(--color-mocha); color: var(--color-burgundy);">
+                    <div class="ped-num" style="color: var(--color-burgundy);">10x</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">National Finalist</div>
+                    <div style="font-size: 0.7rem; opacity: 0.9; margin-top: 4px;">DTU · Chandigarh · TIIPS</div>
+                </div>
+
+                <div class="pedestal-col">
+                    <div class="ped-num">10+</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Repositories</div>
+                    <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 4px;">Shipped Systems</div>
+                </div>
+
+                <div class="pedestal-col">
+                    <div class="ped-num">'29</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">GGSIPU Cohort</div>
+                    <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 4px;">CS-DS Specialization</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL A: BENTO MATRIX ================= -->
+    <div id="opt-a" class="option-panel">
+        <span class="option-label">// Option A · Modern Developer Bento Matrix</span>
+        
+        <div class="bento-layout">
+            <div class="bento-bio-card">
+                <div>
+                    <h2 class="sec-title">WHO AM I</h2>
+                    <h3 class="sec-name">Abhijeet Thakur</h3>
+                    <p class="bento-bio-text">
+                        I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures. From ambient environmental platforms to assistive mobility devices, my work couples rigorous engineering with user-centric problem solving.
+                    </p>
+                    <div class="bento-quote">
+                        "Sculpting complex algorithms into scalable, human-centered systems."
+                    </div>
+                </div>
+                <div class="bento-pills">
+                    <span class="tech-pill">Applied AI / ML</span>
+                    <span class="tech-pill">Post-Quantum Security</span>
+                    <span class="tech-pill">Edge Vision Wearables</span>
+                    <span class="tech-pill">Real-time Architectures</span>
+                </div>
+            </div>
+
+            <div class="bento-stats-grid">
+                <div class="bento-stat-card">
+                    <div class="stat-big">3x</div>
+                    <div class="stat-sub">Hackathon Winner</div>
+                    <div class="stat-detail">GenCodeX Grand Winner</div>
+                </div>
+                <div class="bento-stat-card highlight">
+                    <div class="stat-big">10x</div>
+                    <div class="stat-sub">Hackathon Finalist</div>
+                    <div class="stat-detail">DTU · Chandigarh · TIIPS</div>
+                </div>
+                <div class="bento-stat-card">
+                    <div class="stat-big">10+</div>
+                    <div class="stat-sub">Repositories</div>
+                    <div class="stat-detail">Shipped Production Systems</div>
+                </div>
+                <div class="bento-stat-card">
+                    <div class="stat-big">'29</div>
+                    <div class="stat-sub">GGSIPU Cohort</div>
+                    <div class="stat-detail">Computer Science Data Science</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL B: 3-PILLAR TABBED DOSSIER ================= -->
+    <div id="opt-b" class="option-panel">
+        <span class="option-label">// Option B · Interactive 3-Pillar Tabbed Dossier</span>
+        
+        <h2 class="sec-title">WHO AM I</h2>
+        <h3 class="sec-name">Abhijeet Thakur</h3>
+
+        <div class="pillar-nav">
+            <button class="pillar-btn active" onclick="switchPillar('pillar-1', this)">[ 01 THE ARCHITECT ]</button>
+            <button class="pillar-btn" onclick="switchPillar('pillar-2', this)">[ 02 THE COMPETITOR ]</button>
+            <button class="pillar-btn" onclick="switchPillar('pillar-3', this)">[ 03 THE RESEARCHER ]</button>
+        </div>
+
+        <div class="pillar-content-grid">
+            <div>
+                <div id="pillar-1" class="pillar-pane active">
+                    <p class="bento-bio-text">
+                        <strong>Architectural Focus:</strong> I design modular, high-impact intelligent systems from the ground up. Whether engineering ambient air intelligence with AERIS AI or building low-latency edge computer vision in Vision-AID, my architecture emphasizes durability, clean interfaces, and low computational overhead.
+                    </p>
+                    <div class="bento-quote">
+                        "Turning mathematical models into physical and digital utility."
+                    </div>
+                </div>
+                <div id="pillar-2" class="pillar-pane">
+                    <p class="bento-bio-text">
+                        <strong>Competitive Arena:</strong> Across national hackathons, I thrive under pressure. 3x Champion at GenCodeX (Catalyst Gen AI, ₹21,000 Grand Prize), Track Runner-Up at Zinnovatio 4.0 (Chandigarh University), and 10x Finalist finishes spanning Delhi Technological University (DTU) and TIIPS Greater Noida.
+                    </p>
+                    <div class="bento-quote">
+                        "3x Grand Victories · 10x National Finalist Finishes across India."
+                    </div>
+                </div>
+                <div id="pillar-3" class="pillar-pane">
+                    <p class="bento-bio-text">
+                        <strong>Research & Academia:</strong> Sophomore at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. My research inquiries center on Post-Quantum Cryptography (EncryptPlus) and algorithmic efficiency in constrained edge computing environments.
+                    </p>
+                    <div class="bento-quote">
+                        "Preparing digital systems for the post-quantum computational landscape."
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-stats-grid">
+                <div class="bento-stat-card">
+                    <div class="stat-big">3x</div>
+                    <div class="stat-sub">Hackathon Winner</div>
+                </div>
+                <div class="bento-stat-card highlight">
+                    <div class="stat-big">10x</div>
+                    <div class="stat-sub">Hackathon Finalist</div>
+                </div>
+                <div class="bento-stat-card">
+                    <div class="stat-big">10+</div>
+                    <div class="stat-sub">Repositories Shipped</div>
+                </div>
+                <div class="bento-stat-card">
+                    <div class="stat-big">'29</div>
+                    <div class="stat-sub">GGSIPU CS-DS Cohort</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL C: TOP METRIC RIBBON + TRIAD ================= -->
+    <div id="opt-c" class="option-panel">
+        <span class="option-label">// Option C · Horizontal Metric Ribbon + Domain Triad</span>
+
+        <h2 class="sec-title">WHO AM I</h2>
+        <h3 class="sec-name">Abhijeet Thakur</h3>
+
+        <div class="metric-ribbon">
+            <div class="ribbon-cell">
+                <div class="ribbon-num">3x</div>
+                <div class="ribbon-desc">Grand Champion</div>
+            </div>
+            <div class="ribbon-cell highlight">
+                <div class="ribbon-num">10x</div>
+                <div class="ribbon-desc">National Finalist</div>
+            </div>
+            <div class="ribbon-cell">
+                <div class="ribbon-num">10+</div>
+                <div class="ribbon-desc">Shipped Repos</div>
+            </div>
+            <div class="ribbon-cell">
+                <div class="ribbon-num">'29</div>
+                <div class="ribbon-desc">GGSIPU Cohort</div>
+            </div>
+        </div>
+
+        <div class="triad-layout">
+            <div>
+                <p class="bento-bio-text">
+                    I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. With a track record of 3 Hackathon Victories and 10 National Finalist finishes, I engineer systems that bridge intelligent algorithms with human utility.
+                </p>
+                <div class="bento-quote">
+                    "Rigorous engineering paired with user-centric problem solving."
+                </div>
+            </div>
+
+            <div class="domain-stack">
+                <div class="domain-item">
+                    <div>
+                        <div class="domain-title">01 // APPLIED AI & MACHINE LEARNING</div>
+                        <div class="domain-tag">Computer Vision · Wearable Edge AI · PyTorch</div>
+                    </div>
+                    <span>→</span>
+                </div>
+                <div class="domain-item">
+                    <div>
+                        <div class="domain-title">02 // POST-QUANTUM CRYPTOGRAPHY</div>
+                        <div class="domain-tag">EncryptPlus · Quantum Vulnerability Auditing</div>
+                    </div>
+                    <span>→</span>
+                </div>
+                <div class="domain-item">
+                    <div>
+                        <div class="domain-title">03 // AMBIENT ENVIRONMENTAL INTEL</div>
+                        <div class="domain-tag">AERIS AI · SweepX · Real-Time Telemetry</div>
+                    </div>
+                    <span>→</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL D: MONOLITHIC STAT PILLAR ================= -->
+    <div id="opt-d" class="option-panel">
+        <span class="option-label">// Option D · Monolithic Stat Pillar & Editorial Pull-Quote</span>
+
+        <div class="monolith-layout">
+            <div>
+                <h2 class="sec-title">WHO AM I</h2>
+                <h3 class="sec-name">Abhijeet Thakur</h3>
+                <p class="bento-bio-text">
+                    I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. I sculpt complex algorithms into scalable, high-impact solutions. From post-quantum cryptography to real-time assistive tech, I weave modular architecture into tangible innovations, bridging the gap between intelligent systems and human utility.
+                </p>
+                
+                <div class="bento-bio-card" style="margin-top: 24px; padding: 20px;">
+                    <div style="font-size: 0.8rem; font-weight: 800; color: var(--color-mocha-dark); text-transform: uppercase; margin-bottom: 6px;">
+                        // Architectural Thesis
+                    </div>
+                    <div style="font-size: 1rem; font-weight: 600;">
+                        "Engineering real-time environmental intelligence, quantum-safe security tools, and edge AI assistive systems that solve real human challenges."
+                    </div>
+                </div>
+            </div>
+
+            <div class="monolith-card">
+                <div class="monolith-header">// Verified Milestones</div>
+                
+                <div class="monolith-stat-row">
+                    <span class="mono-num">3x</span>
+                    <div class="mono-label">
+                        <div>Hackathon Winner</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha);">GenCodeX Grand Prize</div>
+                    </div>
+                </div>
+
+                <div class="monolith-stat-row">
+                    <span class="mono-num" style="color: var(--color-latte);">10x</span>
+                    <div class="mono-label">
+                        <div>National Finalist</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha);">DTU · Chandigarh · TIIPS</div>
+                    </div>
+                </div>
+
+                <div class="monolith-stat-row">
+                    <span class="mono-num">10+</span>
+                    <div class="mono-label">
+                        <div>Shipped Repos</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha);">Open-Source Systems</div>
+                    </div>
+                </div>
+
+                <div class="monolith-stat-row">
+                    <span class="mono-num">'29</span>
+                    <div class="mono-label">
+                        <div>GGSIPU Cohort</div>
+                        <div style="font-size: 0.7rem; color: var(--color-mocha);">CS & Data Science</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PANEL E: STREAMLINED ROWS ================= -->
+    <div id="opt-e" class="option-panel">
+        <span class="option-label">// Option E · Streamlined Horizontal Metric Rows</span>
+
+        <div class="streamline-layout">
+            <div>
+                <h2 class="sec-title">WHO AM I</h2>
+                <h3 class="sec-name">Abhijeet Thakur</h3>
+                <p class="bento-bio-text">
+                    I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. With a track record of 3 Hackathon Victories (GenCodeX) and 10 National Finalist finishes, I engineer systems across Applied AI/ML, Post-Quantum Cryptography, Edge Vision Wearables, and high-performance Web Architectures.
+                </p>
+                <div class="bento-quote">
+                    "From ambient environmental platforms to assistive mobility devices."
+                </div>
+            </div>
+
+            <div class="row-stack">
+                <div class="stream-row">
+                    <span class="stream-idx">01</span>
+                    <div class="stream-info">
+                        <h4>Hackathon Winner</h4>
+                        <p>GenCodeX Grand Winner · Catalyst Gen AI</p>
+                    </div>
+                    <span class="stream-badge">3x</span>
+                </div>
+
+                <div class="stream-row highlight">
+                    <span class="stream-idx">02</span>
+                    <div class="stream-info">
+                        <h4>National Finalist</h4>
+                        <p>10x Finalist · DTU, Chandigarh Univ, TIIPS</p>
+                    </div>
+                    <span class="stream-badge">10x</span>
+                </div>
+
+                <div class="stream-row">
+                    <span class="stream-idx">03</span>
+                    <div class="stream-info">
+                        <h4>Shipped Repositories</h4>
+                        <p>Production Codebases & Assistive Systems</p>
+                    </div>
+                    <span class="stream-badge">10+</span>
+                </div>
+
+                <div class="stream-row">
+                    <span class="stream-idx">04</span>
+                    <div class="stream-info">
+                        <h4>GGSIPU CS-DS Cohort</h4>
+                        <p>Computer Science & Data Science · Class of 2029</p>
+                    </div>
+                    <span class="stream-badge">'29</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-back">
+        <span>💡 <strong>12 Live Designs Ready:</strong> Click any button above to test each layout live.</span>
+        <a href="index.html">← Back to Main Portfolio</a>
+    </div>
+
+    <script>
+        function switchOption(id, btn) {
+            document.querySelectorAll('.option-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            btn.classList.add('active');
+            window.scrollTo({ top: document.querySelector('.showcase-header').offsetTop, behavior: 'smooth' });
+        }
+
+        function switchPillar(id, btn) {
+            document.querySelectorAll('.pillar-pane').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.pillar-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        function toggleAccordion(rail) {
+            const isOpen = rail.classList.contains('open');
+            document.querySelectorAll('.acc-rail').forEach(r => r.classList.remove('open'));
+            if (!isOpen) {
+                rail.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
