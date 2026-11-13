@@ -437,12 +437,9 @@ nav {
     bottom: 18px;
     left: 50%;
     transform: translateX(-50%) rotate(-6deg);
-    width: 78%;
+    width: 75%;
     max-width: 300px;
-    opacity: 0.90;
-    /* invert dark ink → white, screen blend removes black bg → cream on dark photo */
-    filter: invert(1) sepia(0.3) saturate(0.6) brightness(1.05);
-    mix-blend-mode: screen;
+    opacity: 0.92;
     pointer-events: none;
     z-index: 2;
     transition: opacity 0.3s ease;
@@ -1410,12 +1407,12 @@ footer {
     }
 
     .portrait-signature {
-        width: 70%;
+        width: 72%;
         max-width: 140px;
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%) rotate(-6deg);
-        opacity: 0.88;
+        opacity: 0.90;
     }
 
     .portrait-caption {
