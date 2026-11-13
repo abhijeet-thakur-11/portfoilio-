@@ -431,6 +431,25 @@ nav {
     transform: scale(1.02);
 }
 
+/* Handwritten Signature Overlay */
+.portrait-signature {
+    position: absolute;
+    bottom: 14px;
+    right: 10px;
+    width: 58%;
+    max-width: 240px;
+    opacity: 0.82;
+    mix-blend-mode: multiply;
+    transform: rotate(-6deg);
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.portrait-container:hover .portrait-signature {
+    opacity: 0.95;
+}
+
 .portrait-caption {
     display: flex;
     justify-content: center;
@@ -1386,6 +1405,14 @@ footer {
     .portrait-matting {
         padding: var(--sp-12);
         border-bottom: 1.5px solid var(--color-burgundy);
+    }
+
+    .portrait-signature {
+        width: 52%;
+        max-width: 120px;
+        bottom: 10px;
+        right: 6px;
+        opacity: 0.80;
     }
 
     .portrait-caption {
