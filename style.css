@@ -1238,13 +1238,13 @@ footer {
    MOBILE VIEWPORT (< 768px): OPTION 3 (REFINED JAPANESE MINIMALIST GRID)
    - Eliminates clunky thick box clutter with 1px architectural hairlines
    - Delicate watercolor mocha washes across 2x2 metric grid
-   - Generous breathing space & zero congestion
+   - Generous breathing space & zero congestion between sections
    - Laptop / Desktop (> 768px) remains 100% original & unchanged
    ========================================================= */
 @media (max-width: 768px) {
     :root {
         --page-padding-h: var(--sp-16);
-        --page-padding-v: var(--sp-36);
+        --page-padding-v: 48px;
         --border-mobile-fine: 1px solid rgba(92, 10, 30, 0.22);
         --shadow-mobile-subtle: 2px 2px 0px rgba(92, 10, 30, 0.12);
     }
@@ -1290,18 +1290,20 @@ footer {
         display: none;
     }
 
-    /* Global Headings: scaled with calm breathing space */
+    /* Global Headings & Section Separation: Spacious & Calm */
     .section-title {
         font-size: clamp(2.3rem, 7.5vw, 3.2rem);
-        margin-bottom: var(--sp-20);
+        margin-bottom: var(--sp-24);
         line-height: 1.15;
     }
 
     .section-label {
-        font-size: var(--text-xs);
+        display: inline-block;
+        font-size: 0.72rem;
         letter-spacing: 0.14em;
+        text-transform: uppercase;
         margin-bottom: var(--sp-8);
-        opacity: 0.75;
+        opacity: 0.82;
     }
 
     .section-header-block,
@@ -1312,10 +1314,12 @@ footer {
     /* --- HERO SECTION --- */
     #hero {
         min-height: auto;
-        padding-top: calc(52px + var(--sp-24));
-        padding-bottom: var(--sp-32);
-        gap: var(--sp-24);
-        border-bottom: 1px solid rgba(92, 10, 30, 0.2);
+        padding-top: calc(52px + var(--sp-32));
+        padding-bottom: 48px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
+        gap: var(--sp-32);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .meta-tag {
@@ -1369,7 +1373,7 @@ footer {
 
     .hero-right {
         justify-content: center;
-        margin-top: var(--sp-8);
+        margin-top: var(--sp-12);
     }
 
     .portrait-container {
@@ -1390,8 +1394,11 @@ footer {
 
     /* --- ABOUT SECTION & OPTION 3 2x2 METRIC GRID --- */
     #about {
-        padding: var(--sp-36) var(--page-padding-h);
-        border-bottom: 1px solid rgba(92, 10, 30, 0.2);
+        padding-top: 48px;
+        padding-bottom: 56px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .about-name {
@@ -1402,7 +1409,7 @@ footer {
     .about-text {
         font-size: var(--text-sm);
         line-height: 1.65;
-        margin-bottom: var(--sp-20);
+        margin-bottom: var(--sp-24);
         opacity: 0.9;
     }
 
@@ -1411,7 +1418,7 @@ footer {
         border-left: none;
         border-top: none;
         padding-left: 0;
-        padding-top: var(--sp-8);
+        padding-top: var(--sp-12);
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--sp-12);
@@ -1440,15 +1447,18 @@ footer {
         opacity: 0.75;
     }
 
-    /* --- SKILLS SECTION (Option 3 Airy Hairline Cards) --- */
+    /* --- SKILLS SECTION (Spacious Transitions & Hairline Cards) --- */
     #skills {
-        padding: var(--sp-36) var(--page-padding-h);
-        border-bottom: 1px solid rgba(92, 10, 30, 0.2);
+        padding-top: 52px;
+        padding-bottom: 56px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: var(--sp-16);
+        gap: var(--sp-20);
     }
 
     .skill-card {
@@ -1496,13 +1506,16 @@ footer {
 
     /* --- EDUCATION SECTION --- */
     #education {
-        padding: var(--sp-36) var(--page-padding-h);
-        border-bottom: 1px solid rgba(92, 10, 30, 0.2);
+        padding-top: 52px;
+        padding-bottom: 56px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .education-grid {
         grid-template-columns: 1fr;
-        gap: var(--sp-16);
+        gap: var(--sp-20);
     }
 
     .edu-card {
@@ -1553,13 +1566,16 @@ footer {
 
     /* --- PROJECTS SECTION --- */
     #projects {
-        padding: var(--sp-36) var(--page-padding-h);
-        border-bottom: 1px solid rgba(92, 10, 30, 0.2);
+        padding-top: 52px;
+        padding-bottom: 56px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: var(--sp-16);
+        gap: var(--sp-20);
     }
 
     .project-board {
@@ -1618,13 +1634,16 @@ footer {
     /* --- ACHIEVEMENTS TIMELINE --- */
     #achievements {
         min-height: auto;
-        padding: var(--sp-36) var(--page-padding-h);
+        padding-top: 52px;
+        padding-bottom: 56px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
     }
 
     .ach-timeline {
         display: flex;
         flex-direction: column;
-        gap: var(--sp-12);
+        gap: var(--sp-16);
         max-width: 100%;
         padding-left: 24px;
     }
@@ -1682,7 +1701,10 @@ footer {
 
     /* --- CONTACT SECTION --- */
     #contact {
-        padding: var(--sp-36) var(--page-padding-h);
+        padding-top: 52px;
+        padding-bottom: 56px;
+        padding-left: var(--page-padding-h);
+        padding-right: var(--page-padding-h);
     }
 
     .contact-grid {
@@ -1709,7 +1731,7 @@ footer {
 @media (max-width: 480px) {
     :root {
         --page-padding-h: 14px;
-        --page-padding-v: 24px;
+        --page-padding-v: 44px;
     }
 
     .hero-actions {
