@@ -1191,52 +1191,43 @@ nav {
     gap: var(--sp-8);
 }
 
-.signoff-tag {
-    font-family: var(--font-sub);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-mocha-dark);
-}
-
 .signoff-text {
     font-family: var(--font-header);
-    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
-    font-weight: 500;
+    font-size: clamp(2rem, 3.2vw, 3.1rem);
+    font-weight: 400;
     color: var(--color-burgundy);
     margin: 0;
-    max-width: 420px;
-    line-height: 1.4;
+    max-width: 560px;
+    line-height: 1.25;
 }
 
 .signoff-signature-block {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: var(--sp-8);
+    gap: var(--sp-4);
     min-width: 0;
 }
 
 .contact-signature {
-    width: 320px;
+    width: 480px;
     max-width: 100%;
     height: auto;
-    transform: rotate(-3deg);
+    transform: rotate(-8deg);
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 2px 6px rgba(92, 10, 30, 0.08));
     display: block;
 }
 
 .contact-signature:hover {
-    transform: rotate(-1deg) scale(1.03);
+    transform: rotate(-6deg) scale(1.02);
 }
 
 .signoff-role {
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--color-mocha-dark);
     opacity: 0.85;
@@ -1252,7 +1243,7 @@ footer {
 
 .footer-inner {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     font-size: var(--text-xs);
     font-weight: var(--fw-bold);
@@ -1806,7 +1797,8 @@ footer {
 
     .signoff-text {
         text-align: center;
-        font-size: 0.95rem;
+        font-size: 1.65rem;
+        line-height: 1.25;
     }
 
     .signoff-signature-block {
@@ -1815,17 +1807,19 @@ footer {
     }
 
     .contact-signature {
-        width: 75%;
-        max-width: 240px;
-        transform: rotate(-3deg);
+        width: 85%;
+        max-width: 320px;
+        transform: rotate(-8deg);
     }
 
     .signoff-role {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
     }
 
     .footer-inner {
         flex-direction: column;
+        justify-content: center;
         gap: var(--sp-12);
         text-align: center;
     }
