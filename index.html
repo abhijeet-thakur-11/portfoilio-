@@ -15,19 +15,7 @@
         rel="stylesheet">
 
     <!-- Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="style.css?v=20261113_v23_dark_mode_table_lamp">
-
-    <!-- Immediate Theme Application (Prevents FOUC) -->
-    <script>
-        (function () {
-            try {
-                var saved = localStorage.getItem('akt_theme');
-                if (saved === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                }
-            } catch (e) { }
-        })();
-    </script>
+    <link rel="stylesheet" href="style.css?v=20261113_v24_classic_light_palette">
 </head>
 
 <body>
@@ -45,36 +33,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <div class="nav-right">
-            <!-- Vintage Desk/Table Lamp Dark Mode Switch -->
-            <button class="lamp-toggle-btn" id="themeToggle" aria-label="Toggle dark mode" title="Turn lamp on/off">
-                <div class="lamp-container">
-                    <svg class="lamp-svg" viewBox="0 0 40 40" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Warm Light Beam (Emits downwards when lamp is on) -->
-                        <polygon class="lamp-cone" points="13,18 27,18 36,36 4,36" fill="url(#lampBeam)" />
-                        <!-- Lamp Shade -->
-                        <path class="lamp-shade" d="M15 7L11 18H29L25 7H15Z" />
-                        <!-- Top Cap/Finial -->
-                        <circle class="lamp-finial" cx="20" cy="5.5" r="1.5" />
-                        <!-- Central Stem -->
-                        <path class="lamp-stem" d="M19.2 18V28H20.8V18H19.2Z" />
-                        <!-- Beaded Pull-Cord -->
-                        <line class="lamp-cord" x1="24" y1="18" x2="24" y2="24" stroke-width="1.2" stroke-linecap="round" />
-                        <circle class="lamp-cord-bead" cx="24" cy="24.8" r="1.4" />
-                        <!-- Heavy Cast Brass Base -->
-                        <path class="lamp-base" d="M13 28C13 27.4 13.5 27 14.1 27H25.9C26.5 27 27 27.4 27 28V29.5H13V28Z" />
-                        <!-- Gradient Definition -->
-                        <defs>
-                            <linearGradient id="lampBeam" x1="20" y1="18" x2="20" y2="36" gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#FFE885" stop-opacity="0.85" />
-                                <stop offset="50%" stop-color="#FFC83B" stop-opacity="0.4" />
-                                <stop offset="100%" stop-color="#FFD700" stop-opacity="0" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </button>
-        </div>
+        <div class="nav-right"></div>
     </nav>
 
     <!-- ============ HERO SECTION ============ -->
@@ -669,37 +628,6 @@
 
                 document.querySelectorAll('.scramble-target').forEach(el => {
                     scrambleObserver.observe(el);
-                });
-            }
-
-            // 3. Vintage Table Lamp Dark Mode Toggle
-            const themeToggle = document.getElementById('themeToggle');
-            const root = document.documentElement;
-
-            function applyTheme(theme) {
-                if (theme === 'dark') {
-                    root.setAttribute('data-theme', 'dark');
-                    if (themeToggle) {
-                        themeToggle.setAttribute('aria-label', 'Switch to day mode');
-                        themeToggle.setAttribute('title', 'Switch to day mode');
-                    }
-                } else {
-                    root.removeAttribute('data-theme');
-                    if (themeToggle) {
-                        themeToggle.setAttribute('aria-label', 'Turn lamp on (Night mode)');
-                        themeToggle.setAttribute('title', 'Turn lamp on (Night mode)');
-                    }
-                }
-            }
-
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function () {
-                    const isDark = root.getAttribute('data-theme') === 'dark';
-                    const newTheme = isDark ? 'light' : 'dark';
-                    applyTheme(newTheme);
-                    try {
-                        localStorage.setItem('akt_theme', newTheme);
-                    } catch (e) { }
                 });
             }
         })();
