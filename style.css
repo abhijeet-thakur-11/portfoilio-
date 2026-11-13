@@ -1104,23 +1104,13 @@ nav {
     border-bottom: var(--border-thick);
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-    gap: var(--sp-64);
-    align-items: end;
-}
-
-.contact-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 0;
+.contact-header {
+    margin-bottom: var(--sp-48);
 }
 
 .contact-heading {
     font-family: var(--font-header);
-    font-size: clamp(3.5rem, 7vw, 6.2rem);
+    font-size: clamp(3.2rem, 6.5vw, 5.8rem);
     font-weight: 400;
     line-height: 1.15;
     letter-spacing: 0.02em;
@@ -1138,10 +1128,24 @@ nav {
     display: inline-block;
 }
 
+/* Middle: 2 columns (Buttons on left, Signature on right) */
+.contact-body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 5fr);
+    gap: var(--sp-64);
+    align-items: center;
+    margin-bottom: var(--sp-48);
+}
+
+.contact-buttons-col {
+    min-width: 0;
+}
+
 .contact-stack {
     display: flex;
     flex-direction: column;
     gap: var(--sp-16);
+    max-width: 440px;
 }
 
 .btn-contact {
@@ -1149,7 +1153,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--sp-24) var(--sp-32);
+    padding: var(--sp-20) var(--sp-28);
     border: var(--border-thick);
     background-color: var(--color-latte-card);
     color: var(--color-burgundy);
@@ -1159,7 +1163,7 @@ nav {
     text-transform: uppercase;
     box-shadow: var(--shadow-hard);
     transition: var(--trans-fast);
-    min-height: 64px;
+    min-height: 60px;
 }
 
 .btn-contact:hover {
@@ -1183,43 +1187,18 @@ nav {
     transform: translate(4px, -4px);
 }
 
-/* --- Contact Signature Sign-off --- */
-.contact-signoff {
-    margin-top: var(--sp-64);
-    padding-top: var(--sp-40);
-    border-top: 1.5px solid rgba(92, 10, 30, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: var(--sp-32);
-}
-
-.signoff-meta {
+/* Right: Signature + Byline */
+.contact-signature-col {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: var(--sp-8);
-}
-
-.signoff-text {
-    font-family: var(--font-header);
-    font-size: clamp(2rem, 3.2vw, 3.1rem);
-    font-weight: 400;
-    color: var(--color-burgundy);
-    margin: 0;
-    max-width: 560px;
-    line-height: 1.25;
-}
-
-.signoff-signature-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--sp-4);
     min-width: 0;
 }
 
 .contact-signature {
-    width: 480px;
+    width: 440px;
     max-width: 100%;
     height: auto;
     transform: rotate(-8deg);
@@ -1229,17 +1208,36 @@ nav {
 }
 
 .contact-signature:hover {
-    transform: rotate(-6deg) scale(1.02);
+    transform: rotate(-5deg) scale(1.03);
 }
 
 .signoff-role {
     font-family: var(--font-body);
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--color-mocha-dark);
     opacity: 0.85;
+}
+
+/* Bottom: Awaiting Message right above footer border */
+.contact-awaiting-wrap {
+    padding-top: var(--sp-32);
+    border-top: 1.5px solid rgba(92, 10, 30, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.signoff-text {
+    font-family: var(--font-header);
+    font-size: clamp(2rem, 3.4vw, 3.2rem);
+    font-weight: 400;
+    color: var(--color-burgundy);
+    margin: 0;
+    line-height: 1.25;
 }
 
 /* --- 12. FOOTER --- */
@@ -1783,9 +1781,18 @@ footer {
         padding-right: var(--page-padding-h);
     }
 
-    .contact-grid {
+    .contact-header {
+        margin-bottom: var(--sp-24);
+    }
+
+    .contact-body-grid {
         grid-template-columns: 1fr;
-        gap: var(--sp-24);
+        gap: var(--sp-32);
+        margin-bottom: var(--sp-32);
+    }
+
+    .contact-stack {
+        max-width: 100%;
     }
 
     .btn-contact {
@@ -1796,40 +1803,32 @@ footer {
         box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.12);
     }
 
-    .contact-signoff {
-        margin-top: 36px;
-        padding-top: 28px;
-        border-top: 1px solid rgba(92, 10, 30, 0.2);
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: var(--sp-20);
-    }
-
-    .signoff-meta {
-        align-items: center;
-    }
-
-    .signoff-text {
-        text-align: center;
-        font-size: 1.65rem;
-        line-height: 1.25;
-    }
-
-    .signoff-signature-block {
+    .contact-signature-col {
         align-items: center;
         width: 100%;
+        padding: var(--sp-12) 0;
     }
 
     .contact-signature {
-        width: 85%;
-        max-width: 320px;
+        width: 80%;
+        max-width: 280px;
         transform: rotate(-8deg);
     }
 
     .signoff-role {
         font-size: 0.75rem;
         letter-spacing: 0.2em;
+    }
+
+    .contact-awaiting-wrap {
+        padding-top: 24px;
+        border-top: 1px solid rgba(92, 10, 30, 0.2);
+    }
+
+    .signoff-text {
+        text-align: center;
+        font-size: 1.65rem;
+        line-height: 1.25;
     }
 
     .footer-inner {

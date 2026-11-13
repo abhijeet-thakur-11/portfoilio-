@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     <!-- Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="style.css?v=20261113_v21_centered_navbar">
+    <link rel="stylesheet" href="style.css?v=20261113_v22_sketch_contact_redesign">
 </head>
 
 <body>
@@ -493,17 +493,16 @@
 
     <!-- ============ CONTACT SECTION ============ -->
     <section id="contact">
-        <div class="contact-grid">
-            <div class="contact-left">
-                <div class="section-label">// Get In Touch</div>
-                <h2 class="contact-heading">
-                    Let's Build<br>
-                    <span class="serif-accent">something</span><br>
-                    Sentient
-                </h2>
-            </div>
+        <div class="contact-header">
+            <div class="section-label">// Get In Touch</div>
+            <h2 class="contact-heading">
+                Let's Build <span class="serif-accent">something</span> Sentient
+            </h2>
+        </div>
 
-            <div class="contact-right">
+        <div class="contact-body-grid">
+            <!-- Left: Buttons -->
+            <div class="contact-buttons-col">
                 <div class="contact-stack">
                     <a href="mailto:abhijeetthakur.nov2006@gmail.com" class="btn-contact">
                         <span>Email</span>
@@ -520,17 +519,17 @@
                     </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Signature Sign-off -->
-        <div class="contact-signoff">
-            <div class="signoff-meta">
-                <p class="signoff-text">Awaiting new quests &amp; collaborations</p>
-            </div>
-            <div class="signoff-signature-block">
+            <!-- Right: Signature + Byline -->
+            <div class="contact-signature-col">
                 <img src="signature.png" alt="Abhijeet Thakur signature" class="contact-signature">
                 <span class="signoff-role">Abhijeet</span>
             </div>
+        </div>
+
+        <!-- Bottom: Awaiting Message -->
+        <div class="contact-awaiting-wrap">
+            <p class="signoff-text">Awaiting new quests &amp; collaborations</p>
         </div>
     </section>
 
