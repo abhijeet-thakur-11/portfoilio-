@@ -5,31 +5,16 @@
    ========================================================================== */
 
 /* --- 1. DESIGN TOKENS --- */
-/* ==========================================================================
-   PALETTE CONFIGURATION:
-   Active: 60% Black (#000000) / 25% White (#FFFFFF) / 15% Cobalt Blue (#2C3480)
-   
-   PREVIOUS PALETTE ARCHIVE (FOR INSTANT ROLLBACK):
-   --color-latte:       #FFF8E7; /* Cosmic Latte */
-   --color-latte-card:  #FFFDF5;
-   --color-mocha:       #C8A98B; /* Warm Mocha */
-   --color-mocha-light: #DEC9B5;
-   --color-mocha-dark:  #A58161;
-   --color-burgundy:    #5C0A1E; /* Deep Burgundy */
-   --color-burgundy-dark: #3F0514;
-   --color-burgundy-faint: rgba(44, 52, 128, 0.08);
-   ========================================================================== */
-
 :root {
-    /* 60% Black / 25% White / 15% Cobalt Blue Color System */
-    --color-latte:       #000000; /* 60% Black - Dominant background & canvas */
-    --color-latte-card:  #0A0A10; /* Deep obsidian for cards & panels */
-    --color-mocha:       #2C3480; /* 15% Cobalt Blue - Primary accent, borders & CTAs */
-    --color-mocha-light: #3D49B8; /* Lighter cobalt for hover states */
-    --color-mocha-dark:  #6D7BF0; /* High-legibility cobalt for tags & metadata */
-    --color-burgundy:    #FFFFFF; /* 25% Pure White - Main typography, headings & text */
-    --color-burgundy-dark: #12163A; /* Deep cobalt-tinted shadow */
-    --color-burgundy-faint: rgba(44, 52, 128, 0.18); /* Transparent cobalt wash */
+    /* Color System (Strict 60 / 20 / 20 Ratio) */
+    --color-latte:       #FFF8E7; /* 60% Primary canvas & large surfaces */
+    --color-latte-card:  #FFFDF5; /* Slightly cleaner latte for card backgrounds */
+    --color-mocha:       #C8A98B; /* 20% Secondary modular panels & card surfaces */
+    --color-mocha-light: #DEC9B5; /* Hover tint for mocha surfaces */
+    --color-mocha-dark:  #A58161; /* Darker mocha for high-contrast accents */
+    --color-burgundy:    #5C0A1E; /* 20% Text, structural borders & CTA buttons */
+    --color-burgundy-dark: #3F0514; /* Shadow & active tint */
+    --color-burgundy-faint: rgba(92, 10, 30, 0.08); /* Transparent tint for hover */
 
     /* Typography System (Exact Fontjoy: Alex Brush Headers + Raleway Subheaders + Montserrat Alternates Body) */
     --font-header: 'Alex Brush', cursive;
@@ -75,13 +60,13 @@
     --page-padding-v: var(--sp-96);
     --page-padding-h: var(--sp-64);
 
-    /* Brutalist Structural Borders & Hard Drop Shadows (Cobalt Precision) */
-    --border-thin:   2px solid #2C3480;
-    --border-thick:  3px solid #2C3480;
-    --border-mocha:  2px solid #2C3480;
-    --shadow-hard-sm: 3px 3px 0px #2C3480;
-    --shadow-hard:    5px 5px 0px #2C3480;
-    --shadow-hard-lg: 8px 8px 0px rgba(44, 52, 128, 0.5);
+    /* Brutalist Structural Borders & Hard Drop Shadows */
+    --border-thin:   2px solid var(--color-burgundy);
+    --border-thick:  4px solid var(--color-burgundy);
+    --border-mocha:  2px solid var(--color-mocha);
+    --shadow-hard-sm: 3px 3px 0px var(--color-burgundy);
+    --shadow-hard:    6px 6px 0px var(--color-burgundy);
+    --shadow-hard-lg: 9px 9px 0px var(--color-burgundy);
 
     /* Transitions (Fast, crisp, mechanical) */
     --trans-fast: 150ms cubic-bezier(0, 0, 0.2, 1);
@@ -350,20 +335,20 @@ nav {
     font-weight: var(--fw-bold);
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: #2C3480;
-    border: 2px solid #2C3480;
+    color: var(--color-latte);
+    background-color: var(--color-burgundy);
+    border: var(--border-thick);
     padding: var(--sp-16) var(--sp-32);
-    box-shadow: 4px 4px 0px #FFFFFF;
+    box-shadow: var(--shadow-hard);
     transition: var(--trans-fast);
     min-height: 48px;
 }
 
 .btn-primary:hover {
-    background-color: #3D49B8;
-    color: #FFFFFF;
+    background-color: var(--color-mocha);
+    color: var(--color-burgundy);
     transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0px #FFFFFF;
+    box-shadow: var(--shadow-hard-lg);
 }
 
 .btn-primary:active {
@@ -430,7 +415,7 @@ nav {
 .portrait-matting {
     padding: var(--sp-24);
     /* Cohesive portfolio backdrop: warm latte to mocha and deep burgundy */
-    background: radial-gradient(circle at 50% 30%, #202761 0%, #101538 60%, #000000 100%);
+    background: radial-gradient(circle at 50% 30%, #F5E8D8 0%, #C8A98B 60%, #5C0A1E 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -462,12 +447,12 @@ nav {
     justify-content: center;
     align-items: center;
     padding: var(--sp-12) var(--sp-24);
-    background-color: #2C3480;
+    background-color: var(--color-burgundy);
     font-size: var(--text-xs);
     font-weight: var(--fw-bold);
     letter-spacing: 0.08em;
     text-transform: none;
-    color: #FFFFFF;
+    color: var(--color-latte);
 }
 
 /* --- 6. ABOUT SECTION --- */
@@ -1218,7 +1203,7 @@ nav {
     height: auto;
     transform: rotate(-8deg);
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 2px 6px rgba(44, 52, 128, 0.08));
+    filter: drop-shadow(0 2px 6px rgba(92, 10, 30, 0.08));
     display: block;
 }
 
@@ -1239,7 +1224,7 @@ nav {
 /* Bottom: Awaiting Message right above footer border */
 .contact-awaiting-wrap {
     padding-top: var(--sp-32);
-    border-top: 1.5px solid rgba(44, 52, 128, 0.2);
+    border-top: 1.5px solid rgba(92, 10, 30, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1257,10 +1242,10 @@ nav {
 
 /* --- 12. FOOTER --- */
 footer {
-    background-color: #000000;
-    color: var(--color-mocha-dark);
+    background-color: var(--color-burgundy);
+    color: var(--color-mocha);
     padding: var(--sp-32) var(--page-padding-h);
-    border-top: 2px solid #2C3480;
+    border-top: 2px solid var(--color-mocha);
 }
 
 .footer-inner {
@@ -1328,8 +1313,8 @@ footer {
     :root {
         --page-padding-h: var(--sp-16);
         --page-padding-v: 48px;
-        --border-mobile-fine: 1px solid rgba(44, 52, 128, 0.22);
-        --shadow-mobile-subtle: 2px 2px 0px rgba(44, 52, 128, 0.12);
+        --border-mobile-fine: 1px solid rgba(92, 10, 30, 0.22);
+        --shadow-mobile-subtle: 2px 2px 0px rgba(92, 10, 30, 0.12);
     }
 
     /* Masthead: sleek, single-row minimal masthead with horizontal swipe pills */
@@ -1339,7 +1324,7 @@ footer {
         justify-content: space-between;
         padding: var(--sp-8) var(--sp-16);
         gap: var(--sp-12);
-        border-bottom: 1px solid rgba(44, 52, 128, 0.25);
+        border-bottom: 1px solid rgba(92, 10, 30, 0.25);
     }
 
     .nav-logo {
@@ -1408,13 +1393,13 @@ footer {
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
         gap: var(--sp-32);
-        border-bottom: 1.5px solid rgba(44, 52, 128, 0.2);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .meta-tag {
         font-size: 0.68rem;
         padding: 3px 10px;
-        border: 1px solid rgba(44, 52, 128, 0.25);
+        border: 1px solid rgba(92, 10, 30, 0.25);
         margin-bottom: var(--sp-16);
         box-shadow: none;
     }
@@ -1445,7 +1430,7 @@ footer {
         font-size: var(--text-xs);
         min-height: 44px;
         border: 1.5px solid var(--color-burgundy);
-        box-shadow: 2px 2px 0px rgba(44, 52, 128, 0.2);
+        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.2);
     }
 
     .btn-secondary {
@@ -1453,7 +1438,7 @@ footer {
         font-size: var(--text-xs);
         min-height: 44px;
         border: 1.5px solid var(--color-burgundy);
-        box-shadow: 2px 2px 0px rgba(44, 52, 128, 0.2);
+        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.2);
     }
 
     .hero-scroll-indicator {
@@ -1469,7 +1454,7 @@ footer {
         max-width: 240px;
         margin: 0 auto;
         border: 1.5px solid var(--color-burgundy);
-        box-shadow: 4px 4px 0px rgba(44, 52, 128, 0.15);
+        box-shadow: 4px 4px 0px rgba(92, 10, 30, 0.15);
     }
 
     .portrait-matting {
@@ -1487,7 +1472,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(44, 52, 128, 0.2);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .about-name {
@@ -1514,11 +1499,11 @@ footer {
     }
 
     .stat-card {
-        border: 1px solid rgba(44, 52, 128, 0.22);
+        border: 1px solid rgba(92, 10, 30, 0.22);
         background: linear-gradient(135deg, rgba(255, 253, 249, 0.95) 0%, rgba(245, 232, 216, 0.5) 100%);
         padding: 16px 12px;
         min-height: auto;
-        box-shadow: 2px 2px 0px rgba(44, 52, 128, 0.1);
+        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.1);
         align-items: center;
         text-align: center;
     }
@@ -1542,7 +1527,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(44, 52, 128, 0.2);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .skills-grid {
@@ -1551,14 +1536,14 @@ footer {
     }
 
     .skill-card {
-        border: 1px solid rgba(44, 52, 128, 0.2);
+        border: 1px solid rgba(92, 10, 30, 0.2);
         background-color: var(--color-latte);
         padding: 16px 16px;
-        box-shadow: 2px 2px 0px rgba(44, 52, 128, 0.1);
+        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.1);
     }
 
     .skill-card-header {
-        border-bottom: 1px solid rgba(44, 52, 128, 0.15);
+        border-bottom: 1px solid rgba(92, 10, 30, 0.15);
         padding-bottom: 6px;
         margin-bottom: var(--sp-12);
     }
@@ -1578,7 +1563,7 @@ footer {
     }
 
     .skill-pill {
-        border: 1px solid rgba(44, 52, 128, 0.25);
+        border: 1px solid rgba(92, 10, 30, 0.25);
         background-color: rgba(251, 247, 240, 0.9);
         color: var(--color-burgundy);
         padding: 4px 10px;
@@ -1599,7 +1584,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(44, 52, 128, 0.2);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .education-grid {
@@ -1608,14 +1593,14 @@ footer {
     }
 
     .edu-card {
-        border: 1px solid rgba(44, 52, 128, 0.2);
+        border: 1px solid rgba(92, 10, 30, 0.2);
         background: linear-gradient(135deg, rgba(200, 169, 139, 0.15) 0%, rgba(245, 232, 216, 0.4) 100%);
         padding: 18px 16px;
-        box-shadow: 2px 2px 0px rgba(44, 52, 128, 0.1);
+        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.1);
     }
 
     .edu-top-meta {
-        border-bottom: 1px solid rgba(44, 52, 128, 0.15);
+        border-bottom: 1px solid rgba(92, 10, 30, 0.15);
         padding-bottom: 6px;
         margin-bottom: var(--sp-12);
     }
@@ -1627,7 +1612,7 @@ footer {
     .edu-date {
         font-size: 0.65rem;
         padding: 2px 8px;
-        border: 1px solid rgba(44, 52, 128, 0.2);
+        border: 1px solid rgba(92, 10, 30, 0.2);
     }
 
     .edu-title {
@@ -1650,7 +1635,7 @@ footer {
     .edu-badge {
         padding: 4px 10px;
         font-size: 0.68rem;
-        border: 1px solid rgba(44, 52, 128, 0.25);
+        border: 1px solid rgba(92, 10, 30, 0.25);
     }
 
     /* --- PROJECTS SECTION --- */
@@ -1659,7 +1644,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(44, 52, 128, 0.2);
+        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
     }
 
     .projects-grid {
@@ -1668,9 +1653,9 @@ footer {
     }
 
     .project-board {
-        border: 1px solid rgba(44, 52, 128, 0.22);
+        border: 1px solid rgba(92, 10, 30, 0.22);
         padding: 20px 16px;
-        box-shadow: 3px 3px 0px rgba(44, 52, 128, 0.1);
+        box-shadow: 3px 3px 0px rgba(92, 10, 30, 0.1);
     }
 
     .project-num-badge {
@@ -1688,7 +1673,7 @@ footer {
     .project-category-tag {
         font-size: 0.65rem;
         padding: 2px 8px;
-        border: 1px solid rgba(44, 52, 128, 0.25);
+        border: 1px solid rgba(92, 10, 30, 0.25);
         margin-bottom: var(--sp-8);
     }
 
@@ -1710,7 +1695,7 @@ footer {
     .project-tech-chips span {
         font-size: 0.68rem;
         padding: 2px 8px;
-        border: 1px solid rgba(44, 52, 128, 0.2);
+        border: 1px solid rgba(92, 10, 30, 0.2);
     }
 
     .btn-project {
@@ -1815,7 +1800,7 @@ footer {
         min-height: 48px;
         font-size: 0.95rem;
         border: 1px solid var(--color-burgundy);
-        box-shadow: 2px 2px 0px rgba(44, 52, 128, 0.12);
+        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.12);
     }
 
     .contact-signature-col {
@@ -1837,7 +1822,7 @@ footer {
 
     .contact-awaiting-wrap {
         padding-top: 24px;
-        border-top: 1px solid rgba(44, 52, 128, 0.2);
+        border-top: 1px solid rgba(92, 10, 30, 0.2);
     }
 
     .signoff-text {
