@@ -186,7 +186,7 @@ nav {
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex: 1;
 }
 
 .nav-logo span {
@@ -196,8 +196,17 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--sp-4);
     list-style: none;
+    flex: 0 0 auto;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-links a {
@@ -1322,9 +1331,11 @@ footer {
 
     .nav-logo {
         font-size: 1.8rem;
+        flex: 0 0 auto;
     }
 
     .nav-links {
+        flex: 1;
         width: auto;
         display: flex;
         flex-wrap: nowrap;
@@ -1333,6 +1344,10 @@ footer {
         scrollbar-width: none;
         gap: var(--sp-4);
         padding-bottom: 2px;
+    }
+
+    .nav-right {
+        display: none;
     }
 
     .nav-links::-webkit-scrollbar {
