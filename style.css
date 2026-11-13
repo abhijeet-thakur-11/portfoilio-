@@ -431,23 +431,7 @@ nav {
     transform: scale(1.02);
 }
 
-/* Handwritten Signature Overlay */
-.portrait-signature {
-    position: absolute;
-    bottom: 18px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-6deg);
-    width: 75%;
-    max-width: 300px;
-    opacity: 0.92;
-    pointer-events: none;
-    z-index: 2;
-    transition: opacity 0.3s ease;
-}
-
-.portrait-container:hover .portrait-signature {
-    opacity: 1;
-}
+/* Handwritten Signature Overlay - removed from portrait, now in contact */
 
 .portrait-caption {
     display: flex;
@@ -1190,6 +1174,74 @@ nav {
     transform: translate(4px, -4px);
 }
 
+/* --- Contact Signature Sign-off --- */
+.contact-signoff {
+    margin-top: var(--sp-64);
+    padding-top: var(--sp-40);
+    border-top: 1.5px solid rgba(92, 10, 30, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--sp-32);
+}
+
+.signoff-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+}
+
+.signoff-tag {
+    font-family: var(--font-sub);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-mocha-dark);
+}
+
+.signoff-text {
+    font-family: var(--font-header);
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    font-weight: 500;
+    color: var(--color-burgundy);
+    margin: 0;
+    max-width: 420px;
+    line-height: 1.4;
+}
+
+.signoff-signature-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--sp-8);
+    min-width: 0;
+}
+
+.contact-signature {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 2px 6px rgba(92, 10, 30, 0.08));
+    display: block;
+}
+
+.contact-signature:hover {
+    transform: rotate(-1deg) scale(1.03);
+}
+
+.signoff-role {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-mocha-dark);
+    opacity: 0.85;
+}
+
 /* --- 12. FOOTER --- */
 footer {
     background-color: var(--color-burgundy);
@@ -1404,15 +1456,6 @@ footer {
     .portrait-matting {
         padding: var(--sp-12);
         border-bottom: 1.5px solid var(--color-burgundy);
-    }
-
-    .portrait-signature {
-        width: 72%;
-        max-width: 140px;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-6deg);
-        opacity: 0.90;
     }
 
     .portrait-caption {
@@ -1745,6 +1788,40 @@ footer {
         font-size: 0.95rem;
         border: 1px solid var(--color-burgundy);
         box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.12);
+    }
+
+    .contact-signoff {
+        margin-top: 36px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(92, 10, 30, 0.2);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--sp-20);
+    }
+
+    .signoff-meta {
+        align-items: center;
+    }
+
+    .signoff-text {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    .signoff-signature-block {
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-signature {
+        width: 75%;
+        max-width: 240px;
+        transform: rotate(-3deg);
+    }
+
+    .signoff-role {
+        font-size: 0.7rem;
     }
 
     .footer-inner {
