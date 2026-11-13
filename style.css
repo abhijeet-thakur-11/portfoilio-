@@ -73,6 +73,32 @@
     --trans-base: 200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* --- 1B. DARK MODE TOKENS (Midnight Velvet Burgundy) --- */
+[data-theme="dark"] {
+    /* Color System Inversion — Velvet Midnight Burgundy */
+    --color-latte:       #130308; /* Deep Obsidian Burgundy canvas */
+    --color-latte-card:  #1C070D; /* Elevated dark velvet card surface */
+    --color-mocha:       #C8A98B; /* Warm Brass / Mocha accents */
+    --color-mocha-light: #E0CEBD; /* Luminous mocha tint */
+    --color-mocha-dark:  #E5B869; /* Antique Gold accent */
+    --color-burgundy:    #FFF8E7; /* Cosmic Latte cream for primary text & headings */
+    --color-burgundy-dark: #080104; /* Deepest obsidian shadow */
+    --color-burgundy-faint: rgba(255, 248, 231, 0.08);
+
+    /* Neobrutalist Borders & Drop Shadows for Dark Mode */
+    --border-thin:   1.5px solid rgba(200, 169, 139, 0.45);
+    --border-thick:  2.5px solid var(--color-mocha);
+    --border-mocha:  1.5px solid rgba(200, 169, 139, 0.6);
+    --shadow-hard-sm: 3px 3px 0px rgba(0, 0, 0, 0.7);
+    --shadow-hard:    5px 5px 0px rgba(0, 0, 0, 0.8);
+    --shadow-hard-lg: 8px 8px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* Smooth Theme Transitions */
+body, nav, section, footer, .stat-card, .btn-contact, .btn-primary, .btn-secondary, .project-card, .skill-category-card {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* --- 2. GLOBAL RESET & BASE STYLES --- */
 *, *::before, *::after {
     margin: 0;
@@ -231,28 +257,150 @@ nav {
     border-color: var(--color-burgundy);
 }
 
-.nav-status {
-    display: flex;
+/* --- Table Lamp Theme Toggle --- */
+.lamp-toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    display: inline-flex;
     align-items: center;
-    gap: var(--sp-8);
-    font-family: var(--font-sub);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: none;
-    color: var(--color-burgundy);
-    padding: var(--sp-8) var(--sp-12);
-    border: var(--border-thin);
-    background-color: var(--color-latte-card);
-    white-space: nowrap;
-    flex-shrink: 0;
+    justify-content: center;
+    position: relative;
+    outline: none;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-burgundy);
-    flex-shrink: 0;
+.lamp-toggle-btn:hover {
+    transform: scale(1.12);
+}
+
+.lamp-toggle-btn:active .lamp-cord {
+    transform: translateY(2.5px);
+}
+
+.lamp-container {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lamp-svg {
+    overflow: visible;
+}
+
+/* Light Mode: Lamp is off */
+.lamp-shade {
+    fill: rgba(92, 10, 30, 0.08);
+    stroke: var(--color-burgundy);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    transition: fill 0.3s ease, stroke 0.3s ease, filter 0.3s ease;
+}
+
+.lamp-finial,
+.lamp-stem,
+.lamp-base {
+    fill: var(--color-burgundy);
+    stroke: var(--color-burgundy);
+    stroke-width: 0.5;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.lamp-cord {
+    stroke: var(--color-burgundy);
+    transition: transform 0.15s ease, stroke 0.3s ease;
+}
+
+.lamp-cord-bead {
+    fill: var(--color-mocha-dark);
+}
+
+.lamp-cone {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform-origin: 20px 18px;
+    transform: scaleY(0.5);
+    pointer-events: none;
+}
+
+/* Dark Mode: Lamp is ON and GLOWING! */
+[data-theme="dark"] .lamp-shade {
+    fill: #FFD56B;
+    stroke: #FFEAA7;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 0 10px rgba(255, 213, 107, 0.85));
+}
+
+[data-theme="dark"] .lamp-finial,
+[data-theme="dark"] .lamp-stem,
+[data-theme="dark"] .lamp-base {
+    fill: var(--color-mocha);
+    stroke: var(--color-mocha-light);
+}
+
+[data-theme="dark"] .lamp-cord {
+    stroke: var(--color-mocha);
+}
+
+[data-theme="dark"] .lamp-cord-bead {
+    fill: #FFD56B;
+}
+
+[data-theme="dark"] .lamp-cone {
+    opacity: 1;
+    transform: scaleY(1);
+    filter: drop-shadow(0 0 12px rgba(255, 215, 64, 0.55));
+}
+
+/* Component Dark Mode Refinements */
+[data-theme="dark"] nav {
+    background-color: #16040A;
+    border-bottom: 1.5px solid rgba(200, 169, 139, 0.35);
+}
+
+[data-theme="dark"] .nav-links a:hover {
+    background-color: var(--color-mocha);
+    color: #140408;
+    border-color: var(--color-mocha);
+}
+
+[data-theme="dark"] .hero-subtitle {
+    border-left-color: var(--color-mocha);
+}
+
+[data-theme="dark"] .portrait-container {
+    background-color: #1C070D;
+    border-color: var(--color-mocha);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .portrait-matting {
+    background: radial-gradient(circle at 50% 30%, #350A14 0%, #1A050B 60%, #0A0104 100%);
+    border-bottom: 2px solid rgba(200, 169, 139, 0.4);
+}
+
+[data-theme="dark"] .portrait-caption {
+    background-color: #0E0206;
+    color: var(--color-mocha-light);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: var(--color-mocha-light);
+    color: #140408;
+}
+
+[data-theme="dark"] .contact-signature {
+    filter: invert(1) brightness(1.2) sepia(0.25) saturate(0.8) drop-shadow(0 2px 8px rgba(255, 248, 231, 0.15));
+}
+
+[data-theme="dark"] footer {
+    background-color: #0A0104;
+    border-top: 1.5px solid rgba(200, 169, 139, 0.3);
+    color: var(--color-mocha);
 }
 
 /* --- 5. HERO SECTION --- */
@@ -1345,7 +1493,9 @@ footer {
     }
 
     .nav-right {
-        display: none;
+        display: flex;
+        flex: 0 0 auto;
+        padding-left: var(--sp-4);
     }
 
     .nav-links::-webkit-scrollbar {
