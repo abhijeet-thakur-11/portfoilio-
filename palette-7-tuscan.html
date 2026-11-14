@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Thakur — [Tuscan Terra & Raw Linen]</title>
+    <meta name="description"
+        content="Portfolio of Abhijeet Thakur — AI builder and GGSIPU data science scholar, sculpting complex algorithms into scalable, high-impact solutions.">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Optimized Font Loading (Alex Brush + Montserrat Alternates + Raleway) with display=block to eliminate FOUT -->
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat+Alternates:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=block"
+        rel="stylesheet">
+
+    <!-- Anti-FOUT: Prevent Flash of Unstyled Fallback Fonts -->
+    <style>
+        html { background-color: #FAF6EE; }
+        html.wf-loading body {
+            visibility: hidden;
+            opacity: 0;
+        }
+        html.wf-active body {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.12s ease-in;
+        }
+    </style>
+    <script>
+        document.documentElement.classList.add('wf-loading');
+        if ('fonts' in document) {
+            document.fonts.ready.then(function () {
+                document.documentElement.classList.remove('wf-loading');
+                document.documentElement.classList.add('wf-active');
+            });
+            setTimeout(function () {
+                document.documentElement.classList.remove('wf-loading');
+                document.documentElement.classList.add('wf-active');
+            }, 350);
+        } else {
+            document.documentElement.classList.remove('wf-loading');
+        }
+    </script>
+
+    <!-- Stylesheet with Cache Busting -->
+    <link rel="stylesheet" href="style-tuscan.css?v=20261115">
+</head>
+
+<body>
+
+    <!-- ============ NAVIGATION / MASTHEAD ============ -->
+    <nav aria-label="Main navigation">
+        <a href="#hero" class="nav-logo">Hello<span>.</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" id="openResumeBtn" class="nav-resume-btn" aria-label="Resume" title="Resume">
+                <svg class="resume-icon-paper" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                </svg>
+                <span class="resume-btn-text">Resume</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="hero">
+        <div class="hero-left">
+            <div class="meta-tag">// Of New Delhi • Apprentice to the machine</div>
+            <h1 class="hero-title">
+                Intelligent <span class="accent-text">Systems</span><br>
+                Engineer
+            </h1>
+            <p class="hero-subtitle">
+                An AI builder and GGSIPU data science scholar, I sculpt complex algorithms into scalable, high-impact solutions. From post-quantum cryptography to real-time assistive tech, I weave modular architecture into tangible innovations, bridging the gap between intelligent systems and human utility.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    View Projects <span class="arrow">→</span>
+                </a>
+                <a href="https://github.com/abhijeet-thakur-11" target="_blank" class="btn-secondary">
+                    GitHub Profile <span class="arrow">↗</span>
+                </a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span class="scroll-dash"></span>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="portrait-container">
+                <div class="portrait-matting">
+                    <img src="portrait_warm_portfolio.png" alt="Abhijeet Thakur" class="portrait-photo">
+                </div>
+                <div class="portrait-caption">
+                    <span>Yeah that's me</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-narrative">
+                <div class="section-label">// About</div>
+                <h2 class="section-title scramble-target">WHO AM I</h2>
+                <h3 class="about-name">Abhijeet Thakur</h3>
+                <p class="about-text">
+                    I am a GGSIPU Data Science sophomore, engineering high-performance architectures. I blend analytical rigor with user-centric problem-solving—a discipline shaped by my time as a Delhi state-level volleyball player. Though retired from the court, that drive persists in my coding. Off-screen, I fuel my creativity by writing short poetry, listening to music, and exploring captivating movies and web series.
+                </p>
+            </div>
+
+            <div class="about-metrics">
+                <div class="stat-card">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">Hackathon Winner</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Hackathon Finalist</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Repositories Shipped</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">'29</div>
+                    <div class="stat-label">GGSIPU CS-DS Cohort</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills">
+        <div class="skills-wrapper">
+            <div class="section-header-block">
+                <div class="section-label">// The Arsenal</div>
+                <h2 class="section-title scramble-target">Skills &amp; Capabilities</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Category 1 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">01</span>
+                        <h3 class="cat-title">Foundations</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">C / C++</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">Go</span>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">02</span>
+                        <h3 class="cat-title">AI / ML</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill accent">PyTorch</span>
+                        <span class="skill-pill accent">TensorFlow</span>
+                        <span class="skill-pill accent">OpenCV</span>
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">Pandas</span>
+                        <span class="skill-pill">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">03</span>
+                        <h3 class="cat-title">Web Architecture</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">Next.js</span>
+                        <span class="skill-pill">SvelteKit</span>
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">Socket.IO</span>
+                        <span class="skill-pill">Three.js</span>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">04</span>
+                        <h3 class="cat-title">Data Layer</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">Supabase</span>
+                        <span class="skill-pill">Prisma</span>
+                        <span class="skill-pill">Firebase</span>
+                        <span class="skill-pill">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">05</span>
+                        <h3 class="cat-title">IoT / Embedded</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">Arduino</span>
+                        <span class="skill-pill">Raspberry Pi</span>
+                        <span class="skill-pill">ESP32</span>
+                        <span class="skill-pill">Home Assistant</span>
+                        <span class="skill-pill">Edge AI</span>
+                    </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">06</span>
+                        <h3 class="cat-title">Cloud & Tools</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">GitHub Actions</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Vercel</span>
+                        <span class="skill-pill">Render</span>
+                        <span class="skill-pill">Figma</span>
+                        <span class="skill-pill">Adobe Suite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EDUCATION SECTION ============ -->
+    <section id="education">
+        <div class="section-label">// Academic Background</div>
+        <h2 class="section-title scramble-target">Education</h2>
+
+        <div class="education-grid">
+            <!-- Edu Card 1 -->
+            <div class="edu-card">
+                <div class="edu-top-meta">
+                    <span class="edu-tag">B.Tech · New Delhi</span>
+                    <span class="edu-date">2025 – 2029</span>
+                </div>
+                <h3 class="edu-title">B.Tech CSE – Data Science</h3>
+                <p class="edu-institution">Guru Gobind Singh Indraprastha University (GGSIPU)</p>
+                <p class="edu-desc">Sophomore specialising in Data Science with core CS fundamentals alongside applied
+                    machine learning, neural networks, and scalable software architectures.</p>
+                <div class="edu-badge-box">
+                    <span class="edu-badge">Class of 2029 · Active</span>
+                </div>
+            </div>
+
+            <!-- Edu Card 2 -->
+            <div class="edu-card">
+                <div class="edu-top-meta">
+                    <span class="edu-tag">Class XII · CBSE</span>
+                    <span class="edu-date">Completed</span>
+                </div>
+                <h3 class="edu-title">Senior Secondary</h3>
+                <p class="edu-institution">CBSE Board — Delhi, India</p>
+                <p class="edu-desc">Completed Senior Secondary education with focus on Science and Mathematics under the
+                    Central Board of Secondary Education, Delhi region.</p>
+                <div class="edu-badge-box">
+                    <span class="edu-badge">CBSE · Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects">
+        <div class="section-label">// Selected Work · 6 Repositories</div>
+        <h2 class="section-title scramble-target">Selected Work</h2>
+
+        <div class="projects-grid">
+            <!-- Project 1: Aeris-AI -->
+            <div class="project-board">
+                <div class="project-num-badge">01</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Environmental Intelligence & ML</span>
+                    <h3 class="project-title scramble-target">AERIS AI</h3>
+                </div>
+                <p class="project-description">
+                    A real-time Environmental Intelligence and Hyper-Local Air Quality Management Platform engineered to
+                    detect, visualize, predict, and mitigate urban air pollution (modeled for high-density environments
+                    like Delhi NCR).
+                </p>
+                <div class="project-tech-chips">
+                    <span>SvelteKit</span>
+                    <span>Python</span>
+                    <span>Scikit-Learn</span>
+                    <span>Mapbox</span>
+                    <span>IoT Telemetry</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/Aeris-AI" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Encrypt-Plus -->
+            <div class="project-board">
+                <div class="project-num-badge">02</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Quantum-Safe Cryptography</span>
+                    <h3 class="project-title scramble-target">ENCRYPTPLUS</h3>
+                </div>
+                <p class="project-description">
+                    Scans source code repositories to identify cryptographic algorithms, calculates which primitives
+                    will be broken by quantum computers, and generates an automated step-by-step developer roadmap to
+                    upgrade to post-quantum standards.
+                </p>
+                <div class="project-tech-chips">
+                    <span>Go</span>
+                    <span>Post-Quantum Crypto</span>
+                    <span>AST Analysis</span>
+                    <span>Security CLI</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/Encrypt-Plus" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: Vision-Aid -->
+            <div class="project-board">
+                <div class="project-num-badge">03</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Edge AI & Smart Wearable</span>
+                    <h3 class="project-title scramble-target">VISION-AID</h3>
+                </div>
+                <p class="project-description">
+                    An edge-first, AI-powered smart wearable assistive system designed to grant independent mobility and
+                    environmental awareness to visually impaired individuals via real-time spatial obstacle detection
+                    and audio cues.
+                </p>
+                <div class="project-tech-chips">
+                    <span>ESP32</span>
+                    <span>OpenCV</span>
+                    <span>PyTorch</span>
+                    <span>Edge AI</span>
+                    <span>PCB Design</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/VisionAid-" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: SweepX -->
+            <div class="project-board">
+                <div class="project-num-badge">04</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Environmental Gamification</span>
+                    <h3 class="project-title scramble-target">SWEEPX</h3>
+                </div>
+                <p class="project-description">
+                    A gamified environmental cleanup platform that turns urban cleanup into an adventure. Real-time
+                    community leaderboards, AI-powered waste detection, and spatial impact tracking.
+                </p>
+                <div class="project-tech-chips">
+                    <span>SvelteKit</span>
+                    <span>YOLOv8</span>
+                    <span>MongoDB</span>
+                    <span>Mapbox</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/sweepdtu" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: Audit-minds- -->
+            <div class="project-board">
+                <div class="project-num-badge">05</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Enterprise GRC & Audit AI</span>
+                    <h3 class="project-title scramble-target">AUDITMIND</h3>
+                </div>
+                <p class="project-description">
+                    An enterprise GRC (Governance, Risk, and Compliance) & Audit Intelligence platform streamlining risk
+                    analytics, continuous compliance monitoring, and automated policy verification for enterprise
+                    architectures.
+                </p>
+                <div class="project-tech-chips">
+                    <span>TypeScript</span>
+                    <span>Next.js</span>
+                    <span>Node.js</span>
+                    <span>Enterprise GRC</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/Audit-minds-" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 6: Copify -->
+            <div class="project-board">
+                <div class="project-num-badge">06</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Real-Time Cloud Utility</span>
+                    <h3 class="project-title scramble-target">COPIFY</h3>
+                </div>
+                <p class="project-description">
+                    A temporary, login-free clipboard between devices. Sender pastes text to receive an ephemeral
+                    5-character transfer key; Receiver enters the key to receive data instantly, auto-expiring in 10
+                    minutes.
+                </p>
+                <div class="project-tech-chips">
+                    <span>TypeScript</span>
+                    <span>WebSockets</span>
+                    <span>Express</span>
+                    <span>Node.js</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/copify" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS SECTION — TIMELINE SPINE ============ -->
+    <section id="achievements">
+        <div class="ach-header">
+            <div class="section-label">// Recognition · 3x Winner · 10x Finalist</div>
+            <h2 class="section-title scramble-target">Achievements</h2>
+        </div>
+
+        <!-- Timeline spine -->
+        <div class="ach-timeline">
+            <div class="ach-spine"></div>
+
+            <!-- Left: 01 GenCodeX -->
+            <div class="ach-item ach-left">
+                <div class="ach-card">
+                    <span class="ach-badge winner">3x Hackathon Winner</span>
+                    <h3 class="ach-name">GenCodeX &amp; National Hackathons</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">JIMS JEMTEC</span>
+                        <span class="ach-tag highlight">₹21,000+ Grand Prize</span>
+                    </div>
+                </div>
+                <div class="ach-node"></div>
+            </div>
+
+            <!-- Right: 02 Zinnovatio -->
+            <div class="ach-item ach-right">
+                <div class="ach-node"></div>
+                <div class="ach-card">
+                    <span class="ach-badge runner-up">Track Runner-Up</span>
+                    <h3 class="ach-name">Zinnovatio 4.0</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">Chandigarh University</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left: 03 Brainwave -->
+            <div class="ach-item ach-left">
+                <div class="ach-card">
+                    <span class="ach-badge finalist">Finalist</span>
+                    <h3 class="ach-name">Brainwave Hackathon</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">DTU New Delhi</span>
+                    </div>
+                </div>
+                <div class="ach-node"></div>
+            </div>
+
+            <!-- Right: 04 Ideathon -->
+            <div class="ach-item ach-right">
+                <div class="ach-node"></div>
+                <div class="ach-card">
+                    <span class="ach-badge finalist">Finalist</span>
+                    <h3 class="ach-name">Ideathon 2025</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">TIIPS Greater Noida</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left: 05 National Circuit -->
+            <div class="ach-item ach-left">
+                <div class="ach-card">
+                    <span class="ach-badge finalist">10x Hackathon Finalist</span>
+                    <h3 class="ach-name">National Hackathon Circuit</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">Across India</span>
+                        <span class="ach-tag highlight">10x Finalist Finishes</span>
+                    </div>
+                </div>
+                <div class="ach-node"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact">
+        <div class="contact-header">
+            <div class="section-label">// Get In Touch</div>
+            <h2 class="contact-heading">
+                Let's Build <span class="serif-accent">something</span> Sentient
+            </h2>
+        </div>
+
+        <div class="contact-body-grid">
+            <!-- Left: Buttons -->
+            <div class="contact-buttons-col">
+                <div class="contact-stack">
+                    <a href="mailto:abhijeetthakur.nov2006@gmail.com" class="btn-contact">
+                        <span>Email</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/abhijeet-thakur-11" target="_blank" class="btn-contact">
+                        <span>GitHub</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhijeet-thakur-4ba311378?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
+                        target="_blank" class="btn-contact">
+                        <span>LinkedIn</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Signature + Byline -->
+            <div class="contact-signature-col">
+                <img src="signature.png" alt="Abhijeet Thakur signature" class="contact-signature">
+                <span class="signoff-role">Abhijeet</span>
+            </div>
+        </div>
+
+        <!-- Bottom: Awaiting Message -->
+        <div class="contact-awaiting-wrap">
+            <p class="signoff-text">Awaiting new quests &amp; collaborations</p>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-brand">Built with obsession</span>
+        </div>
+    </footer>
+
+    <!-- ============ RESUME SHOWCASE MODAL ============ -->
+    <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <div class="resume-modal-backdrop" id="resumeBackdrop"></div>
+        <div class="resume-modal-wrapper">
+            <!-- Sleek Floating Control Bar -->
+            <header class="resume-floating-bar">
+                <div class="resume-bar-meta">
+                    <span id="resumeModalTitle" class="resume-bar-title">Abhijeet Thakur</span>
+                    <span class="resume-bar-sep">//</span>
+                    <span class="resume-bar-role">Curriculum Vitae</span>
+                </div>
+
+                <div class="resume-bar-actions">
+                    <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="btn-resume-pill btn-resume-dl" title="Download PDF to device">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download PDF</span>
+                    </a>
+                    <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-pill btn-resume-tab" title="Open in dedicated tab">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        <span>Open Tab</span>
+                    </a>
+                    <button class="btn-resume-close-circle" id="closeResumeBtn" aria-label="Close resume modal" title="Close (Esc)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Floating Paper Document Sheet (Clean, elevated, no harsh box border) -->
+            <div class="resume-sheet-container">
+                <iframe src="Abhijeet_Thakur_Resume.pdf#toolbar=0&navpanes=0&view=FitH" title="Abhijeet Thakur Resume PDF" class="resume-sheet-iframe"></iframe>
+            </div>
+
+            <div class="resume-sheet-caption">
+                <span>ATS-Optimized Single-Page Architecture</span>
+                <span class="caption-dot">•</span>
+                <span>Press <kbd>Esc</kbd> or click outside to close</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script>
+        /* =========================================
+           SWISS BRUTALIST PORTFOLIO INTERACTION LOGIC
+           ========================================= */
+        (function () {
+            'use strict';
+
+            // 1. Smooth Navigation Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // 2. High-Performance Text Scramble Effect
+            class TextScramble {
+                constructor(el) {
+                    this.el = el;
+                    this.chars = '!<>-_\\/[]{}—=+*^?#_ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                    this.originalText = el.textContent.trim();
+                    this.frame = 0;
+                    this.queue = [];
+                    this.frameRequest = null;
+                }
+
+                setText(newText) {
+                    const oldText = this.el.textContent.trim();
+                    const length = Math.max(oldText.length, newText.length);
+                    this.queue = [];
+                    for (let i = 0; i < length; i++) {
+                        const from = oldText[i] || '';
+                        const to = newText[i] || '';
+                        const start = Math.floor(Math.random() * 20);
+                        const end = start + Math.floor(Math.random() * 20);
+                        this.queue.push({ from, to, start, end, char: '' });
+                    }
+                    cancelAnimationFrame(this.frameRequest);
+                    this.frame = 0;
+                    this.update();
+                }
+
+                update() {
+                    let output = '';
+                    let complete = 0;
+                    for (let i = 0; i < this.queue.length; i++) {
+                        let { from, to, start, end, char } = this.queue[i];
+                        if (this.frame >= end) {
+                            complete++;
+                            output += to;
+                        } else if (this.frame >= start) {
+                            if (!char || Math.random() < 0.28) {
+                                char = this.chars[Math.floor(Math.random() * this.chars.length)];
+                                this.queue[i].char = char;
+                            }
+                            output += `<span style="color: currentColor; opacity: 0.45;">${char}</span>`;
+                        } else {
+                            output += from;
+                        }
+                    }
+                    this.el.innerHTML = output;
+                    if (complete < this.queue.length) {
+                        this.frameRequest = requestAnimationFrame(() => this.update());
+                        this.frame++;
+                    }
+                }
+            }
+
+            // Initialize Text Scramble on elements when in view
+            if ('IntersectionObserver' in window) {
+                const scrambleObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const scrambler = new TextScramble(entry.target);
+                            scrambler.setText(scrambler.originalText);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                document.querySelectorAll('.scramble-target').forEach(el => {
+                    scrambleObserver.observe(el);
+                });
+            }
+        })();
+
+        // ============ RESUME MODAL CONTROLLER ============
+        (function initResumeModal() {
+            function bind() {
+                const openBtn = document.getElementById('openResumeBtn');
+                const closeBtn = document.getElementById('closeResumeBtn');
+                const modal = document.getElementById('resumeModal');
+                const backdrop = document.getElementById('resumeBackdrop');
+
+                if (!openBtn || !modal) {
+                    console.error('Resume modal elements missing:', { openBtn, modal });
+                    return;
+                }
+
+                function openModal(e) {
+                    if (e) e.preventDefault();
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    if (closeBtn) closeBtn.focus();
+                }
+
+                function closeModal(e) {
+                    if (e) e.preventDefault();
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                    if (openBtn) openBtn.focus();
+                }
+
+                openBtn.addEventListener('click', openModal);
+                if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                if (backdrop) backdrop.addEventListener('click', closeModal);
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) {
+                        closeModal(e);
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bind);
+            } else {
+                bind();
+            }
+        })();
+    </script>
+
+    <!-- ============ THEME PREVIEW SWITCHER ============ -->
+    <aside class="theme-switcher-bar" aria-label="Palette Switcher">
+        <div class="theme-switcher-inner">
+            <span class="theme-switcher-label">PREVIEW PALETTES:</span>
+            <a href="index.html" class="theme-btn " title="Cosmic Latte & Deep Burgundy">Original</a>
+            <a href="palette-3-kyoto.html" class="theme-btn " title="Kyoto Moss & Hinoki Wood">03 Kyoto</a>
+            <a href="palette-6-titanium.html" class="theme-btn " title="Raw Titanium Monolith">06 Titanium</a>
+            <a href="palette-7-tuscan.html" class="theme-btn active" title="Tuscan Terra & Raw Linen">07 Tuscan</a>
+        </div>
+    </aside>
+
+</body>
+
+</html>
