@@ -48,7 +48,7 @@
     </script>
 
     <!-- Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="style.css?v=20261114_v32_resume_modal_fixed">
+    <link rel="stylesheet" href="style.css?v=20261114_v33_mocha_light_resume_showcase">
 </head>
 
 <body>
@@ -579,17 +579,21 @@
         </div>
     </footer>
 
-    <!-- ============ RESUME MODAL VIEWER ============ -->
+    <!-- ============ RESUME SHOWCASE MODAL ============ -->
     <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
         <div class="resume-modal-backdrop" id="resumeBackdrop"></div>
-        <div class="resume-modal-container">
-            <div class="resume-modal-header">
-                <div class="resume-modal-info">
-                    <span class="resume-modal-tag">// CURRICULUM VITAE</span>
-                    <h3 id="resumeModalTitle" class="resume-modal-name">Abhijeet Thakur <span>• Resume</span></h3>
+        <div class="resume-modal-wrapper">
+            <!-- Sleek Floating Control Bar -->
+            <header class="resume-floating-bar">
+                <div class="resume-bar-meta">
+                    <span class="resume-badge-dot"></span>
+                    <span id="resumeModalTitle" class="resume-bar-title">Abhijeet Thakur</span>
+                    <span class="resume-bar-sep">//</span>
+                    <span class="resume-bar-role">Curriculum Vitae</span>
                 </div>
-                <div class="resume-modal-actions">
-                    <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="btn-resume-action btn-resume-download" title="Download to local storage">
+
+                <div class="resume-bar-actions">
+                    <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="btn-resume-pill btn-resume-dl" title="Download PDF to device">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
@@ -597,36 +601,32 @@
                         </svg>
                         <span>Download PDF</span>
                     </a>
-                    <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-external" title="Open in new browser tab">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-pill btn-resume-tab" title="Open in dedicated tab">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
                             <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                         <span>Open Tab</span>
                     </a>
-                    <button class="btn-resume-action btn-resume-close" id="closeResumeBtn" aria-label="Close resume modal" title="Close (Esc)">
-                        <span aria-hidden="true">✕</span>
+                    <button class="btn-resume-close-circle" id="closeResumeBtn" aria-label="Close resume modal" title="Close (Esc)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
                     </button>
                 </div>
+            </header>
+
+            <!-- Floating Paper Document Sheet (Clean, elevated, no harsh box border) -->
+            <div class="resume-sheet-container">
+                <iframe src="Abhijeet_Thakur_Resume.pdf#toolbar=0&navpanes=0&view=FitH" title="Abhijeet Thakur Resume PDF" class="resume-sheet-iframe"></iframe>
             </div>
-            <div class="resume-mobile-notice">
-                <span>Mobile view: Tap <strong>Download PDF</strong> above to save or <strong>Open Tab</strong> to view in fullscreen.</span>
-            </div>
-            <div class="resume-modal-body">
-                <iframe src="Abhijeet_Thakur_Resume.pdf#toolbar=1&navpanes=0&view=FitH" title="Abhijeet Thakur Resume PDF" class="resume-pdf-iframe"></iframe>
-            </div>
-            <div class="resume-modal-footer">
-                <div class="resume-footer-meta">
-                    <span>ATS-Optimized</span>
-                    <span>•</span>
-                    <span>Single-Page Architecture</span>
-                    <span>•</span>
-                    <span>AI/ML & SDE Focus</span>
-                </div>
-                <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="resume-footer-direct-dl">
-                    Save to Device (98 KB PDF) ↓
-                </a>
+
+            <div class="resume-sheet-caption">
+                <span>ATS-Optimized Single-Page Architecture</span>
+                <span class="caption-dot">•</span>
+                <span>Press <kbd>Esc</kbd> or click outside to close</span>
             </div>
         </div>
     </div>
