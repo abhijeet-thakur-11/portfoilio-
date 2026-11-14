@@ -48,7 +48,7 @@
     </script>
 
     <!-- Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="style.css?v=20261114_v31_creative_resume_button">
+    <link rel="stylesheet" href="style.css?v=20261114_v32_resume_modal_fixed">
 </head>
 
 <body>
@@ -67,7 +67,7 @@
         </ul>
 
         <div class="nav-right">
-            <button id="openResumeBtn" class="nav-resume-btn" aria-label="Open Resume Preview and Download" title="View & Download Resume (PDF)">
+            <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" id="openResumeBtn" class="nav-resume-btn" aria-label="Open Resume Preview and Download" title="View & Download Resume (PDF)">
                 <span class="resume-pulse-dot" aria-hidden="true"></span>
                 <span class="resume-btn-text">Resume</span>
                 <span class="resume-btn-badge">PDF</span>
@@ -76,7 +76,7 @@
                         <path d="M7 17l9.2-9.2M17 17V8H8"/>
                     </svg>
                 </span>
-            </button>
+            </a>
         </div>
     </nav>
 
@@ -579,6 +579,58 @@
         </div>
     </footer>
 
+    <!-- ============ RESUME MODAL VIEWER ============ -->
+    <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <div class="resume-modal-backdrop" id="resumeBackdrop"></div>
+        <div class="resume-modal-container">
+            <div class="resume-modal-header">
+                <div class="resume-modal-info">
+                    <span class="resume-modal-tag">// CURRICULUM VITAE</span>
+                    <h3 id="resumeModalTitle" class="resume-modal-name">Abhijeet Thakur <span>• Resume</span></h3>
+                </div>
+                <div class="resume-modal-actions">
+                    <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="btn-resume-action btn-resume-download" title="Download to local storage">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download PDF</span>
+                    </a>
+                    <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-external" title="Open in new browser tab">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        <span>Open Tab</span>
+                    </a>
+                    <button class="btn-resume-action btn-resume-close" id="closeResumeBtn" aria-label="Close resume modal" title="Close (Esc)">
+                        <span aria-hidden="true">✕</span>
+                    </button>
+                </div>
+            </div>
+            <div class="resume-mobile-notice">
+                <span>Mobile view: Tap <strong>Download PDF</strong> above to save or <strong>Open Tab</strong> to view in fullscreen.</span>
+            </div>
+            <div class="resume-modal-body">
+                <iframe src="Abhijeet_Thakur_Resume.pdf#toolbar=1&navpanes=0&view=FitH" title="Abhijeet Thakur Resume PDF" class="resume-pdf-iframe"></iframe>
+            </div>
+            <div class="resume-modal-footer">
+                <div class="resume-footer-meta">
+                    <span>ATS-Optimized</span>
+                    <span>•</span>
+                    <span>Single-Page Architecture</span>
+                    <span>•</span>
+                    <span>AI/ML & SDE Focus</span>
+                </div>
+                <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="resume-footer-direct-dl">
+                    Save to Device (98 KB PDF) ↓
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- ============ SCRIPTS ============ -->
     <script>
         /* =========================================
@@ -672,94 +724,50 @@
         })();
 
         // ============ RESUME MODAL CONTROLLER ============
-        (function () {
-            const openBtn = document.getElementById('openResumeBtn');
-            const closeBtn = document.getElementById('closeResumeBtn');
-            const modal = document.getElementById('resumeModal');
-            const backdrop = document.getElementById('resumeBackdrop');
+        (function initResumeModal() {
+            function bind() {
+                const openBtn = document.getElementById('openResumeBtn');
+                const closeBtn = document.getElementById('closeResumeBtn');
+                const modal = document.getElementById('resumeModal');
+                const backdrop = document.getElementById('resumeBackdrop');
 
-            if (!openBtn || !modal) return;
-
-            function openModal() {
-                modal.removeAttribute('hidden');
-                void modal.offsetWidth;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                if (closeBtn) closeBtn.focus();
-            }
-
-            function closeModal() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-                setTimeout(() => {
-                    modal.setAttribute('hidden', '');
-                }, 250);
-                openBtn.focus();
-            }
-
-            openBtn.addEventListener('click', openModal);
-            if (closeBtn) closeBtn.addEventListener('click', closeModal);
-            if (backdrop) backdrop.addEventListener('click', closeModal);
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeModal();
+                if (!openBtn || !modal) {
+                    console.error('Resume modal elements missing:', { openBtn, modal });
+                    return;
                 }
-            });
+
+                function openModal(e) {
+                    if (e) e.preventDefault();
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    if (closeBtn) closeBtn.focus();
+                }
+
+                function closeModal(e) {
+                    if (e) e.preventDefault();
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                    if (openBtn) openBtn.focus();
+                }
+
+                openBtn.addEventListener('click', openModal);
+                if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                if (backdrop) backdrop.addEventListener('click', closeModal);
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) {
+                        closeModal(e);
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bind);
+            } else {
+                bind();
+            }
         })();
     </script>
-
-    <!-- ============ RESUME MODAL VIEWER ============ -->
-    <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle" hidden>
-        <div class="resume-modal-backdrop" id="resumeBackdrop"></div>
-        <div class="resume-modal-container">
-            <div class="resume-modal-header">
-                <div class="resume-modal-info">
-                    <span class="resume-modal-tag">// CURRICULUM VITAE</span>
-                    <h3 id="resumeModalTitle" class="resume-modal-name">Abhijeet Thakur <span>• Resume</span></h3>
-                </div>
-                <div class="resume-modal-actions">
-                    <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="btn-resume-action btn-resume-download" title="Download to local storage">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        <span>Download PDF</span>
-                    </a>
-                    <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-external" title="Open in new browser tab">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                        <span>Open Tab</span>
-                    </a>
-                    <button class="btn-resume-action btn-resume-close" id="closeResumeBtn" aria-label="Close resume modal" title="Close (Esc)">
-                        <span aria-hidden="true">✕</span>
-                    </button>
-                </div>
-            </div>
-            <div class="resume-mobile-notice">
-                <span>Mobile view: Tap <strong>Download PDF</strong> above to save or <strong>Open Tab</strong> to view in fullscreen.</span>
-            </div>
-            <div class="resume-modal-body">
-                <iframe src="Abhijeet_Thakur_Resume.pdf#toolbar=1&navpanes=0&view=FitH" title="Abhijeet Thakur Resume PDF" class="resume-pdf-iframe"></iframe>
-            </div>
-            <div class="resume-modal-footer">
-                <div class="resume-footer-meta">
-                    <span>ATS-Optimized</span>
-                    <span>•</span>
-                    <span>Single-Page Architecture</span>
-                    <span>•</span>
-                    <span>AI/ML & SDE Focus</span>
-                </div>
-                <a href="Abhijeet_Thakur_Resume.pdf" download="Abhijeet_Thakur_Resume.pdf" class="resume-footer-direct-dl">
-                    Save to Device (98 KB PDF) ↓
-                </a>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
