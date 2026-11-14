@@ -12,9 +12,9 @@
     --color-mocha:       #C8A98B; /* 20% Secondary modular panels & card surfaces */
     --color-mocha-light: #DEC9B5; /* Hover tint for mocha surfaces */
     --color-mocha-dark:  #A58161; /* Darker mocha for high-contrast accents */
-    --color-burgundy:    #5C0A1E; /* 20% Text, structural borders & CTA buttons */
-    --color-burgundy-dark: #3F0514; /* Shadow & active tint */
-    --color-burgundy-faint: rgba(92, 10, 30, 0.08); /* Transparent tint for hover */
+    --color-burgundy:    #871630; /* 20% Text, structural borders & CTA buttons */
+    --color-burgundy-dark: #5C0A1E; /* Shadow & active tint */
+    --color-burgundy-faint: rgba(135, 22, 48, 0.08); /* Transparent tint for hover */
 
     /* Typography System (Exact Fontjoy: Alex Brush Headers + Raleway Subheaders + Montserrat Alternates Body) */
     --font-header: 'Alex Brush', cursive;
@@ -1279,7 +1279,7 @@ nav {
     height: auto;
     transform: rotate(-8deg);
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 2px 6px rgba(92, 10, 30, 0.08));
+    filter: drop-shadow(0 2px 6px rgba(135, 22, 48, 0.08));
     display: block;
 }
 
@@ -1300,7 +1300,7 @@ nav {
 /* Bottom: Awaiting Message right above footer border */
 .contact-awaiting-wrap {
     padding-top: var(--sp-32);
-    border-top: 1.5px solid rgba(92, 10, 30, 0.2);
+    border-top: 1.5px solid rgba(135, 22, 48, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1455,8 +1455,8 @@ footer {
     :root {
         --page-padding-h: var(--sp-16);
         --page-padding-v: 48px;
-        --border-mobile-fine: 1px solid rgba(92, 10, 30, 0.22);
-        --shadow-mobile-subtle: 2px 2px 0px rgba(92, 10, 30, 0.12);
+        --border-mobile-fine: 1px solid rgba(135, 22, 48, 0.22);
+        --shadow-mobile-subtle: 2px 2px 0px rgba(135, 22, 48, 0.12);
     }
 
     /* Masthead: sleek, single-row minimal masthead with horizontal swipe pills */
@@ -1466,7 +1466,7 @@ footer {
         justify-content: space-between;
         padding: var(--sp-8) var(--sp-16);
         gap: var(--sp-12);
-        border-bottom: 1px solid rgba(92, 10, 30, 0.25);
+        border-bottom: 1px solid rgba(135, 22, 48, 0.25);
     }
 
     .nav-logo {
@@ -1552,13 +1552,13 @@ footer {
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
         gap: var(--sp-32);
-        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
+        border-bottom: 1.5px solid rgba(135, 22, 48, 0.2);
     }
 
     .meta-tag {
         font-size: 0.68rem;
         padding: 3px 10px;
-        border: 1px solid rgba(92, 10, 30, 0.25);
+        border: 1px solid rgba(135, 22, 48, 0.25);
         margin-bottom: var(--sp-16);
         box-shadow: none;
     }
@@ -1589,7 +1589,7 @@ footer {
         font-size: var(--text-xs);
         min-height: 44px;
         border: 1.5px solid var(--color-burgundy);
-        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.2);
+        box-shadow: 2px 2px 0px rgba(135, 22, 48, 0.2);
     }
 
     .btn-secondary {
@@ -1597,7 +1597,7 @@ footer {
         font-size: var(--text-xs);
         min-height: 44px;
         border: 1.5px solid var(--color-burgundy);
-        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.2);
+        box-shadow: 2px 2px 0px rgba(135, 22, 48, 0.2);
     }
 
     .hero-scroll-indicator {
@@ -1613,7 +1613,7 @@ footer {
         max-width: 240px;
         margin: 0 auto;
         border: 1.5px solid var(--color-burgundy);
-        box-shadow: 4px 4px 0px rgba(92, 10, 30, 0.15);
+        box-shadow: 4px 4px 0px rgba(135, 22, 48, 0.15);
     }
 
     .portrait-matting {
@@ -1631,7 +1631,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
+        border-bottom: 1.5px solid rgba(135, 22, 48, 0.2);
     }
 
     .about-name {
@@ -1658,11 +1658,11 @@ footer {
     }
 
     .stat-card {
-        border: 1px solid rgba(92, 10, 30, 0.22);
+        border: 1px solid rgba(135, 22, 48, 0.22);
         background: linear-gradient(135deg, rgba(255, 253, 249, 0.95) 0%, rgba(245, 232, 216, 0.5) 100%);
         padding: 16px 12px;
         min-height: auto;
-        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.1);
+        box-shadow: 2px 2px 0px rgba(135, 22, 48, 0.1);
         align-items: center;
         text-align: center;
     }
@@ -1686,7 +1686,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
+        border-bottom: 1.5px solid rgba(135, 22, 48, 0.2);
     }
 
     .skills-grid {
@@ -1695,14 +1695,14 @@ footer {
     }
 
     .skill-card {
-        border: 1px solid rgba(92, 10, 30, 0.2);
+        border: 1px solid rgba(135, 22, 48, 0.2);
         background-color: var(--color-latte);
         padding: 16px 16px;
-        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.1);
+        box-shadow: 2px 2px 0px rgba(135, 22, 48, 0.1);
     }
 
     .skill-card-header {
-        border-bottom: 1px solid rgba(92, 10, 30, 0.15);
+        border-bottom: 1px solid rgba(135, 22, 48, 0.15);
         padding-bottom: 6px;
         margin-bottom: var(--sp-12);
     }
@@ -1722,7 +1722,7 @@ footer {
     }
 
     .skill-pill {
-        border: 1px solid rgba(92, 10, 30, 0.25);
+        border: 1px solid rgba(135, 22, 48, 0.25);
         background-color: rgba(251, 247, 240, 0.9);
         color: var(--color-burgundy);
         padding: 4px 10px;
@@ -1743,7 +1743,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
+        border-bottom: 1.5px solid rgba(135, 22, 48, 0.2);
     }
 
     .education-grid {
@@ -1752,14 +1752,14 @@ footer {
     }
 
     .edu-card {
-        border: 1px solid rgba(92, 10, 30, 0.2);
+        border: 1px solid rgba(135, 22, 48, 0.2);
         background: linear-gradient(135deg, rgba(200, 169, 139, 0.15) 0%, rgba(245, 232, 216, 0.4) 100%);
         padding: 18px 16px;
-        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.1);
+        box-shadow: 2px 2px 0px rgba(135, 22, 48, 0.1);
     }
 
     .edu-top-meta {
-        border-bottom: 1px solid rgba(92, 10, 30, 0.15);
+        border-bottom: 1px solid rgba(135, 22, 48, 0.15);
         padding-bottom: 6px;
         margin-bottom: var(--sp-12);
     }
@@ -1771,7 +1771,7 @@ footer {
     .edu-date {
         font-size: 0.65rem;
         padding: 2px 8px;
-        border: 1px solid rgba(92, 10, 30, 0.2);
+        border: 1px solid rgba(135, 22, 48, 0.2);
     }
 
     .edu-title {
@@ -1794,7 +1794,7 @@ footer {
     .edu-badge {
         padding: 4px 10px;
         font-size: 0.68rem;
-        border: 1px solid rgba(92, 10, 30, 0.25);
+        border: 1px solid rgba(135, 22, 48, 0.25);
     }
 
     /* --- PROJECTS SECTION --- */
@@ -1803,7 +1803,7 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
-        border-bottom: 1.5px solid rgba(92, 10, 30, 0.2);
+        border-bottom: 1.5px solid rgba(135, 22, 48, 0.2);
     }
 
     .projects-grid {
@@ -1812,9 +1812,9 @@ footer {
     }
 
     .project-board {
-        border: 1px solid rgba(92, 10, 30, 0.22);
+        border: 1px solid rgba(135, 22, 48, 0.22);
         padding: 20px 16px;
-        box-shadow: 3px 3px 0px rgba(92, 10, 30, 0.1);
+        box-shadow: 3px 3px 0px rgba(135, 22, 48, 0.1);
     }
 
     .project-num-badge {
@@ -1832,7 +1832,7 @@ footer {
     .project-category-tag {
         font-size: 0.65rem;
         padding: 2px 8px;
-        border: 1px solid rgba(92, 10, 30, 0.25);
+        border: 1px solid rgba(135, 22, 48, 0.25);
         margin-bottom: var(--sp-8);
     }
 
@@ -1854,7 +1854,7 @@ footer {
     .project-tech-chips span {
         font-size: 0.68rem;
         padding: 2px 8px;
-        border: 1px solid rgba(92, 10, 30, 0.2);
+        border: 1px solid rgba(135, 22, 48, 0.2);
     }
 
     .btn-project {
@@ -1979,7 +1979,7 @@ footer {
         min-height: 48px;
         font-size: 0.95rem;
         border: 1px solid var(--color-burgundy);
-        box-shadow: 2px 2px 0px rgba(92, 10, 30, 0.12);
+        box-shadow: 2px 2px 0px rgba(135, 22, 48, 0.12);
     }
 
     .contact-signature-col {
@@ -2001,7 +2001,7 @@ footer {
 
     .contact-awaiting-wrap {
         padding-top: 24px;
-        border-top: 1px solid rgba(92, 10, 30, 0.2);
+        border-top: 1px solid rgba(135, 22, 48, 0.2);
     }
 
     .signoff-text {
@@ -2119,8 +2119,8 @@ footer {
     background-color: rgba(255, 248, 231, 0.95); /* Cosmic Latte glass */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(92, 10, 30, 0.14);
-    box-shadow: 0 10px 25px -5px rgba(92, 10, 30, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(135, 22, 48, 0.14);
+    box-shadow: 0 10px 25px -5px rgba(135, 22, 48, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
     border-radius: 9999px; /* Refined floating pill */
     gap: var(--sp-12);
     flex-shrink: 0;
@@ -2190,24 +2190,24 @@ footer {
     background-color: var(--color-burgundy);
     color: var(--color-latte);
     border: 1px solid var(--color-burgundy);
-    box-shadow: 0 4px 12px rgba(92, 10, 30, 0.2);
+    box-shadow: 0 4px 12px rgba(135, 22, 48, 0.2);
 }
 
 .btn-resume-dl:hover {
     background-color: var(--color-burgundy-dark);
     border-color: var(--color-burgundy-dark);
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(92, 10, 30, 0.3);
+    box-shadow: 0 6px 16px rgba(135, 22, 48, 0.3);
 }
 
 .btn-resume-tab {
     background-color: transparent;
     color: var(--color-burgundy);
-    border: 1px solid rgba(92, 10, 30, 0.22);
+    border: 1px solid rgba(135, 22, 48, 0.22);
 }
 
 .btn-resume-tab:hover {
-    background-color: rgba(92, 10, 30, 0.06);
+    background-color: rgba(135, 22, 48, 0.06);
     border-color: var(--color-burgundy);
     transform: translateY(-1px);
 }
@@ -2221,7 +2221,7 @@ footer {
     border-radius: 50% !important;
     background-color: transparent;
     color: var(--color-burgundy);
-    border: 1px solid rgba(92, 10, 30, 0.2);
+    border: 1px solid rgba(135, 22, 48, 0.2);
     cursor: pointer;
     transition: all var(--trans-fast);
     padding: 0;
@@ -2240,8 +2240,8 @@ footer {
     position: relative;
     background-color: #FFFFFF;
     border-radius: 12px;
-    border: 1px solid rgba(92, 10, 30, 0.1);
-    box-shadow: 0 25px 60px -15px rgba(92, 10, 30, 0.2), 0 8px 24px -6px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(135, 22, 48, 0.1);
+    box-shadow: 0 25px 60px -15px rgba(135, 22, 48, 0.2), 0 8px 24px -6px rgba(0, 0, 0, 0.06);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -2277,7 +2277,7 @@ footer {
     font-weight: 700;
     color: var(--color-burgundy);
     background-color: rgba(255, 248, 231, 0.9);
-    border: 1px solid rgba(92, 10, 30, 0.2);
+    border: 1px solid rgba(135, 22, 48, 0.2);
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
