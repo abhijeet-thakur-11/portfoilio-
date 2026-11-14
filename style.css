@@ -225,7 +225,8 @@ nav {
     min-height: 44px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     background-color: var(--color-burgundy);
     color: var(--color-latte);
     border-color: var(--color-burgundy);
@@ -1240,6 +1241,72 @@ nav {
     line-height: 1.25;
 }
 
+/* --- Subpage Masthead & Bottom CTA Banner --- */
+.subpage-hero {
+    padding-top: calc(80px + var(--sp-48));
+    padding-bottom: var(--sp-48);
+    padding-left: var(--page-padding-h);
+    padding-right: var(--page-padding-h);
+    background-color: var(--color-latte);
+    border-bottom: var(--border-thick);
+}
+
+.subpage-hero .section-label {
+    margin-bottom: var(--sp-12);
+}
+
+.subpage-hero-title {
+    font-family: var(--font-header);
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: var(--color-burgundy);
+    margin-bottom: var(--sp-16);
+}
+
+.subpage-hero-desc {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--color-burgundy);
+    max-width: 680px;
+    opacity: 0.9;
+}
+
+.subpage-cta-banner {
+    padding: var(--sp-48) var(--page-padding-h);
+    background-color: var(--color-latte-card);
+    border-top: var(--border-thick);
+    border-bottom: var(--border-thick);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--sp-32);
+    flex-wrap: wrap;
+}
+
+.cta-banner-text h3 {
+    font-family: var(--font-header);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--color-burgundy);
+    font-weight: 400;
+    margin-bottom: var(--sp-8);
+}
+
+.cta-banner-text p {
+    font-family: var(--font-sub);
+    font-size: var(--text-sm);
+    color: var(--color-mocha-dark);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.page-contact #contact {
+    padding-top: calc(80px + var(--sp-48));
+}
+
 /* --- 12. FOOTER --- */
 footer {
     background-color: var(--color-burgundy);
@@ -1779,6 +1846,26 @@ footer {
         padding-bottom: 56px;
         padding-left: var(--page-padding-h);
         padding-right: var(--page-padding-h);
+    }
+
+    /* --- SUBPAGE UTILITIES --- */
+    .subpage-hero {
+        padding-top: calc(56px + 32px);
+        padding-bottom: 32px;
+    }
+
+    .subpage-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-16);
+    }
+
+    .subpage-cta-banner .btn-primary {
+        width: 100%;
+    }
+
+    .page-contact #contact {
+        padding-top: calc(56px + 32px);
     }
 
     .contact-header {
