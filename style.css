@@ -209,13 +209,13 @@ nav {
     align-items: center;
 }
 
-/* --- Creative Resume Button (Top Right Navigation) --- */
+/* --- Paper Icon Resume Button (Top Right Navigation) --- */
 .nav-resume-btn {
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: var(--sp-8);
-    padding: 7px 14px;
+    justify-content: center;
+    padding: 7px 10px;
     background-color: var(--color-latte-card);
     color: var(--color-burgundy);
     font-family: var(--font-sub);
@@ -224,9 +224,9 @@ nav {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     border: 2px solid var(--color-burgundy);
-    box-shadow: 3px 3px 0 var(--color-burgundy);
+    box-shadow: 2px 2px 0 var(--color-burgundy);
     cursor: pointer;
-    transition: transform var(--trans-fast), box-shadow var(--trans-fast), background-color var(--trans-fast), color var(--trans-fast);
+    transition: transform var(--trans-fast), box-shadow var(--trans-fast), background-color var(--trans-fast), color var(--trans-fast), padding 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
     line-height: 1;
     white-space: nowrap;
@@ -234,11 +234,13 @@ nav {
     user-select: none;
 }
 
-.nav-resume-btn:hover {
+.nav-resume-btn:hover,
+.nav-resume-btn:focus-visible {
     background-color: var(--color-burgundy);
     color: var(--color-latte);
     box-shadow: 1px 1px 0 var(--color-burgundy);
-    transform: translate(2px, 2px);
+    transform: translate(1px, 1px);
+    padding: 7px 14px;
 }
 
 .nav-resume-btn:focus-visible {
@@ -246,54 +248,40 @@ nav {
     outline-offset: 3px;
 }
 
-.resume-pulse-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50% !important;
-    background-color: #10B981; /* Emerald active pulse */
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-    animation: resumePulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    flex-shrink: 0;
-}
-
-@keyframes resumePulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-    }
-}
-
-.resume-btn-badge {
-    font-size: 0.6rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    padding: 2px 5px;
-    background-color: var(--color-burgundy);
-    color: var(--color-latte);
-    border: 1px solid var(--color-burgundy);
-    transition: background-color var(--trans-fast), color var(--trans-fast), border-color var(--trans-fast);
-    line-height: 1;
-}
-
-.nav-resume-btn:hover .resume-btn-badge {
-    background-color: var(--color-latte);
-    color: var(--color-burgundy);
-    border-color: var(--color-latte);
-}
-
-.resume-btn-arrow {
+.resume-icon-paper {
+    width: 16px;
+    height: 16px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     transition: transform var(--trans-fast);
 }
 
-.nav-resume-btn:hover .resume-btn-arrow {
-    transform: translate(2px, -2px);
+.nav-resume-btn:hover .resume-icon-paper {
+    transform: scale(1.05);
+}
+
+.resume-btn-text {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 0;
+    transform: translateX(-4px);
+    transition: max-width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                margin-left 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+}
+
+.nav-resume-btn:hover .resume-btn-text,
+.nav-resume-btn:focus-visible .resume-btn-text {
+    max-width: 70px;
+    opacity: 1;
+    margin-left: 6px;
+    transform: translateX(0);
 }
 
 .nav-links a {
@@ -1482,13 +1470,12 @@ footer {
     }
 
     .nav-logo {
-        font-size: 1.8rem;
-        flex: 0 0 auto;
+        display: none !important; /* Hide 'Hello.' on mobile only to eliminate overlap */
     }
 
     .nav-links {
         flex: 1;
-        width: auto;
+        width: 100%;
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -1502,18 +1489,22 @@ footer {
         display: flex;
         align-items: center;
         flex: 0 0 auto;
+        margin-left: var(--sp-8);
     }
 
     .nav-resume-btn {
-        padding: 5px 9px;
-        font-size: 0.68rem;
-        gap: 5px;
+        padding: 6px 8px;
         box-shadow: 2px 2px 0 var(--color-burgundy);
     }
 
-    .resume-btn-badge {
-        font-size: 0.52rem;
-        padding: 1px 3px;
+    .nav-resume-btn:hover,
+    .nav-resume-btn:focus-visible {
+        padding: 6px 12px;
+    }
+
+    .resume-icon-paper {
+        width: 15px;
+        height: 15px;
     }
 
     .nav-links::-webkit-scrollbar {
@@ -2147,12 +2138,7 @@ footer {
 }
 
 .resume-badge-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50% !important;
-    background-color: #10B981;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
-    flex-shrink: 0;
+    display: none;
 }
 
 .resume-bar-title {
