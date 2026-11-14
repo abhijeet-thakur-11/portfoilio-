@@ -8,27 +8,29 @@
     <meta name="description"
         content="Portfolio of Abhijeet Thakur — AI builder and GGSIPU data science scholar, sculpting complex algorithms into scalable, high-impact solutions.">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Raleway (Headers & Subheaders) + Alex Brush (Calligraphic Accent) + Montserrat Alternates (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
         rel="stylesheet">
 
     <!-- Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="style.css?v=20261114_v27_multipage_hub">
+    <link rel="stylesheet" href="style.css?v=20261114_v28_restored_single_page">
 </head>
 
-<body class="page-home">
+<body>
 
     <!-- ============ NAVIGATION / MASTHEAD ============ -->
     <nav aria-label="Main navigation">
-        <a href="index.html" class="nav-logo">Hello<span>.</span></a>
+        <a href="#hero" class="nav-logo">Hello<span>.</span></a>
 
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="work.html">Work &amp; Skills</a></li>
-            <li><a href="about.html">Story</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="nav-right"></div>
@@ -46,16 +48,16 @@
                 An AI builder and GGSIPU data science scholar, I sculpt complex algorithms into scalable, high-impact solutions. From post-quantum cryptography to real-time assistive tech, I weave modular architecture into tangible innovations, bridging the gap between intelligent systems and human utility.
             </p>
             <div class="hero-actions">
-                <a href="work.html" class="btn-primary">
-                    View Work &amp; Skills <span class="arrow">→</span>
+                <a href="#projects" class="btn-primary">
+                    View Projects <span class="arrow">→</span>
                 </a>
-                <a href="contact.html" class="btn-secondary">
-                    Get In Touch <span class="arrow">→</span>
+                <a href="https://github.com/abhijeet-thakur-11" target="_blank" class="btn-secondary">
+                    GitHub Profile <span class="arrow">↗</span>
                 </a>
             </div>
             <div class="hero-scroll-indicator">
                 <span class="scroll-dash"></span>
-                <span>Executive Overview</span>
+                <span>Scroll to explore</span>
             </div>
         </div>
 
@@ -71,21 +73,21 @@
         </div>
     </section>
 
-    <!-- ============ AT A GLANCE (METRICS) ============ -->
+    <!-- ============ ABOUT SECTION ============ -->
     <section id="about">
         <div class="about-grid">
             <div class="about-narrative">
-                <div class="section-label">// Executive Summary</div>
-                <h2 class="section-title scramble-target">AT A GLANCE</h2>
+                <div class="section-label">// About</div>
+                <h2 class="section-title scramble-target">WHO AM I</h2>
                 <h3 class="about-name">Abhijeet Thakur</h3>
                 <p class="about-text">
-                    Specializing in Data Science at Guru Gobind Singh Indraprastha University (GGSIPU), Class of 2029. Engineering at the confluence of Applied Deep Learning, Edge Intelligence, and Cryptographic Security.
+                    I am a Computer Science sophomore specializing in Data Science at Guru Gobind Singh Indraprastha
+                    University (GGSIPU), Class of 2029. I engineer systems across Applied AI/ML, Post-Quantum
+                    Cryptography, Edge
+                    Vision Wearables, and high-performance Web Architectures. From ambient environmental platforms
+                    (AERIS AI & SweepX) to quantum vulnerability scanning (EncryptPlus) and assistive mobility devices
+                    (Vision-AID), my work couples rigorous engineering with user-centric problem solving.
                 </p>
-                <div style="margin-top: var(--sp-24);">
-                    <a href="about.html" class="btn-secondary" style="display: inline-flex;">
-                        Read Full Story &amp; Credentials <span class="arrow">→</span>
-                    </a>
-                </div>
             </div>
 
             <div class="about-metrics">
@@ -109,9 +111,155 @@
         </div>
     </section>
 
-    <!-- ============ FEATURED WORK PREVIEW ============ -->
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills">
+        <div class="skills-wrapper">
+            <div class="section-header-block">
+                <div class="section-label">// The Arsenal</div>
+                <h2 class="section-title scramble-target">Skills &amp; Capabilities</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Category 1 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">01</span>
+                        <h3 class="cat-title">Foundations</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">C / C++</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">Go</span>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">02</span>
+                        <h3 class="cat-title">AI / ML</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill accent">PyTorch</span>
+                        <span class="skill-pill accent">TensorFlow</span>
+                        <span class="skill-pill accent">OpenCV</span>
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">Pandas</span>
+                        <span class="skill-pill">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">03</span>
+                        <h3 class="cat-title">Web Architecture</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">Next.js</span>
+                        <span class="skill-pill">SvelteKit</span>
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">Socket.IO</span>
+                        <span class="skill-pill">Three.js</span>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">04</span>
+                        <h3 class="cat-title">Data Layer</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">Supabase</span>
+                        <span class="skill-pill">Prisma</span>
+                        <span class="skill-pill">Firebase</span>
+                        <span class="skill-pill">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">05</span>
+                        <h3 class="cat-title">IoT / Embedded</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">Arduino</span>
+                        <span class="skill-pill">Raspberry Pi</span>
+                        <span class="skill-pill">ESP32</span>
+                        <span class="skill-pill">Home Assistant</span>
+                        <span class="skill-pill">Edge AI</span>
+                    </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <span class="cat-num">06</span>
+                        <h3 class="cat-title">Cloud & Tools</h3>
+                    </div>
+                    <div class="pill-group">
+                        <span class="skill-pill">GitHub Actions</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Vercel</span>
+                        <span class="skill-pill">Render</span>
+                        <span class="skill-pill">Figma</span>
+                        <span class="skill-pill">Adobe Suite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EDUCATION SECTION ============ -->
+    <section id="education">
+        <div class="section-label">// Academic Background</div>
+        <h2 class="section-title scramble-target">Education</h2>
+
+        <div class="education-grid">
+            <!-- Edu Card 1 -->
+            <div class="edu-card">
+                <div class="edu-top-meta">
+                    <span class="edu-tag">B.Tech · New Delhi</span>
+                    <span class="edu-date">2025 – 2029</span>
+                </div>
+                <h3 class="edu-title">B.Tech CSE – Data Science</h3>
+                <p class="edu-institution">Guru Gobind Singh Indraprastha University (GGSIPU)</p>
+                <p class="edu-desc">Sophomore specialising in Data Science with core CS fundamentals alongside applied
+                    machine learning, neural networks, and scalable software architectures.</p>
+                <div class="edu-badge-box">
+                    <span class="edu-badge">Class of 2029 · Active</span>
+                </div>
+            </div>
+
+            <!-- Edu Card 2 -->
+            <div class="edu-card">
+                <div class="edu-top-meta">
+                    <span class="edu-tag">Class XII · CBSE</span>
+                    <span class="edu-date">Completed</span>
+                </div>
+                <h3 class="edu-title">Senior Secondary</h3>
+                <p class="edu-institution">CBSE Board — Delhi, India</p>
+                <p class="edu-desc">Completed Senior Secondary education with focus on Science and Mathematics under the
+                    Central Board of Secondary Education, Delhi region.</p>
+                <div class="edu-badge-box">
+                    <span class="edu-badge">CBSE · Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
     <section id="projects">
-        <div class="section-label">// Featured Engineering Highlights</div>
+        <div class="section-label">// Selected Work · 6 Repositories</div>
         <h2 class="section-title scramble-target">Selected Work</h2>
 
         <div class="projects-grid">
@@ -119,7 +267,7 @@
             <div class="project-board">
                 <div class="project-num-badge">01</div>
                 <div class="project-header">
-                    <span class="project-category-tag">Environmental Intelligence &amp; ML</span>
+                    <span class="project-category-tag">Environmental Intelligence & ML</span>
                     <h3 class="project-title scramble-target">AERIS AI</h3>
                 </div>
                 <p class="project-description">
@@ -150,18 +298,117 @@
                 </div>
                 <p class="project-description">
                     Scans source code repositories to identify cryptographic algorithms, calculates which primitives
-                    are vulnerable to Shor's algorithm, and generates actionable, prioritized migration playbooks to
-                    NIST-standardized post-quantum schemes (ML-KEM, ML-DSA).
+                    will be broken by quantum computers, and generates an automated step-by-step developer roadmap to
+                    upgrade to post-quantum standards.
                 </p>
                 <div class="project-tech-chips">
-                    <span>Python</span>
-                    <span>AST Parsers</span>
-                    <span>NIST PQC</span>
-                    <span>FastAPI</span>
-                    <span>React</span>
+                    <span>Go</span>
+                    <span>Post-Quantum Crypto</span>
+                    <span>AST Analysis</span>
+                    <span>Security CLI</span>
                 </div>
                 <div class="project-cta-wrap">
-                    <a href="https://github.com/abhijeet-thakur-11/encrypt-plus" target="_blank" class="btn-project">
+                    <a href="https://github.com/abhijeet-thakur-11/Encrypt-Plus" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: Vision-Aid -->
+            <div class="project-board">
+                <div class="project-num-badge">03</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Edge AI & Smart Wearable</span>
+                    <h3 class="project-title scramble-target">VISION-AID</h3>
+                </div>
+                <p class="project-description">
+                    An edge-first, AI-powered smart wearable assistive system designed to grant independent mobility and
+                    environmental awareness to visually impaired individuals via real-time spatial obstacle detection
+                    and audio cues.
+                </p>
+                <div class="project-tech-chips">
+                    <span>ESP32</span>
+                    <span>OpenCV</span>
+                    <span>PyTorch</span>
+                    <span>Edge AI</span>
+                    <span>PCB Design</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/VisionAid-" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: SweepX -->
+            <div class="project-board">
+                <div class="project-num-badge">04</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Environmental Gamification</span>
+                    <h3 class="project-title scramble-target">SWEEPX</h3>
+                </div>
+                <p class="project-description">
+                    A gamified environmental cleanup platform that turns urban cleanup into an adventure. Real-time
+                    community leaderboards, AI-powered waste detection, and spatial impact tracking.
+                </p>
+                <div class="project-tech-chips">
+                    <span>SvelteKit</span>
+                    <span>YOLOv8</span>
+                    <span>MongoDB</span>
+                    <span>Mapbox</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/sweepdtu" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: Audit-minds- -->
+            <div class="project-board">
+                <div class="project-num-badge">05</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Enterprise GRC & Audit AI</span>
+                    <h3 class="project-title scramble-target">AUDITMIND</h3>
+                </div>
+                <p class="project-description">
+                    An enterprise GRC (Governance, Risk, and Compliance) & Audit Intelligence platform streamlining risk
+                    analytics, continuous compliance monitoring, and automated policy verification for enterprise
+                    architectures.
+                </p>
+                <div class="project-tech-chips">
+                    <span>TypeScript</span>
+                    <span>Next.js</span>
+                    <span>Node.js</span>
+                    <span>Enterprise GRC</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/Audit-minds-" target="_blank" class="btn-project">
+                        View Repository <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 6: Copify -->
+            <div class="project-board">
+                <div class="project-num-badge">06</div>
+                <div class="project-header">
+                    <span class="project-category-tag">Real-Time Cloud Utility</span>
+                    <h3 class="project-title scramble-target">COPIFY</h3>
+                </div>
+                <p class="project-description">
+                    A temporary, login-free clipboard between devices. Sender pastes text to receive an ephemeral
+                    5-character transfer key; Receiver enters the key to receive data instantly, auto-expiring in 10
+                    minutes.
+                </p>
+                <div class="project-tech-chips">
+                    <span>TypeScript</span>
+                    <span>WebSockets</span>
+                    <span>Express</span>
+                    <span>Node.js</span>
+                </div>
+                <div class="project-cta-wrap">
+                    <a href="https://github.com/abhijeet-thakur-11/copify" target="_blank" class="btn-project">
                         View Repository <span class="arrow">↗</span>
                     </a>
                 </div>
@@ -169,21 +416,122 @@
         </div>
     </section>
 
-    <!-- ============ DEEP DIVE BANNER ============ -->
-    <div class="subpage-cta-banner">
-        <div class="cta-banner-text">
-            <h3>Explore all 4 core projects and complete skills deck</h3>
-            <p>Foundations, AI/ML models, marine robotics, edge vision, and cloud systems</p>
+    <!-- ============ ACHIEVEMENTS SECTION — TIMELINE SPINE ============ -->
+    <section id="achievements">
+        <div class="ach-header">
+            <div class="section-label">// Recognition · 3x Winner · 10x Finalist</div>
+            <h2 class="section-title scramble-target">Achievements</h2>
         </div>
-        <a href="work.html" class="btn-primary">
-            View All Work &amp; Skills <span class="arrow">→</span>
-        </a>
-    </div>
 
-    <!-- ============ BOTTOM SIGNOFF ============ -->
-    <div class="contact-awaiting-wrap" style="padding: var(--sp-40) var(--page-padding-h); background-color: var(--color-latte);">
-        <p class="signoff-text">Awaiting new quests &amp; collaborations</p>
-    </div>
+        <!-- Timeline spine -->
+        <div class="ach-timeline">
+            <div class="ach-spine"></div>
+
+            <!-- Left: 01 GenCodeX -->
+            <div class="ach-item ach-left">
+                <div class="ach-card">
+                    <span class="ach-badge winner">🏆 3x Hackathon Winner</span>
+                    <h3 class="ach-name">GenCodeX &amp; National Hackathons</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">JIMS JEMTEC</span>
+                        <span class="ach-tag highlight">₹21,000+ Grand Prize</span>
+                    </div>
+                </div>
+                <div class="ach-node"></div>
+            </div>
+
+            <!-- Right: 02 Zinnovatio -->
+            <div class="ach-item ach-right">
+                <div class="ach-node"></div>
+                <div class="ach-card">
+                    <span class="ach-badge runner-up">🥈 Track Runner-Up</span>
+                    <h3 class="ach-name">Zinnovatio 4.0</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">Chandigarh University</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left: 03 Brainwave -->
+            <div class="ach-item ach-left">
+                <div class="ach-card">
+                    <span class="ach-badge finalist">★ Finalist</span>
+                    <h3 class="ach-name">Brainwave Hackathon</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">DTU New Delhi</span>
+                    </div>
+                </div>
+                <div class="ach-node"></div>
+            </div>
+
+            <!-- Right: 04 Ideathon -->
+            <div class="ach-item ach-right">
+                <div class="ach-node"></div>
+                <div class="ach-card">
+                    <span class="ach-badge finalist">★ Finalist</span>
+                    <h3 class="ach-name">Ideathon 2025</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">TIIPS Greater Noida</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left: 05 National Circuit -->
+            <div class="ach-item ach-left">
+                <div class="ach-card">
+                    <span class="ach-badge finalist">★ 10x Hackathon Finalist</span>
+                    <h3 class="ach-name">National Hackathon Circuit</h3>
+                    <div class="ach-tags">
+                        <span class="ach-tag">Across India</span>
+                        <span class="ach-tag highlight">10x Finalist Finishes</span>
+                    </div>
+                </div>
+                <div class="ach-node"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact">
+        <div class="contact-header">
+            <div class="section-label">// Get In Touch</div>
+            <h2 class="contact-heading">
+                Let's Build <span class="serif-accent">something</span> Sentient
+            </h2>
+        </div>
+
+        <div class="contact-body-grid">
+            <!-- Left: Buttons -->
+            <div class="contact-buttons-col">
+                <div class="contact-stack">
+                    <a href="mailto:abhijeetthakur.nov2006@gmail.com" class="btn-contact">
+                        <span>Email</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/abhijeet-thakur-11" target="_blank" class="btn-contact">
+                        <span>GitHub</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhijeet-thakur-4ba311378?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
+                        target="_blank" class="btn-contact">
+                        <span>LinkedIn</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Signature + Byline -->
+            <div class="contact-signature-col">
+                <img src="signature.png" alt="Abhijeet Thakur signature" class="contact-signature">
+                <span class="signoff-role">Abhijeet</span>
+            </div>
+        </div>
+
+        <!-- Bottom: Awaiting Message -->
+        <div class="contact-awaiting-wrap">
+            <p class="signoff-text">Awaiting new quests &amp; collaborations</p>
+        </div>
+    </section>
 
     <!-- ============ FOOTER ============ -->
     <footer>
@@ -194,8 +542,26 @@
 
     <!-- ============ SCRIPTS ============ -->
     <script>
+        /* =========================================
+           SWISS BRUTALIST PORTFOLIO INTERACTION LOGIC
+           ========================================= */
         (function () {
             'use strict';
+
+            // 1. Smooth Navigation Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // 2. High-Performance Text Scramble Effect
             class TextScramble {
                 constructor(el) {
                     this.el = el;
@@ -205,6 +571,7 @@
                     this.queue = [];
                     this.frameRequest = null;
                 }
+
                 setText(newText) {
                     const oldText = this.el.textContent.trim();
                     const length = Math.max(oldText.length, newText.length);
@@ -220,6 +587,7 @@
                     this.frame = 0;
                     this.update();
                 }
+
                 update() {
                     let output = '';
                     let complete = 0;
@@ -245,6 +613,8 @@
                     }
                 }
             }
+
+            // Initialize Text Scramble on elements when in view
             if ('IntersectionObserver' in window) {
                 const scrambleObserver = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
@@ -255,6 +625,7 @@
                         }
                     });
                 }, { threshold: 0.3 });
+
                 document.querySelectorAll('.scramble-target').forEach(el => {
                     scrambleObserver.observe(el);
                 });
