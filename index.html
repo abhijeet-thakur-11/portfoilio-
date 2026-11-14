@@ -8,14 +8,47 @@
     <meta name="description"
         content="Portfolio of Abhijeet Thakur — AI builder and GGSIPU data science scholar, sculpting complex algorithms into scalable, high-impact solutions.">
 
-    <!-- Google Fonts: Raleway (Headers & Subheaders) + Alex Brush (Calligraphic Accent) + Montserrat Alternates (Body) -->
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+
+    <!-- Optimized Font Loading (Alex Brush + Montserrat Alternates + Raleway) with display=block to eliminate FOUT -->
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat+Alternates:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=block"
         rel="stylesheet">
 
+    <!-- Anti-FOUT: Prevent Flash of Unstyled Fallback Fonts -->
+    <style>
+        html {
+            background-color: #FFF8E7;
+        }
+        html.wf-loading body {
+            visibility: hidden;
+            opacity: 0;
+        }
+        html.wf-active body {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.12s ease-in;
+        }
+    </style>
+    <script>
+        document.documentElement.classList.add('wf-loading');
+        if ('fonts' in document) {
+            document.fonts.ready.then(function () {
+                document.documentElement.classList.remove('wf-loading');
+                document.documentElement.classList.add('wf-active');
+            });
+            setTimeout(function () {
+                document.documentElement.classList.remove('wf-loading');
+                document.documentElement.classList.add('wf-active');
+            }, 350);
+        } else {
+            document.documentElement.classList.remove('wf-loading');
+        }
+    </script>
+
     <!-- Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="style.css?v=20261114_v29_updated_whoami_bio">
+    <link rel="stylesheet" href="style.css?v=20261114_v30_antifout_fonts_optimized">
 </head>
 
 <body>
