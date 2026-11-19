@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Thakur — Intelligent Systems Engineer (Editorial Preview)</title>
+    <meta name="description" content="Portfolio of Abhijeet Thakur — Intelligent Systems Engineer & Applied AI Architect. Specializing in Deep Learning, Post-Quantum Cryptography, and Edge Assistive Computing.">
+    <link rel="icon" type="image/png" href="portrait_warm_portfolio.png">
+    <link rel="stylesheet" href="preview-editorial.css">
+</head>
+<body>
+
+    <!-- ============ 1. FLOATING CAPSULE NAVIGATION DOCK ============ -->
+    <div class="nav-dock-wrap">
+        <nav class="nav-dock" aria-label="Main Navigation">
+            <a href="#hero" class="nav-wordmark">
+                Abhijeet<span class="dot"></span>
+            </a>
+
+            <div class="nav-controls">
+                <!-- Theme Switcher -->
+                <button type="button" id="themeToggleBtn" class="nav-icon-btn" aria-label="Toggle Theme" title="Toggle Theme">
+                    <svg id="themeIconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg id="themeIconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Fullscreen Drawer Trigger -->
+                <button type="button" id="openDrawerBtn" class="nav-icon-btn" aria-label="Open Navigation Menu" title="Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                    </svg>
+                </button>
+
+                <!-- Resume Download CTA -->
+                <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" class="nav-resume-pill" title="View & Download Resume">
+                    <span>Resume</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ============ 2. LETTER-STAGGERED NAVIGATION DRAWER ============ -->
+    <div id="navDrawer" class="nav-drawer" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="nav-drawer-card">
+            <div class="nav-drawer-header">
+                <span class="nav-drawer-title">// Table of Contents</span>
+                <button type="button" id="closeDrawerBtn" class="nav-drawer-close" aria-label="Close Navigation">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <ul class="nav-drawer-links">
+                <li>
+                    <a href="#hero" class="stagger-link" onclick="closeDrawer()">
+                        <span class="char" style="--i:0">H</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">m</span><span class="char" style="--i:3">e</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="stagger-link" onclick="closeDrawer()">
+                        <span class="char" style="--i:0">A</span><span class="char" style="--i:1">b</span><span class="char" style="--i:2">o</span><span class="char" style="--i:3">u</span><span class="char" style="--i:4">t</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#stack" class="stagger-link" onclick="closeDrawer()">
+                        <span class="char" style="--i:0">S</span><span class="char" style="--i:1">t</span><span class="char" style="--i:2">a</span><span class="char" style="--i:3">c</span><span class="char" style="--i:4">k</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#folders" class="stagger-link" onclick="closeDrawer()">
+                        <span class="char" style="--i:0">P</span><span class="char" style="--i:1">r</span><span class="char" style="--i:2">o</span><span class="char" style="--i:3">j</span><span class="char" style="--i:4">e</span><span class="char" style="--i:5">c</span><span class="char" style="--i:6">t</span><span class="char" style="--i:7">s</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" class="stagger-link" onclick="closeDrawer()">
+                        <span class="char" style="--i:0">H</span><span class="char" style="--i:1">i</span><span class="char" style="--i:2">s</span><span class="char" style="--i:3">t</span><span class="char" style="--i:4">o</span><span class="char" style="--i:5">r</span><span class="char" style="--i:6">y</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="stagger-link" onclick="closeDrawer()">
+                        <span class="char" style="--i:0">C</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">n</span><span class="char" style="--i:3">t</span><span class="char" style="--i:4">a</span><span class="char" style="--i:5">c</span><span class="char" style="--i:6">t</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-drawer-footer">
+                <div><strong>Direct Inquiries:</strong> abhijeetthakur.nov2006@gmail.com</div>
+                <div>New Delhi, India • UTC+05:30</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ 3. HERO SECTION ============ -->
+    <header id="hero" class="section">
+        <div class="container">
+            <div class="hero-meta-bar">
+                <span>©2026 / APPRENTICE TO THE MACHINE</span>
+                <span>/ AI &amp; SYSTEMS ARCHITECTURE</span>
+            </div>
+
+            <!-- Massive Newspaper Display Title with Overlapping Portrait -->
+            <div class="hero-display-wrap">
+                <h1 class="hero-display-title">
+                    SYSTEMS ENGINEER
+                </h1>
+                <div class="hero-portrait-anchor" title="Abhijeet Thakur">
+                    <img src="portrait_warm_portfolio.png" alt="Abhijeet Thakur">
+                </div>
+            </div>
+
+            <!-- Bio Introduction & Status Grid -->
+            <div class="hero-bio-grid">
+                <div class="hero-bio-text">
+                    <h2 class="hero-greeting">Hi, I'm Abhijeet.</h2>
+                    <p class="hero-statement">
+                        An AI builder and GGSIPU data science scholar. I sculpt complex algorithms into scalable, resilient architectures—from post-quantum cryptographic upgrade tools to edge-first assistive vision.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#folders" class="btn-primary">
+                            Explore Dossiers ↓
+                        </a>
+                        <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" class="btn-secondary">
+                            Curriculum Vitae ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-status-card">
+                    <div class="status-badge-row">
+                        <span class="status-ping"></span>
+                        <span>Current Status · Active</span>
+                    </div>
+                    <div class="status-title">CS (Data Science) @ GGSIPU</div>
+                    <p class="status-desc">
+                        Class of 2029 sophomore. 3x Hackathon Winner and 10x National Finalist. Seeking High-Impact Software Engineering Internships.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ 4. ABOUT & PHILOSOPHY ============ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-label">// 01 · Background &amp; Philosophy</div>
+            <h2 class="section-title">Built on discipline.<br>Engineered for impact.</h2>
+
+            <p style="font-size: 1.15rem; margin-bottom: 24px; max-width: 72ch;">
+                I blend analytical rigor with human-centric problem-solving—a work ethic forged through years as a Delhi state-level volleyball player. While retired from the court, that high-pressure composure and team synergy now fuels how I architect software systems.
+            </p>
+            <p style="font-size: 1.15rem; max-width: 72ch;">
+                Off the terminal, I channel creativity through writing short poetry, deep-diving into cinema and web series, and dissecting emerging papers in artificial intelligence and cryptographic bounds.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ 5. TECH STACK BENTO ============ -->
+    <section id="stack" class="section">
+        <div class="container">
+            <div class="section-label">// 02 · Technical Arsenal</div>
+            <h2 class="section-title">The tools behind my work.</h2>
+
+            <div class="bento-grid">
+                <!-- Bento 1: AI & Vision -->
+                <div class="bento-card">
+                    <div>
+                        <div class="bento-index">01 / ARTIFICIAL INTELLIGENCE</div>
+                        <h3 class="bento-heading">AI &amp; Vision Systems</h3>
+                        <p class="bento-sub">Object detection, neural representations, edge inferences &amp; LLM agents.</p>
+                    </div>
+                    <div class="pill-cloud">
+                        <span class="tech-chip featured">PyTorch</span>
+                        <span class="tech-chip featured">OpenCV</span>
+                        <span class="tech-chip">YOLOv8</span>
+                        <span class="tech-chip">TensorFlow</span>
+                        <span class="tech-chip">Scikit-learn</span>
+                        <span class="tech-chip">NumPy</span>
+                        <span class="tech-chip">Pandas</span>
+                        <span class="tech-chip">Edge AI</span>
+                    </div>
+                </div>
+
+                <!-- Bento 2: Core Engineering -->
+                <div class="bento-card">
+                    <div>
+                        <div class="bento-index">02 / CORE SOFTWARE</div>
+                        <h3 class="bento-heading">Languages &amp; Stacks</h3>
+                        <p class="bento-sub">Systems programming, typed web runtimes &amp; microservices.</p>
+                    </div>
+                    <div class="pill-cloud">
+                        <span class="tech-chip featured">Python</span>
+                        <span class="tech-chip featured">TypeScript</span>
+                        <span class="tech-chip">Go</span>
+                        <span class="tech-chip">C / C++</span>
+                        <span class="tech-chip">Java</span>
+                        <span class="tech-chip">Next.js</span>
+                        <span class="tech-chip">SvelteKit</span>
+                        <span class="tech-chip">FastAPI</span>
+                        <span class="tech-chip">Node.js</span>
+                    </div>
+                </div>
+
+                <!-- Bento 3: Data & Infrastructure -->
+                <div class="bento-card">
+                    <div>
+                        <div class="bento-index">03 / INFRASTRUCTURE</div>
+                        <h3 class="bento-heading">Systems, Data &amp; IoT</h3>
+                        <p class="bento-sub">Distributed storage, post-quantum ciphers &amp; embedded controllers.</p>
+                    </div>
+                    <div class="pill-cloud">
+                        <span class="tech-chip featured">PostgreSQL</span>
+                        <span class="tech-chip featured">Post-Quantum Dilithium</span>
+                        <span class="tech-chip">WebSockets</span>
+                        <span class="tech-chip">MongoDB</span>
+                        <span class="tech-chip">Docker</span>
+                        <span class="tech-chip">ESP32 / IoT</span>
+                        <span class="tech-chip">Git / GitHub Actions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 6. MANILA PROJECT FOLDERS ============ -->
+    <section id="folders" class="section">
+        <div class="container">
+            <div class="section-label">// 03 · Selected Works · Click to Unfold</div>
+            <h2 class="section-title">Physical project dossiers.</h2>
+
+            <div class="folder-grid">
+                <!-- Folder 1: Aeris AI -->
+                <div class="project-folder" onclick="toggleDossier('aeris')">
+                    <div>
+                        <div class="folder-meta">
+                            <span>01 / ENV ML</span>
+                            <span>2026</span>
+                        </div>
+                        <h3 class="folder-title">Aeris AI</h3>
+                        <p class="folder-summary">Hyper-local air quality intelligence &amp; predictive telemetry platform for dense metropolitan regions.</p>
+                        <div class="folder-tags">
+                            <span class="folder-tag">SvelteKit</span>
+                            <span class="folder-tag">Python</span>
+                            <span class="folder-tag">Mapbox</span>
+                        </div>
+                    </div>
+                    <div class="folder-cta-row">
+                        <span>Unfold Dossier</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+                <!-- Folder 2: EncryptPlus -->
+                <div class="project-folder" onclick="toggleDossier('encrypt')">
+                    <div>
+                        <div class="folder-meta">
+                            <span>02 / CRYPTOGRAPHY</span>
+                            <span>2026</span>
+                        </div>
+                        <h3 class="folder-title">EncryptPlus</h3>
+                        <p class="folder-summary">Quantum-safe repository scanner detecting classical cryptographic vulnerabilities with migration roadmaps.</p>
+                        <div class="folder-tags">
+                            <span class="folder-tag">Go</span>
+                            <span class="folder-tag">Post-Quantum</span>
+                            <span class="folder-tag">AST</span>
+                        </div>
+                    </div>
+                    <div class="folder-cta-row">
+                        <span>Unfold Dossier</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+                <!-- Folder 3: Vision-Aid -->
+                <div class="project-folder" onclick="toggleDossier('vision')">
+                    <div>
+                        <div class="folder-meta">
+                            <span>03 / EDGE WEARABLE</span>
+                            <span>2026</span>
+                        </div>
+                        <h3 class="folder-title">Vision-Aid</h3>
+                        <p class="folder-summary">Edge-first smart assistive wearable for visually impaired individuals with real-time spatial obstacle detection.</p>
+                        <div class="folder-tags">
+                            <span class="folder-tag">ESP32</span>
+                            <span class="folder-tag">PyTorch</span>
+                            <span class="folder-tag">OpenCV</span>
+                        </div>
+                    </div>
+                    <div class="folder-cta-row">
+                        <span>Unfold Dossier</span>
+                        <span>→</span>
+                    </div>
+                </div>
+
+                <!-- Folder 4: AuditMind -->
+                <div class="project-folder" onclick="toggleDossier('audit')">
+                    <div>
+                        <div class="folder-meta">
+                            <span>04 / AGENTIC GRC</span>
+                            <span>2026</span>
+                        </div>
+                        <h3 class="folder-title">AuditMind</h3>
+                        <p class="folder-summary">Autonomous Governance, Risk &amp; Compliance agent verifying enterprise architectures continuously.</p>
+                        <div class="folder-tags">
+                            <span class="folder-tag">TypeScript</span>
+                            <span class="folder-tag">Next.js</span>
+                            <span class="folder-tag">LLM Agents</span>
+                        </div>
+                    </div>
+                    <div class="folder-cta-row">
+                        <span>Unfold Dossier</span>
+                        <span>→</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- In-Place Expanded Dossier Viewers -->
+            <!-- Dossier: Aeris AI -->
+            <div id="dossier-aeris" class="dossier-viewer">
+                <div class="dossier-close-bar">
+                    <span class="dossier-id">DOSSIER #01 // AERIS AI · CASE STUDY</span>
+                    <button type="button" class="btn-close-dossier" onclick="closeAllDossiers()">✕ Close Case Study</button>
+                </div>
+                <div class="dossier-body-grid">
+                    <div class="dossier-sticky-meta">
+                        <div class="dossier-meta-item">
+                            <div class="label">System Focus</div>
+                            <div class="value">Environmental Intelligence &amp; IoT Telemetry</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Architecture</div>
+                            <div class="value">SvelteKit + Python Scikit-Learn + Mapbox GL</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Repository</div>
+                            <div class="value"><a href="https://github.com/abhijeet-thakur-11/Aeris-AI" target="_blank" style="text-decoration: underline;">github.com/abhijeet-thakur-11/Aeris-AI ↗</a></div>
+                        </div>
+                    </div>
+                    <div class="dossier-main-content">
+                        <h3>Urban Air Quality Detection &amp; Mitigation Engine</h3>
+                        <div class="dossier-narrative-section">
+                            <h4>01. The Challenge</h4>
+                            <p>Urban pollution data in hyper-dense corridors (such as Delhi NCR) suffers from sparse sensor distribution and latency, leaving citizens without actionable predictive forecasts.</p>
+                        </div>
+                        <div class="impact-bar">
+                            <div class="impact-metric">
+                                <div class="number">100m</div>
+                                <div class="caption">Spatial Resolution Grid</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">&lt;2.4s</div>
+                                <div class="caption">Live Telemetry Latency</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">92.4%</div>
+                                <div class="caption">Predictive Accuracy (24h)</div>
+                            </div>
+                        </div>
+                        <div class="dossier-narrative-section">
+                            <h4>02. Technical Architecture</h4>
+                            <p>Constructed an asynchronous data intake pipeline processing live IoT sensor streams, applying spatial interpolation algorithms and time-series ML regressors to predict micro-climate air quality indices 24 hours in advance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dossier: EncryptPlus -->
+            <div id="dossier-encrypt" class="dossier-viewer">
+                <div class="dossier-close-bar">
+                    <span class="dossier-id">DOSSIER #02 // ENCRYPTPLUS · POST-QUANTUM CRYPTOGRAPHY</span>
+                    <button type="button" class="btn-close-dossier" onclick="closeAllDossiers()">✕ Close Case Study</button>
+                </div>
+                <div class="dossier-body-grid">
+                    <div class="dossier-sticky-meta">
+                        <div class="dossier-meta-item">
+                            <div class="label">System Focus</div>
+                            <div class="value">Post-Quantum Cryptography &amp; AST Analysis</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Stack</div>
+                            <div class="value">Go + Abstract Syntax Tree Engine + NIST PQC</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Repository</div>
+                            <div class="value"><a href="https://github.com/abhijeet-thakur-11/Encrypt-Plus" target="_blank" style="text-decoration: underline;">github.com/abhijeet-thakur-11/Encrypt-Plus ↗</a></div>
+                        </div>
+                    </div>
+                    <div class="dossier-main-content">
+                        <h3>Automated Quantum-Safe Codebase Migration</h3>
+                        <div class="dossier-narrative-section">
+                            <h4>01. The Challenge</h4>
+                            <p>With Shor’s algorithm on the horizon, legacy RSA and ECC keys in critical infrastructure will be rendered insecure. Development teams lack tooling to audit hundreds of thousands of lines of code for quantum vulnerabilities.</p>
+                        </div>
+                        <div class="impact-bar">
+                            <div class="impact-metric">
+                                <div class="number">10k+</div>
+                                <div class="caption">LOC Scanned / Sec</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">ML-KEM</div>
+                                <div class="caption">NIST Kyber Standard</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">0</div>
+                                <div class="caption">False Positive Primitives</div>
+                            </div>
+                        </div>
+                        <div class="dossier-narrative-section">
+                            <h4>02. Core Novelty</h4>
+                            <p>Engineered a high-performance Go CLI that parses code into Abstract Syntax Trees, flags deprecated cryptographic libraries (RSA, ECDSA), and outputs ready-to-merge patches upgrading imports to NIST-standardized Post-Quantum algorithms (Dilithium / Kyber).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dossier: Vision-Aid -->
+            <div id="dossier-vision" class="dossier-viewer">
+                <div class="dossier-close-bar">
+                    <span class="dossier-id">DOSSIER #03 // VISION-AID · SMART ASSISTIVE WEARABLE</span>
+                    <button type="button" class="btn-close-dossier" onclick="closeAllDossiers()">✕ Close Case Study</button>
+                </div>
+                <div class="dossier-body-grid">
+                    <div class="dossier-sticky-meta">
+                        <div class="dossier-meta-item">
+                            <div class="label">System Focus</div>
+                            <div class="value">Embedded Hardware &amp; Real-Time Edge Vision</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Hardware &amp; Frameworks</div>
+                            <div class="value">ESP32 + PyTorch Quantization + OpenCV Audio</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Repository</div>
+                            <div class="value"><a href="https://github.com/abhijeet-thakur-11/VisionAid-" target="_blank" style="text-decoration: underline;">github.com/abhijeet-thakur-11/VisionAid- ↗</a></div>
+                        </div>
+                    </div>
+                    <div class="dossier-main-content">
+                        <h3>Independent Mobility for the Visually Impaired</h3>
+                        <div class="dossier-narrative-section">
+                            <h4>01. The Challenge</h4>
+                            <p>Commercial white canes only detect ground obstacles. Overhead obstacles, moving vehicles, and immediate hazards remain dangerous for visually impaired individuals.</p>
+                        </div>
+                        <div class="impact-bar">
+                            <div class="impact-metric">
+                                <div class="number">&lt;45ms</div>
+                                <div class="caption">Edge Inference Delay</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">180°</div>
+                                <div class="caption">Spatial Coverage Arc</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">100%</div>
+                                <div class="caption">Offline Autonomous</div>
+                            </div>
+                        </div>
+                        <div class="dossier-narrative-section">
+                            <h4>02. Engineering Feat</h4>
+                            <p>Trained and quantized convolutional models running directly on a lightweight wearable controller with binaural audio cues, translating physical world boundaries into intuitive spatial sounds without internet connectivity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dossier: AuditMind -->
+            <div id="dossier-audit" class="dossier-viewer">
+                <div class="dossier-close-bar">
+                    <span class="dossier-id">DOSSIER #04 // AUDITMIND · AGENTIC GRC INTELLIGENCE</span>
+                    <button type="button" class="btn-close-dossier" onclick="closeAllDossiers()">✕ Close Case Study</button>
+                </div>
+                <div class="dossier-body-grid">
+                    <div class="dossier-sticky-meta">
+                        <div class="dossier-meta-item">
+                            <div class="label">System Focus</div>
+                            <div class="value">Continuous Enterprise Governance &amp; Audit AI</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Stack</div>
+                            <div class="value">Next.js + TypeScript + Agentic LLM Orchestration</div>
+                        </div>
+                        <div class="dossier-meta-item">
+                            <div class="label">Repository</div>
+                            <div class="value"><a href="https://github.com/abhijeet-thakur-11/Audit-minds-" target="_blank" style="text-decoration: underline;">github.com/abhijeet-thakur-11/Audit-minds- ↗</a></div>
+                        </div>
+                    </div>
+                    <div class="dossier-main-content">
+                        <h3>Autonomous Compliance &amp; Policy Verification</h3>
+                        <div class="dossier-narrative-section">
+                            <h4>01. The Challenge</h4>
+                            <p>Manual compliance audits across SOC 2, ISO 27001, and HIPAA require weeks of manual paperwork and are prone to human oversight in fast-moving cloud environments.</p>
+                        </div>
+                        <div class="impact-bar">
+                            <div class="impact-metric">
+                                <div class="number">90%</div>
+                                <div class="caption">Audit Time Saved</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">Continuous</div>
+                                <div class="caption">Policy Monitoring</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="number">Zero-Lag</div>
+                                <div class="caption">Anomaly Alerts</div>
+                            </div>
+                        </div>
+                        <div class="dossier-narrative-section">
+                            <h4>02. Architecture</h4>
+                            <p>Utilized agentic workflow graph routers to ingest cloud infrastructure configurations, compare them against regulatory rule engines, and generate cryptographically verified audit trails in real time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ 7. EXPERIENCE & ACHIEVEMENTS TIMELINE ============ -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-label">// 04 · Proven Track Record</div>
+            <h2 class="section-title">Experience &amp; recognition.</h2>
+
+            <div class="timeline-spine">
+                <!-- Node 1: GenCodeX -->
+                <div class="timeline-node">
+                    <div class="timeline-meta">
+                        <span>2025</span>
+                        <span class="timeline-pill">1st Place Winner</span>
+                        <span>JIMS JEMTEC</span>
+                    </div>
+                    <h3 class="timeline-title">GenCodeX National Hackathon Winner</h3>
+                    <div class="timeline-org">National Grand Prize Award — ₹21,000+</div>
+                    <p class="timeline-desc">Secured first place among 150+ collegiate teams for building high-concurrency civic intelligence systems with real-time hardware telemetry.</p>
+                </div>
+
+                <!-- Node 2: Zinnovatio -->
+                <div class="timeline-node">
+                    <div class="timeline-meta">
+                        <span>2025</span>
+                        <span class="timeline-pill">Runner-Up</span>
+                        <span>Chandigarh University</span>
+                    </div>
+                    <h3 class="timeline-title">Zinnovatio 4.0 Hackathon</h3>
+                    <div class="timeline-org">Track Runner-Up Award</div>
+                    <p class="timeline-desc">Engineered assistive hardware and software integrations for edge-first intelligence, recognized for hardware-software synchronization.</p>
+                </div>
+
+                <!-- Node 3: Brainwave DTU -->
+                <div class="timeline-node">
+                    <div class="timeline-meta">
+                        <span>2025</span>
+                        <span class="timeline-pill">Finalist</span>
+                        <span>Delhi Technological University</span>
+                    </div>
+                    <h3 class="timeline-title">Brainwave Hackathon Finalist</h3>
+                    <div class="timeline-org">DTU New Delhi</div>
+                    <p class="timeline-desc">Built automated environmental gamification prototypes with spatial waste mapping algorithms.</p>
+                </div>
+
+                <!-- Node 4: National Circuit -->
+                <div class="timeline-node">
+                    <div class="timeline-meta">
+                        <span>2024 – Present</span>
+                        <span class="timeline-pill">Competitive Record</span>
+                        <span>Across India</span>
+                    </div>
+                    <h3 class="timeline-title">10x National Hackathon Finalist</h3>
+                    <div class="timeline-org">Pan-India Competitions</div>
+                    <p class="timeline-desc">Consistently pitched, developed, and deployed production-grade applications within 24 to 36-hour sprint constraints across Delhi, Punjab, and Greater Noida.</p>
+                </div>
+
+                <!-- Node 5: JPMorgan Chase & Co. Simulation -->
+                <div class="timeline-node">
+                    <div class="timeline-meta">
+                        <span>Software Simulation</span>
+                        <span class="timeline-pill">Forage</span>
+                        <span>JPMorgan Chase &amp; Co.</span>
+                    </div>
+                    <h3 class="timeline-title">Software Engineering Job Simulation</h3>
+                    <div class="timeline-org">Technical Architecture &amp; Data Integration</div>
+                    <p class="timeline-desc">Completed simulated engineering tracks covering technical documentation, live market data feed integration, and financial visualizers.</p>
+                </div>
+
+                <!-- Node 6: University Cohort -->
+                <div class="timeline-node">
+                    <div class="timeline-meta">
+                        <span>2025 – 2029</span>
+                        <span class="timeline-pill">Academic</span>
+                        <span>GGSIPU New Delhi</span>
+                    </div>
+                    <h3 class="timeline-title">B.Tech in Computer Science (Data Science)</h3>
+                    <div class="timeline-org">Guru Gobind Singh Indraprastha University</div>
+                    <p class="timeline-desc">Core curriculum encompassing Data Structures, Discrete Math, Database Systems, Computer Architecture, and Applied Statistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 8. CONTACT SECTION ("LET'S TALK.") ============ -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <div class="section-label">// 05 · Direct Outreach</div>
+                    <h2 class="section-title">Let's talk.</h2>
+                    <p style="font-size: 1.125rem;">
+                        Whether you are looking for an ambitious engineering intern, discussing collaborative AI research, or exploring post-quantum security, my inbox is always open.
+                    </p>
+
+                    <div class="email-pill-box">
+                        <span>abhijeetthakur.nov2006@gmail.com</span>
+                        <button type="button" id="copyEmailBtn" class="copy-btn" onclick="copyEmail()">Copy Email</button>
+                    </div>
+
+                    <div class="social-links-row">
+                        <a href="https://github.com/abhijeet-thakur-11" target="_blank" class="social-link-btn">
+                            GitHub ↗
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link-btn">
+                            LinkedIn ↗
+                        </a>
+                        <a href="Abhijeet_Thakur_Resume.pdf" target="_blank" class="social-link-btn">
+                            Resume PDF ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Drafting message to abhijeetthakur.nov2006@gmail.com...'); window.location.href='mailto:abhijeetthakur.nov2006@gmail.com?subject=Inquiry%20from%20Portfolio';">
+                        <div class="form-field">
+                            <label class="form-label" for="formName">Your Name</label>
+                            <input type="text" id="formName" class="form-input" placeholder="e.g. Maya Lin" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="formEmail">Email Address</label>
+                            <input type="email" id="formEmail" class="form-input" placeholder="name@domain.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="formMessage">What do you have in mind?</label>
+                            <textarea id="formMessage" class="form-textarea" placeholder="Tell me about the problem, the vision, or the role..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="align-self: flex-start;">
+                            Create Email Draft ↗
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 9. INVERTED PITCH-BLACK STAGE FINALE FOOTER ============ -->
+    <footer class="footer-stage">
+        <!-- Giant low-opacity background watermark -->
+        <div class="footer-watermark">ABHIJEET</div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
+                <div>
+                    <h3 style="font-size: 2.2rem; font-weight: 800; letter-spacing: -0.04em; color: #f8f7f4; margin-bottom: 8px;">
+                        Abhijeet Thakur.
+                    </h3>
+                    <p style="color: #9e9e9e; font-size: 1rem;">
+                        Intelligent Systems Engineer &amp; Applied AI Architect.
+                    </p>
+                </div>
+
+                <div>
+                    <button type="button" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                        Back to top ↑
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interactive Stage Canvas (Connected Neural Nodes Simulation) -->
+            <div class="footer-stage-canvas-wrap">
+                <canvas id="stageCanvas"></canvas>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <span>© 2026 Abhijeet Thakur · All Rights Reserved</span>
+                <span>Crafted with Space Grotesk · Editorial Neo-Craft</span>
+                <span>New Delhi, India (UTC +05:30)</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ JAVASCRIPT CONTROLLERS ============ -->
+    <script>
+        // 1. Theme Toggle System
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIconSun = document.getElementById('themeIconSun');
+        const themeIconMoon = document.getElementById('themeIconMoon');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('akt_preview_theme', theme);
+            if (theme === 'dark') {
+                themeIconSun.style.display = 'none';
+                themeIconMoon.style.display = 'block';
+            } else {
+                themeIconSun.style.display = 'block';
+                themeIconMoon.style.display = 'none';
+            }
+        }
+
+        const savedTheme = localStorage.getItem('akt_preview_theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        // 2. Nav Drawer Toggle
+        const openDrawerBtn = document.getElementById('openDrawerBtn');
+        const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+        const navDrawer = document.getElementById('navDrawer');
+
+        function openDrawer() {
+            navDrawer.classList.add('active');
+            navDrawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            navDrawer.classList.remove('active');
+            navDrawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        openDrawerBtn.addEventListener('click', openDrawer);
+        closeDrawerBtn.addEventListener('click', closeDrawer);
+        navDrawer.addEventListener('click', (e) => {
+            if (e.target === navDrawer) closeDrawer();
+        });
+
+        // 3. Dossier Accordion Controller
+        function toggleDossier(id) {
+            const allDossiers = document.querySelectorAll('.dossier-viewer');
+            const target = document.getElementById('dossier-' + id);
+            const isTargetActive = target.classList.contains('active');
+
+            allDossiers.forEach(d => d.classList.remove('active'));
+
+            if (!isTargetActive) {
+                target.classList.add('active');
+                target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function closeAllDossiers() {
+            document.querySelectorAll('.dossier-viewer').forEach(d => d.classList.remove('active'));
+        }
+
+        // 4. Copy Email Feedback
+        function copyEmail() {
+            const email = 'abhijeetthakur.nov2006@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const btn = document.getElementById('copyEmailBtn');
+                btn.textContent = 'Copied!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.textContent = 'Copy Email';
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // 5. Interactive Stage Canvas Simulation (Connected Neural Nodes)
+        const canvas = document.getElementById('stageCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let nodes = [];
+
+            function resize() {
+                width = canvas.width = canvas.parentElement.offsetWidth;
+                height = canvas.height = canvas.parentElement.offsetHeight;
+                initNodes();
+            }
+
+            function initNodes() {
+                nodes = [];
+                const count = Math.floor(width / 35);
+                for (let i = 0; i < count; i++) {
+                    nodes.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.8,
+                        vy: (Math.random() - 0.5) * 0.8,
+                        radius: Math.random() * 2 + 1.5
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, width, height);
+
+                // Draw links
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const dx = nodes[i].x - nodes[j].x;
+                        const dy = nodes[i].y - nodes[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 90) {
+                            ctx.beginPath();
+                            ctx.moveTo(nodes[i].x, nodes[i].y);
+                            ctx.lineTo(nodes[j].x, nodes[j].y);
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${0.18 * (1 - dist / 90)})`;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                // Draw nodes
+                for (let node of nodes) {
+                    node.x += node.vx;
+                    node.y += node.vy;
+
+                    if (node.x < 0 || node.x > width) node.vx *= -1;
+                    if (node.y < 0 || node.y > height) node.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+                    ctx.fill();
+                }
+
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            draw();
+        }
+    </script>
+</body>
+</html>
